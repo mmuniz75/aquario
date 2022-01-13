@@ -61,6 +61,8 @@ enum class HardScapeQuestion(val displayText : String,
         const val WOOD_KNOLEDGEMENT_TEXT = "Você sabe quantos kilos de troncos tem no seu aquário ?"
         const val WOOD_WEIGHT_TEXT = "Quantos kilos de troncos tem no seu aquário ?"
         const val WOOD_NUMBER_TEXT = "Quantos troncos você tem no seu aquário ?"
+
+        fun getFirstQuestion() = HardScapeQuestion.SUBSTRACT_KNOLEDGEMENT
     }
 
     abstract fun getNext(yes: Boolean? = null) : HardScapeQuestion?

@@ -76,7 +76,7 @@ class HardScapeQuestionTest {
 
     @Test
     fun justSubstrate(){
-        var curentQuestion : HardScapeQuestion? = HardScapeQuestion.SUBSTRACT_KNOLEDGEMENT
+        var curentQuestion : HardScapeQuestion? = HardScapeQuestion.getFirstQuestion()
         println(curentQuestion?.displayText)
         assertQuestion(HardScapeQuestion.SUBSTRACT_KNOLEDGEMENT_TEXT, curentQuestion)
         curentQuestion = nextQuestion(curentQuestion,true)
