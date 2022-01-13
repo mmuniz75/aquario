@@ -1,5 +1,8 @@
 package muniz.aquarium.fishselector.domain
 
+import java.math.BigDecimal
+import java.math.RoundingMode
+
 class Tank(val width: Int,
            val length: Int,
            val heigth: Int) {
@@ -11,13 +14,15 @@ class Tank(val width: Int,
     val realLiter = calculateRealLiter()
 
     private fun calculateRealLiter() : Int {
-        val WATER_SURFACE_SPACE = 1
+        val WATER_SURFACE_SPACE = BigDecimal.ONE
 
-        val realWidth = width - glassThickness.doubleCm
-        val realLength = length - glassThickness.doubleCm
-        val realHeight = heigth - glassThickness.doubleCm - WATER_SURFACE_SPACE
+        val doubleThickness = glassThickness.cm.multiply(BigDecimal(2))
+        val realWidth = BigDecimal(width).subtract(doubleThickness)
+        val realLength = BigDecimal(length).subtract(doubleThickness)
+        val realHeight = BigDecimal(heigth).subtract(glassThickness.cm)
+                          .subtract(WATER_SURFACE_SPACE)
 
-        return  realWidth * realLength * realHeight / 1000
+        return  realWidth.multiply(realLength).multiply(realHeight).divide(BigDecimal(1000)).toInt()
     }
 
 }

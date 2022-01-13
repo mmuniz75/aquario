@@ -2,12 +2,12 @@ package muniz.aquarium.fishselector.domain
 
 import java.math.BigDecimal
 
-enum class GlassThickness(val doubleCm : Int){
+enum class GlassThickness(val cm : BigDecimal){
 
-    THREE(1),
-    FIVE(1),
-    SIX(2),
-    EIGHT(2);
+    THREE(BigDecimal("0.3")),
+    FIVE(BigDecimal("0.5")),
+    SIX(BigDecimal("0.6")),
+    EIGHT(BigDecimal("0.8"));
 
     companion object {
         fun thickness(liter : Int) : GlassThickness {

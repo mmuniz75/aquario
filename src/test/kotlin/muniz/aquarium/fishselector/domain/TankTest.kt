@@ -15,7 +15,7 @@ class TankTest {
     @Test
     fun checkRealLiter(){
         val tank = Tank(80,30,45)
-        assertEquals(91,tank.realLiter)
+        assertEquals(98,tank.realLiter)
     }
 
     @Test
@@ -27,7 +27,7 @@ class TankTest {
     @Test
     fun checkRealLiter2(){
         val tank = Tank(46,24,30)
-        assertEquals(28,tank.realLiter)
+        assertEquals(29,tank.realLiter)
     }
 
     @Test
