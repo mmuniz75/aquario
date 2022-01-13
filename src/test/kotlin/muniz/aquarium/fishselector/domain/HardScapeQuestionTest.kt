@@ -43,6 +43,57 @@ class HardScapeQuestionTest {
 
     }
 
+    @Test
+    fun knowAllWeights(){
+        var curentQuestion : HardScapeQuestion? = HardScapeQuestion.SUBSTRACT_KNOLEDGEMENT
+        println(curentQuestion?.displayText)
+        assertQuestion(HardScapeQuestion.SUBSTRACT_KNOLEDGEMENT_TEXT, curentQuestion)
+        curentQuestion = nextQuestion(curentQuestion,true)
+
+        assertQuestion(HardScapeQuestion.SUBSTRACT_WEIGHT_TEXT, curentQuestion)
+        curentQuestion = nextQuestion(curentQuestion)
+
+        assertQuestion(HardScapeQuestion.ROCK_EXISTENCE_TEXT, curentQuestion)
+        curentQuestion = nextQuestion(curentQuestion,true)
+
+        assertQuestion(HardScapeQuestion.ROCK_KNOLEDGEMENT_TEXT, curentQuestion)
+        curentQuestion = nextQuestion(curentQuestion, true)
+
+        assertQuestion(HardScapeQuestion.ROCK_WEIGHT_TEXT, curentQuestion)
+        curentQuestion = nextQuestion(curentQuestion)
+
+        assertQuestion(HardScapeQuestion.WOOD_EXISTENCE_TEXT, curentQuestion)
+        curentQuestion = nextQuestion(curentQuestion,true)
+
+        assertQuestion(HardScapeQuestion.WOOD_KNOLEDGEMENT_TEXT, curentQuestion)
+        curentQuestion = nextQuestion(curentQuestion,true)
+
+        assertQuestion(HardScapeQuestion.WOOD_WEIGHT_TEXT, curentQuestion)
+        curentQuestion = nextQuestion(curentQuestion)
+
+        assertNull(curentQuestion);
+    }
+
+    @Test
+    fun justSubstrate(){
+        var curentQuestion : HardScapeQuestion? = HardScapeQuestion.SUBSTRACT_KNOLEDGEMENT
+        println(curentQuestion?.displayText)
+        assertQuestion(HardScapeQuestion.SUBSTRACT_KNOLEDGEMENT_TEXT, curentQuestion)
+        curentQuestion = nextQuestion(curentQuestion,true)
+
+        assertQuestion(HardScapeQuestion.SUBSTRACT_WEIGHT_TEXT, curentQuestion)
+        curentQuestion = nextQuestion(curentQuestion)
+
+        assertQuestion(HardScapeQuestion.ROCK_EXISTENCE_TEXT, curentQuestion)
+        curentQuestion = nextQuestion(curentQuestion,false)
+
+        assertQuestion(HardScapeQuestion.WOOD_EXISTENCE_TEXT, curentQuestion)
+        curentQuestion = nextQuestion(curentQuestion,false)
+
+        assertNull(curentQuestion);
+
+    }
+
     private fun assertQuestion(questionText: String, curentQuestion : HardScapeQuestion?){
         assertEquals(questionText, curentQuestion?.displayText)
     }
