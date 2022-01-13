@@ -1,6 +1,6 @@
 package muniz.aquarium.fishselector.domain
 
-enum class Question(displayText : String) {
+enum class Question(val displayText : String) {
 
     SUBSTRACT_KNOLEDGEMENT("Você sabe quantos kilos de substrato tem no seu aquário ?") {
         override fun getNext(yes: Boolean) = if (yes) ROCK_EXISTENCE else SUBSTRACT_FRONT_HEIGHT
@@ -30,7 +30,7 @@ enum class Question(displayText : String) {
     },
 
     WOOD_EXISTENCE("Você possue troncos grandes no seu aquário ?") {
-        override fun getNext(yes: Boolean) =  if (yes) null else WOOD_KNOLEDGEMENT
+        override fun getNext(yes: Boolean) =  if (yes) WOOD_KNOLEDGEMENT else null
         override fun getNext() = throw IllegalCallerException()
     },
     WOOD_KNOLEDGEMENT("Você sabe quantos kilos de troncos tem no seu aquário ?") {
