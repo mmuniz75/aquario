@@ -1,6 +1,6 @@
 package muniz.aquarium.fishselector.domain
 
-enum class GlassThicknessEnum{
+enum class GlassThickness{
 
     THREE,
     FIVE,
@@ -8,7 +8,7 @@ enum class GlassThicknessEnum{
     EIGHT;
 
     companion object {
-        fun thickness(liter : Int) : GlassThicknessEnum {
+        fun thickness(liter : Int) : GlassThickness {
             return when {
                 liter <= 30 -> THREE
                 liter in 31..100 -> FIVE

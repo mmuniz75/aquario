@@ -14,24 +14,24 @@ class TankTest {
     @Test
     fun check3Thickness(){
         val tank = Tank(30,15,20)
-        Assertions.assertEquals(GlassThicknessEnum.THREE,tank.glassThickness)
+        Assertions.assertEquals(GlassThickness.THREE,tank.glassThickness)
     }
 
     @Test
     fun check5Thickness(){
         val tank = Tank(46,24,30)
-        Assertions.assertEquals(GlassThicknessEnum.FIVE,tank.glassThickness)
+        Assertions.assertEquals(GlassThickness.FIVE,tank.glassThickness)
     }
 
     @Test
     fun check6Thickness(){
         val tank = Tank(80,30,45)
-        Assertions.assertEquals(GlassThicknessEnum.SIX,tank.glassThickness)
+        Assertions.assertEquals(GlassThickness.SIX,tank.glassThickness)
     }
 
     @Test
     fun check8Thickness(){
         val tank = Tank(100,50,50)
-        Assertions.assertEquals(GlassThicknessEnum.EIGHT,tank.glassThickness)
+        Assertions.assertEquals(GlassThickness.EIGHT,tank.glassThickness)
     }
 }

@@ -6,7 +6,7 @@ class Tank(width: Int,
 
     var liter : Int = width * length * heigth / 1000
 
-    var glassThickness : GlassThicknessEnum = GlassThicknessEnum.thickness(liter)
+    var glassThickness : GlassThickness = GlassThickness.thickness(liter)
 
 
 }
