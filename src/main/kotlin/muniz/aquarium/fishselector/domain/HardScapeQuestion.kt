@@ -23,12 +23,12 @@ enum class HardScapeQuestion(val displayText : String,
     },
     ROCK_KNOLEDGEMENT(HardScapeQuestion.ROCK_KNOLEDGEMENT_TEXT, true) {
         override fun getNext(knowRocks: Boolean?) = if (knowRocks!=null &&
-                                                        knowRocks) ROCK_WEIGHT else ROCK_NUMBER
+                                                        knowRocks) ROCK_WEIGHT else ROCK_COUNT
     },
     ROCK_WEIGHT(HardScapeQuestion.ROCK_WEIGHT_TEXT) {
         override fun getNext(rocksWeight: Boolean?) = WOOD_EXISTENCE
     },
-    ROCK_NUMBER(HardScapeQuestion.ROCK_NUMBER_TEXT) {
+    ROCK_COUNT(HardScapeQuestion.ROCK_NUMBER_TEXT) {
         override fun getNext(knowCount: Boolean?) = WOOD_EXISTENCE
     },
 
@@ -38,12 +38,12 @@ enum class HardScapeQuestion(val displayText : String,
     },
     WOOD_KNOLEDGEMENT(HardScapeQuestion.WOOD_KNOLEDGEMENT_TEXT, true) {
         override fun getNext(knowWood: Boolean?) = if (knowWood!=null &&
-                                                       knowWood) WOOD_WEIGHT else WOOD_NUMBER
+                                                       knowWood) WOOD_WEIGHT else WOOD_COUNT
     },
     WOOD_WEIGHT(HardScapeQuestion.WOOD_WEIGHT_TEXT) {
         override fun getNext(knowWood: Boolean?) = null
     },
-    WOOD_NUMBER(HardScapeQuestion.WOOD_NUMBER_TEXT) {
+    WOOD_COUNT(HardScapeQuestion.WOOD_NUMBER_TEXT) {
         override fun getNext(woodCount: Boolean?) = null
     }
     ;

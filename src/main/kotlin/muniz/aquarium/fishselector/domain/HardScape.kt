@@ -3,7 +3,7 @@ package muniz.aquarium.fishselector.domain
 import java.lang.IllegalStateException
 import java.math.BigDecimal
 
-class HardScape(val rocksCount : Int = 0,
+class HardScape(var rocksCount : Int = 0,
                 var rocksHeight : Int = 0,
                 val woodCount : Int = 0,
                 var woodWeight : Int = 0,
@@ -14,6 +14,20 @@ class HardScape(val rocksCount : Int = 0,
                 val tankLenght : Int = 0
                 )
 {
+
+    constructor(questions : List<HardScapeAnswer>, tankWidth: Int = 0, tankLenght: Int = 0) :
+            this(rocksCount = questions.find { it.hardScapeQuestion == HardScapeQuestion.ROCK_COUNT }?.answer as Int,
+//                 rocksHeight = questions.find { it.hardScapeQuestion == HardScapeQuestion.ROCK_WEIGHT }?.answer as Int,
+                 woodCount = questions.find { it.hardScapeQuestion == HardScapeQuestion.WOOD_COUNT }?.answer as Int,
+//                 woodWeight = questions.find { it.hardScapeQuestion == HardScapeQuestion.WOOD_WEIGHT }?.answer as Int,
+//                 substractWeight = questions.find { it.hardScapeQuestion == HardScapeQuestion.SUBSTRACT_WEIGHT }?.answer as Int,
+                 substractFrontHeight = questions.find { it.hardScapeQuestion == HardScapeQuestion.SUBSTRACT_FRONT_HEIGHT }?.answer as Int,
+                 substractBackHeight = questions.find { it.hardScapeQuestion == HardScapeQuestion.SUBSTRACT_BACK_HEIGHT }?.answer as Int,
+                tankWidth = tankWidth,
+                tankLenght = tankLenght
+                ) {
+    }
+
     fun height() : Int{
         canculateSubstractWeight()
         calculateRocksWeight()
