@@ -35,12 +35,13 @@ class HardScape(val rocksCount : Int = 0,
                          .multiply(BigDecimal(tankLenght))
                          .multiply(substractAverage)
                          .multiply(BigDecimal("1.5"))
+                         .divide(BigDecimal(1000))
                          .toInt()
 
     }
 
     private fun calculateRocksWeight(){
-        val ROCKS_WEIGHT_AVERAGE = BigDecimal("1.2")
+        val ROCKS_WEIGHT_AVERAGE = BigDecimal.ONE
         if(rocksHeight>0) return;
         if(rocksCount == 0) throw IllegalStateException("Numero de rochas não informado")
         rocksHeight = BigDecimal(rocksCount).multiply(ROCKS_WEIGHT_AVERAGE).toInt()
