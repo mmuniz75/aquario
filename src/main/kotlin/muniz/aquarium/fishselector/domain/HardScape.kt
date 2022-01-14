@@ -5,27 +5,33 @@ import java.math.BigDecimal
 
 class HardScape(var rocksCount : Int = 0,
                 var rocksHeight : Int = 0,
-                val woodCount : Int = 0,
+                var woodCount : Int = 0,
                 var woodWeight : Int = 0,
                 var substractWeight : Int = 0,
-                val substractFrontHeight : Int = 0,
-                val substractBackHeight : Int = 0,
-                val tankWidth : Int = 0,
-                val tankLenght : Int = 0
+                var substractFrontHeight : Int = 0,
+                var substractBackHeight : Int = 0,
+                var tankWidth : Int = 0,
+                var tankLenght : Int = 0
                 )
 {
 
     constructor(questions : List<HardScapeAnswer>, tankWidth: Int = 0, tankLenght: Int = 0) :
-            this(rocksCount = questions.find { it.hardScapeQuestion == HardScapeQuestion.ROCK_COUNT }?.answer as Int,
-//                 rocksHeight = questions.find { it.hardScapeQuestion == HardScapeQuestion.ROCK_WEIGHT }?.answer as Int,
-                 woodCount = questions.find { it.hardScapeQuestion == HardScapeQuestion.WOOD_COUNT }?.answer as Int,
-//                 woodWeight = questions.find { it.hardScapeQuestion == HardScapeQuestion.WOOD_WEIGHT }?.answer as Int,
-//                 substractWeight = questions.find { it.hardScapeQuestion == HardScapeQuestion.SUBSTRACT_WEIGHT }?.answer as Int,
-                 substractFrontHeight = questions.find { it.hardScapeQuestion == HardScapeQuestion.SUBSTRACT_FRONT_HEIGHT }?.answer as Int,
-                 substractBackHeight = questions.find { it.hardScapeQuestion == HardScapeQuestion.SUBSTRACT_BACK_HEIGHT }?.answer as Int,
-                tankWidth = tankWidth,
-                tankLenght = tankLenght
+            this( tankWidth = tankWidth,
+                  tankLenght = tankLenght
                 ) {
+
+        rocksCount = getValueFromEnum(questions, HardScapeQuestion.ROCK_COUNT)
+        rocksHeight = getValueFromEnum(questions, HardScapeQuestion.ROCK_WEIGHT)
+        woodCount = getValueFromEnum(questions, HardScapeQuestion.WOOD_COUNT)
+        woodWeight = getValueFromEnum(questions, HardScapeQuestion.WOOD_WEIGHT)
+        substractWeight = getValueFromEnum(questions, HardScapeQuestion.SUBSTRACT_WEIGHT)
+        substractFrontHeight = getValueFromEnum(questions, HardScapeQuestion.SUBSTRACT_FRONT_HEIGHT)
+        substractBackHeight = getValueFromEnum(questions, HardScapeQuestion.SUBSTRACT_BACK_HEIGHT)
+    }
+
+    private fun getValueFromEnum(questions : List<HardScapeAnswer>, hardScapeQuestion: HardScapeQuestion) : Int{
+        val value = questions.find { it.hardScapeQuestion == hardScapeQuestion }?.answer
+        return if (value!=null) value as Int else 0
     }
 
     fun height() : Int{
