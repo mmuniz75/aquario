@@ -81,21 +81,17 @@ class HardScapeAnswerTest {
 
     @Test
     fun justSubstrate(){
-        var curentQuestion : HardScapeQuestion? = HardScapeQuestion.getFirstQuestion()
-        println(curentQuestion?.displayText)
-        assertQuestion(HardScapeQuestion.SUBSTRACT_KNOLEDGEMENT_TEXT, curentQuestion)
+        val answers = ArrayList<HardScapeAnswer>()
+
+        //SUBSTRACT_KNOLEDGEMENT
+        var curentQuestion : HardScapeQuestion? = HardScapeQuestion.SUBSTRACT_KNOLEDGEMENT
+
+        //SUBSTRACT_WEIGHT
         curentQuestion = nextQuestion(curentQuestion,true)
+        answers.add(HardScapeAnswer(curentQuestion!!, 15))
 
-        assertQuestion(HardScapeQuestion.SUBSTRACT_WEIGHT_TEXT, curentQuestion)
-        curentQuestion = nextQuestion(curentQuestion)
-
-        assertQuestion(HardScapeQuestion.ROCK_EXISTENCE_TEXT, curentQuestion)
-        curentQuestion = nextQuestion(curentQuestion,false)
-
-        assertQuestion(HardScapeQuestion.WOOD_EXISTENCE_TEXT, curentQuestion)
-        curentQuestion = nextQuestion(curentQuestion,false)
-
-        assertNull(curentQuestion);
+        val hardScape =  HardScape(answers)
+        assertEquals(15 , hardScape.height())
 
     }
 

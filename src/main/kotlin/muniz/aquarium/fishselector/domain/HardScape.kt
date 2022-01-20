@@ -63,14 +63,14 @@ class HardScape(var rocksCount : Int = 0,
     private fun calculateRocksWeight(){
         val ROCKS_WEIGHT_AVERAGE = BigDecimal.ONE
         if(rocksHeight>0) return;
-        if(rocksCount == 0) throw IllegalStateException("Numero de rochas não informado")
+        if(rocksCount == 0) return
         rocksHeight = BigDecimal(rocksCount).multiply(ROCKS_WEIGHT_AVERAGE).toInt()
     }
 
     private fun calculateWoodWeight(){
         val WOOD_WEIGHT_AVERAGE = BigDecimal("0.5")
         if(woodWeight>0) return;
-        if(woodCount == 0) throw IllegalStateException("Numero de troncos não informado")
+        if(woodCount == 0) return
         woodWeight = BigDecimal(woodCount).multiply(WOOD_WEIGHT_AVERAGE).toInt()
     }
 }
