@@ -17,12 +17,12 @@ class AquariumService {
         previousQuestions.add(previousQuestions.size -1,answer)
 
         val nextQuestion =  if(answer.answer is Boolean)
-                                 answer.hardScapeQuestion.getNext(answer.answer as Boolean)
+                                 answer.hardScapeQuestion.getNext(answer.answer)
                             else
                                 answer.hardScapeQuestion.getNext()
 
         if(nextQuestion!=null)
-            previousQuestions.add(HardScapeAnswer(nextQuestion, answer.answer))
+            previousQuestions.add(HardScapeAnswer(nextQuestion,null))
         else
             previousQuestions.add(null)
 
