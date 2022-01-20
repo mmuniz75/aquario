@@ -1,17 +1,14 @@
 package muniz.aquarium.fishselector.domain
 
-import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Assertions.assertNull
 import org.junit.jupiter.api.Test
 
 class HardScapeAnswerTest {
 
-
     @Test
     fun notKnowNumbers(){
         val answers = ArrayList<HardScapeAnswer>()
-
         var curentQuestion : HardScapeQuestion? = HardScapeQuestion.SUBSTRACT_KNOLEDGEMENT
 
         //SUBSTRACT_FRONT_HEIGHT_TEXT
@@ -48,33 +45,38 @@ class HardScapeAnswerTest {
 
     @Test
     fun knowAllWeights(){
+        val answers = ArrayList<HardScapeAnswer>()
+
+        //SUBSTRACT_KNOLEDGEMENT
         var curentQuestion : HardScapeQuestion? = HardScapeQuestion.SUBSTRACT_KNOLEDGEMENT
-        println(curentQuestion?.displayText)
-        assertQuestion(HardScapeQuestion.SUBSTRACT_KNOLEDGEMENT_TEXT, curentQuestion)
+
+        //SUBSTRACT_WEIGHT
         curentQuestion = nextQuestion(curentQuestion,true)
+        answers.add(HardScapeAnswer(curentQuestion!!, 10))
 
-        assertQuestion(HardScapeQuestion.SUBSTRACT_WEIGHT_TEXT, curentQuestion)
-        curentQuestion = nextQuestion(curentQuestion)
-
-        assertQuestion(HardScapeQuestion.ROCK_EXISTENCE_TEXT, curentQuestion)
-        curentQuestion = nextQuestion(curentQuestion,true)
-
-        assertQuestion(HardScapeQuestion.ROCK_KNOLEDGEMENT_TEXT, curentQuestion)
+        //ROCK_EXISTENCE
         curentQuestion = nextQuestion(curentQuestion, true)
 
-        assertQuestion(HardScapeQuestion.ROCK_WEIGHT_TEXT, curentQuestion)
-        curentQuestion = nextQuestion(curentQuestion)
-
-        assertQuestion(HardScapeQuestion.WOOD_EXISTENCE_TEXT, curentQuestion)
+        //ROCK_KNOLEDGEMENT
         curentQuestion = nextQuestion(curentQuestion,true)
 
-        assertQuestion(HardScapeQuestion.WOOD_KNOLEDGEMENT_TEXT, curentQuestion)
-        curentQuestion = nextQuestion(curentQuestion,true)
+        //ROCK_WEIGHT
+        curentQuestion = nextQuestion(curentQuestion, true)
+        answers.add(HardScapeAnswer(curentQuestion!!, 15))
 
-        assertQuestion(HardScapeQuestion.WOOD_WEIGHT_TEXT, curentQuestion)
+        //WOOD_EXISTENCE
         curentQuestion = nextQuestion(curentQuestion)
 
-        assertNull(curentQuestion);
+        //WOOD_KNOLEDGEMENT
+        curentQuestion = nextQuestion(curentQuestion,true)
+
+        //WOOD_WEIGHT
+        curentQuestion = nextQuestion(curentQuestion,true)
+
+       answers.add(HardScapeAnswer(curentQuestion!!, 5))
+
+        val hardScape =  HardScape(answers)
+        assertEquals(30 , hardScape.height())
     }
 
     @Test
