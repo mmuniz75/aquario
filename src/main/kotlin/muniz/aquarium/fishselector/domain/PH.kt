@@ -1,9 +1,9 @@
 package muniz.aquarium.fishselector.domain
 
-enum class PH (rangeDisplay : String) {
+import java.math.BigDecimal
 
-    ACID("6.2 - 6.8"),
-    NEUTRAL("7.0"),
-    ALKALI("7.2 - 7.4")
+class PH (name: String, min : BigDecimal, max : BigDecimal) {
+
+    val displayRange : String = "${min.setScale(1)} - ${max.setScale(1)}"
 
 }
