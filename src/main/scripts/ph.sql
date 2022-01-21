@@ -4,3 +4,7 @@ create table PH (
     minPH numeric,
     maxPh numeric
     )
+;
+INSERT INTO public.ph (id, name, minph, maxph) VALUES(1, 'Acido', 6.2, 6.8);
+INSERT INTO public.ph (id, name, minph) VALUES (2, 'Neutro', 7.0);
+INSERT INTO public.ph (id, name, minph, maxph) VALUES(3, 'Alcalino', 7.2, 7.4);
