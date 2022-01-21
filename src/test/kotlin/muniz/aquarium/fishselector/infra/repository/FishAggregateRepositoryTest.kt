@@ -19,8 +19,7 @@ class FishAggregateRepositoryTest {
         runBlocking {
             val fishes = repository.listFish()
             fishes.collect { fish ->
-                val ph = if(fish.ph.isEmpty()) "" else fish.ph[0].displayRange
-                println("${fish.name} - PH(${ph})")}
+               println("${fish.name} - PH(${fish.getPhRangeDisplay()})")}
         }
 
     }

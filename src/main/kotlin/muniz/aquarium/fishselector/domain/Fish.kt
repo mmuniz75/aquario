@@ -15,4 +15,12 @@ class Fish (val id : Int,
             val compatibility : List<Fish> = ArrayList()
            ) {
 
+    fun getPhRangeDisplay(): String {
+        val min = if (ph.isEmpty()) "" else ph.minOf { it.min }.toString()
+        val max = if (ph.isEmpty()) "" else ph.maxOf { it.max }.toString()
+
+        return if (min ==max) min else "$min - $max"
+    }
+
+
 }
