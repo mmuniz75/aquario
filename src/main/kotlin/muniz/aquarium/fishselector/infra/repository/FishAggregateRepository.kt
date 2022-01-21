@@ -1,7 +1,7 @@
 package muniz.aquarium.fishselector.infra.repository
 
-import kotlinx.coroutines.flow.forEach
-import kotlinx.coroutines.flow.map
+import kotlinx.coroutines.flow.*
+import muniz.aquarium.fishselector.domain.Fish
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Repository
 
@@ -17,10 +17,9 @@ class FishAggregateRepository {
     @Autowired
     private lateinit var dhRepository: DHRepository
 
-    suspend fun listFish(){
-
-        val fishes = repository.findAll()
-
+    suspend fun listFish() : Flow<Fish>{
+        return repository.findAll()
+               .onEach { it.ph =  phRepository.findPHByFishId(it.id).toList()}
     }
 
 }

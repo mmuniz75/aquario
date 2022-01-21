@@ -5,7 +5,7 @@ import org.springframework.data.relational.core.mapping.Column
 class Fish (val id : Int,
             val name: String,
             val size:Int,
-            val ph : List<PH> = ArrayList(),
+            var ph : List<PH> = ArrayList(),
             val dh: List<DH> = ArrayList(),
             @Column("maxtemperature") val maxTemperature:Int,
             @Column("maxtemperature") val minTemperature:Int,
