@@ -19,7 +19,7 @@ class FishAggregateRepositoryTest {
         runBlocking {
             val fishes = repository.listFish()
             fishes.collect { fish ->
-               println("${fish.name} - PH(${fish.getPhRangeDisplay()})")}
+               println("${fish.name} - PH(${fish.getPHRangeDisplay()})  - DH(${fish.getDHRangeDisplay()})")}
         }
 
     }

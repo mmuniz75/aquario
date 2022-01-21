@@ -20,6 +20,7 @@ class FishAggregateRepository {
     suspend fun listFish() : Flow<Fish>{
         return repository.findAll()
                .onEach { it.ph =  phRepository.findPHByFishId(it.id).toList()}
+               .onEach { it.dh =  dhRepository.findDHByFishId(it.id).toList()}
     }
 
 }
