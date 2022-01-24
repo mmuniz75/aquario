@@ -8,9 +8,9 @@ class Fish (val id : Int,
             var ph : List<PH> = ArrayList(),
             var dh: List<DH> = ArrayList(),
             @Column("maxtemperature") val maxTemperature:Int,
-            @Column("maxtemperature") val minTemperature:Int,
-            @Column("maxtemperature") val minNumber:Int,
-            @Column("maxtemperature") val widthTank:Int,
+            @Column("mintemperature") val minTemperature:Int,
+            @Column("minnumber") val minNumber:Int,
+            @Column("widthtank") val widthTank:Int,
             @Column("lengthtank") val lengthTank:Int,
             val compatibility : List<Fish> = ArrayList()
            ) {
