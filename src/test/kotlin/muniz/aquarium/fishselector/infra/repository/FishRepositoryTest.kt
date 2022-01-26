@@ -22,4 +22,13 @@ class FishRepositoryTest {
         }
 
     }
+
+    @Test
+    fun listFishByTank(){
+        val fishes = repository.findByWidthTankLessThanEqualAndLengthTankLessThanEqual(50,30)
+        runBlocking {
+            fishes.collect { fish -> println(fish.name)}
+        }
+
+    }
 }
