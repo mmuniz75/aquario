@@ -23,4 +23,10 @@ class FishAggregateRepository {
                .onEach { it.dh =  dhRepository.findDHByFishId(it.id).toList()}
     }
 
+    suspend fun listFishByTank(widthTank : Int, lengthTank: Int) : Flow<Fish>{
+        return repository.findByWidthTankLessThanEqualAndLengthTankLessThanEqual(widthTank, lengthTank)
+            .onEach { it.ph =  phRepository.findPHByFishId(it.id).toList()}
+            .onEach { it.dh =  dhRepository.findDHByFishId(it.id).toList()}
+    }
+
 }

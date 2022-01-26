@@ -23,4 +23,13 @@ class FishAggregateRepositoryTest {
         }
 
     }
+
+    @Test
+    fun listFishByTank(){
+        runBlocking {
+            val fishes = repository.listFishByTank(50,30)
+            fishes.collect { fish -> println(fish.name)}
+        }
+
+    }
 }
