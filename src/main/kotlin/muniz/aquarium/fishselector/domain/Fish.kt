@@ -3,6 +3,7 @@ package muniz.aquarium.fishselector.domain
 import org.springframework.data.annotation.PersistenceConstructor
 import org.springframework.data.annotation.Transient
 import org.springframework.data.relational.core.mapping.Column
+import java.math.BigDecimal
 
 class Fish (val id : Int,
             val name: String,
@@ -29,15 +30,31 @@ class Fish (val id : Int,
     ): this(id,name,size,mutableListOf(),mutableListOf(),maxTemperature,minTemperature,minNumber,widthTank,lengthTank,mutableListOf())
 
     fun getPHRangeDisplay(): String {
-        val min = if (ph.isEmpty()) "" else ph.minOf { it.min }.toString()
-        val max = if (ph.isEmpty()) "" else ph.maxOf { it.max }.toString()
-        return if (min ==max) min else "$min - $max"
+        val min = getMinPH().toString()
+        val max = getMaxPH().toString()
+        return if (min == max) min else "$min - $max"
+    }
+
+    fun getMinPH(): BigDecimal {
+        return if (ph.isEmpty()) BigDecimal.ZERO else ph.minOf { it.min }
+    }
+
+    fun getMaxPH(): BigDecimal {
+        return if (ph.isEmpty()) BigDecimal.ZERO else ph.maxOf { it.max }
     }
 
     fun getDHRangeDisplay(): String {
-        val min = if (dh.isEmpty()) "" else dh.minOf { it.min }.toString()
-        val max = if (dh.isEmpty()) "" else dh.maxOf { it.max }.toString()
+        val min = getMinDH().toString()
+        val max = getMaxDH().toString()
         return if (min ==max) min else "$min-$max"
+    }
+
+    fun getMinDH(): Int {
+        return if (dh.isEmpty()) 0 else dh.minOf { it.min }
+    }
+
+    fun getMaxDH(): Int {
+        return if (dh.isEmpty()) 0 else dh.maxOf { it.max }
     }
 
 }

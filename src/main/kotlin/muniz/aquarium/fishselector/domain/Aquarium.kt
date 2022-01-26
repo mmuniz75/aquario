@@ -22,6 +22,26 @@ class Aquarium (val tank:Tank, val hardScape: HardScape) {
         return tank.realLiter - hardScape.height() - totalFishesSize()
     }
 
+    fun getTemperatureRange() : String {
+        if(fishes.isEmpty())
+            return ""
+
+        val minTemperature = fishes.map { it.fish.minTemperature }.maxOrNull()
+        val maxTemperature = fishes.map { it.fish.maxTemperature }.minOrNull()
+
+        return "$minTemperature Cº - $maxTemperature Cº"
+    }
+
+    fun getPHRange() : String {
+        if(fishes.isEmpty())
+            return ""
+
+        val minPH = fishes.map { it.fish.getMinPH() }.maxOrNull()
+        val maxPH = fishes.map { it.fish.getMaxPH() }.minOrNull()
+
+        return "$minPH - $maxPH"
+    }
+
     private fun totalFishesSize() : Int {
         return  fishes.map {it.totalCentimeter}.sum()
     }

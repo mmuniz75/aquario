@@ -3,6 +3,7 @@ package muniz.aquarium.fishselector.domain
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Assertions.fail
 import org.junit.jupiter.api.Test
+import java.math.BigDecimal
 
 class AquariumTest {
 
@@ -44,21 +45,97 @@ class AquariumTest {
     fun checkFishCentimerTwoShoal(){
         val aquarium = createAquarium()
         aquarium.addFish(createNeon(), 10)
-
-        val tetra = Fish(id=2,name= "Tetra", size=5, maxTemperature=28, minTemperature=24, minNumber=6, widthTank=60, lengthTank=30)
-        aquarium.addFish(tetra, 7)
+        aquarium.addFish(createTetra(), 7)
 
         assertEquals(16, aquarium.fishCentimeterAvaliable())
     }
 
+    @Test
+    fun checkTemperatureRange(){
+        val aquarium = createAquarium()
+        aquarium.addFish(createBarbus(), 6)
+        aquarium.addFish(createColdFish(), 1)
+        aquarium.addFish(createHotFish(), 1)
+
+        assertEquals("24 Cº - 25 Cº", aquarium.getTemperatureRange())
+    }
+
+    @Test
+    fun checkPHRangeAcid(){
+        val aquarium = createAquarium()
+        val fish1 = createColdFish()
+        fish1.ph = listOf(createAcidPH())
+        aquarium.addFish(fish1, 1)
+        assertEquals("6.2 - 6.8", aquarium.getPHRange())
+    }
+
+    @Test
+    fun checkPHRangeAcidNeutral(){
+        val aquarium = createAquarium()
+        val fish1 = createColdFish()
+        fish1.ph = listOf(createAcidPH(),createNeutralPH())
+        aquarium.addFish(fish1, 1)
+        assertEquals("6.2 - 7.0", aquarium.getPHRange())
+    }
+
+    @Test
+    fun checkPHRangeNeutralAlcali(){
+        val aquarium = createAquarium()
+        val fish1 = createColdFish()
+        fish1.ph = listOf(createAlcaliPH(),createNeutralPH())
+        aquarium.addFish(fish1, 1)
+        assertEquals("7.0 - 7.4", aquarium.getPHRange())
+    }
+
+    @Test
+    fun checkPHRangeFishAcidAndFishAcidNeutral(){
+        val aquarium = createAquarium()
+        val fish1 = createColdFish()
+        fish1.ph = listOf(createAcidPH(),createNeutralPH())
+
+        val fish2 = createColdFish()
+        fish2.ph = listOf(createAcidPH())
+
+        aquarium.addFish(fish1, 1)
+        aquarium.addFish(fish2, 1)
+        assertEquals("6.2 - 6.8", aquarium.getPHRange())
+    }
+
+    private fun createAcidPH() : PH{
+        return  PH(1 ,"Acido", BigDecimal("6.2"), BigDecimal("6.8"))
+    }
+
+    private fun createNeutralPH() : PH{
+        return PH(2, "Neutro", BigDecimal("7.0"),BigDecimal("7.0"))
+    }
+
+    private fun createAlcaliPH() : PH{
+        return PH(3, "Alcalino", BigDecimal("7.2"), BigDecimal("7.4"))
+    }
+
     private fun createNeon() : Fish {
-        return Fish(id=1,name= "Neon", size=3, maxTemperature=28, minTemperature=24, minNumber=10, widthTank=60, lengthTank=30)
+        return Fish(id=1,name= "Neon", size=3, maxTemperature=30, minTemperature=24, minNumber=10, widthTank=60, lengthTank=30)
+    }
+
+    private fun createTetra() : Fish {
+        return Fish(id=2,name= "Tetra", size=5, maxTemperature=30, minTemperature=20, minNumber=6, widthTank=60, lengthTank=30)
+    }
+
+    private fun createBarbus() : Fish {
+        return Fish(id=3,name= "Barbus", size=5, maxTemperature=25, minTemperature=18, minNumber=6, widthTank=60, lengthTank=30)
+    }
+
+    private fun createColdFish() : Fish {
+        return Fish(id=4,name= "Cold Fish", size=1, maxTemperature=25, minTemperature=18, minNumber=1, widthTank=60, lengthTank=30)
+    }
+
+    private fun createHotFish() : Fish {
+        return Fish(id=4,name= "Cold Fish", size=1, maxTemperature=30, minTemperature=24, minNumber=1, widthTank=60, lengthTank=30)
     }
 
     private fun createAquarium() : Aquarium{
         val tank = Tank(width = 80, length = 30, heigth = 45)
         val hardScape = HardScape(substractWeight = 10, rocksHeight = 6, woodWeight = 1)
-
         return Aquarium(tank,hardScape)
     }
 
