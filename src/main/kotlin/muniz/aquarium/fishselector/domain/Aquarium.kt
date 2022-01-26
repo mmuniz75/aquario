@@ -42,6 +42,16 @@ class Aquarium (val tank:Tank, val hardScape: HardScape) {
         return "$minPH - $maxPH"
     }
 
+    fun getDHRange() : String {
+        if(fishes.isEmpty())
+            return ""
+
+        val minDH = fishes.map { it.fish.getMinDH() }.maxOrNull()
+        val maxDH = fishes.map { it.fish.getMaxDH() }.minOrNull()
+
+        return "$minDH - $maxDH"
+    }
+
     private fun totalFishesSize() : Int {
         return  fishes.map {it.totalCentimeter}.sum()
     }

@@ -101,6 +101,62 @@ class AquariumTest {
         assertEquals("6.2 - 6.8", aquarium.getPHRange())
     }
 
+    @Test
+    fun checkDHRangeSoft(){
+        val aquarium = createAquarium()
+        val fish1 = createColdFish()
+        fish1.dh = listOf(createDHSoft())
+        aquarium.addFish(fish1, 1)
+        assertEquals("4 - 8", aquarium.getDHRange())
+    }
+
+
+    @Test
+    fun checkDHRangeFishAllAndFishMediunHard(){
+        val aquarium = createAquarium()
+        val fish1 = createColdFish()
+        fish1.dh = listOf(createDHSoft(),createDHMedium(),createDHard())
+        aquarium.addFish(fish1, 1)
+
+        val fish2 = createHotFish()
+        fish2.dh = listOf(createDHMedium(),createDHard())
+        aquarium.addFish(fish2, 1)
+
+        assertEquals("9 - 18", aquarium.getDHRange())
+    }
+
+    @Test
+    fun checkDHRangeFishAllAndFishSoftMediun(){
+        val aquarium = createAquarium()
+        val fish1 = createColdFish()
+        fish1.dh = listOf(createDHSoft(),createDHMedium(),createDHard())
+        aquarium.addFish(fish1, 1)
+
+        val fish2 = createHotFish()
+        fish2.dh = listOf(createDHMedium(),createDHSoft())
+        aquarium.addFish(fish2, 1)
+
+        assertEquals("4 - 12", aquarium.getDHRange())
+    }
+
+    @Test
+    fun checkDHRangeFishMixt(){
+        val aquarium = createAquarium()
+        val fish1 = createColdFish()
+        fish1.dh = listOf(createDHSoft(),createDHMedium(),createDHard())
+        aquarium.addFish(fish1, 1)
+
+        val fish2 = createHotFish()
+        fish2.dh = listOf(createDHMedium(),createDHard())
+        aquarium.addFish(fish2, 1)
+
+        val fish3 = createBarbus()
+        fish3.dh = listOf(createDHMedium())
+        aquarium.addFish(fish3, 6)
+
+        assertEquals("9 - 12", aquarium.getDHRange())
+    }
+
     private fun createAcidPH() : PH{
         return  PH(1 ,"Acido", BigDecimal("6.2"), BigDecimal("6.8"))
     }
@@ -111,6 +167,18 @@ class AquariumTest {
 
     private fun createAlcaliPH() : PH{
         return PH(3, "Alcalino", BigDecimal("7.2"), BigDecimal("7.4"))
+    }
+
+    fun createDHSoft():DH{
+        return DH(2, "Mole",4,8)
+    }
+
+    fun createDHMedium():DH{
+        return DH(3, "Media",9,12)
+    }
+
+    fun createDHard():DH{
+        return DH(4, "Dura",13,18)
     }
 
     private fun createNeon() : Fish {
