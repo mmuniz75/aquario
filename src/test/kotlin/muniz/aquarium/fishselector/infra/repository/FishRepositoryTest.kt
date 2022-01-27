@@ -3,6 +3,7 @@ package muniz.aquarium.fishselector.infra.repository
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.flow.forEach
 import kotlinx.coroutines.runBlocking
+import org.junit.jupiter.api.Assertions.assertTrue
 import org.junit.jupiter.api.Test
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.test.context.SpringBootTest
@@ -18,7 +19,7 @@ class FishRepositoryTest {
     fun listFish(){
         val fishes = repository.findAll()
         runBlocking {
-            fishes.collect { fish -> println(fish.name)}
+            fishes.collect { fish -> assertTrue(listOf("Neon","Mato grosso","Tetra Negro","Barbus Ouro","Ramirezi","Coliza","Tricogaster").contains(fish.name))}
         }
 
     }

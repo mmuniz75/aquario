@@ -6,10 +6,10 @@ import java.math.BigDecimal
 class PH (val id : Int,
           val name: String,
           @Column("minph") val min : BigDecimal,
-          @Column("maxph") val max : BigDecimal = BigDecimal.ZERO) {
+          @Column("maxph") val max : BigDecimal) {
 
 
-    val displayRange : String = if(max.equals(BigDecimal.ZERO))
+    val displayRange : String = if(min == max)
                                   min.toString()
                                 else
                                  "${min.setScale(1)} - ${max.setScale(1)}"

@@ -15,7 +15,7 @@ class PHTest {
 
     @Test
     fun showNetralDisplay(){
-        val ph = PH(2, "Neutro",BigDecimal("7.0"))
+        val ph = PH(2, "Neutro",BigDecimal("7.0"), BigDecimal("7.0"))
         assertEquals("7.0", ph.displayRange)
     }
 

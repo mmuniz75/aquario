@@ -1,29 +1,106 @@
+-- PH
 INSERT INTO ph (id, name, minph, maxph) VALUES(1, 'Acido', 6.2, 6.8);
 INSERT INTO ph (id, name, minph, maxph) VALUES (2, 'Neutro', 7.0, 7.0);
 INSERT INTO ph (id, name, minph, maxph) VALUES(3, 'Alcalino', 7.2, 7.4);
 
+-- DH
 INSERT INTO dh (id, name, mindh, maxdh) VALUES(1, 'Muito mole', 0, 4);
 INSERT INTO dh (id, name, mindh, maxdh) VALUES(2, 'Mole', 5, 8);
 INSERT INTO dh (id, name, mindh, maxdh) VALUES(3, 'Media', 9, 12);
 INSERT INTO dh (id, name, mindh, maxdh) VALUES(4, 'Dura', 13, 18);
 INSERT INTO dh (id, name, mindh, maxdh) VALUES(5, 'Muito dura', 19, 30);
 
+
+-- Fish
 INSERT INTO fish (id, name, size, maxtemperature, mintemperature, minnumber, widthtank, lengthtank)
-VALUES(1, 'Betta', 5, 28, 26, 1, 30, 15);
-INSERT INTO fish_ph (fish_id, ph_id) VALUES(1, 2);
+VALUES(1, 'Neon', 3, 28, 26, 10, 60, 30);
+INSERT INTO fish_ph (fish_id, ph_id) VALUES(1, 1);
+INSERT INTO fish_dh (fish_id, dh_id) VALUES(1, 1);
 INSERT INTO fish_dh (fish_id, dh_id) VALUES(1, 2);
-INSERT INTO fish_dh (fish_id, dh_id) VALUES(1, 3);
-INSERT INTO fish_dh (fish_id, dh_id) VALUES(1, 4);
-
 
 INSERT INTO fish (id, name, size, maxtemperature, mintemperature, minnumber, widthtank, lengthtank)
-VALUES(2, 'Borboleta', 5, 28, 26, 8, 80, 30);
+VALUES(2, 'Mato grosso', 3, 28, 26, 6, 60, 30);
+INSERT INTO fish_ph (fish_id, ph_id) VALUES(2, 1);
+INSERT INTO fish_dh (fish_id, dh_id) VALUES(2, 3);
 
 INSERT INTO fish (id, name, size, maxtemperature, mintemperature, minnumber, widthtank, lengthtank)
-VALUES(3, 'Acara bandeira', 5, 28, 26, 6, 100, 40);
-
+VALUES(3, 'Tetra Negro', 5, 28, 26, 6, 60, 30);
 INSERT INTO fish_ph (fish_id, ph_id) VALUES(3, 1);
-INSERT INTO fish_ph (fish_id, ph_id) VALUES(3, 2);
+INSERT INTO fish_dh (fish_id, dh_id) VALUES(3, 3);
 
+INSERT INTO fish (id, name, size, maxtemperature, mintemperature, minnumber, widthtank, lengthtank)
+VALUES(4, 'Barbus Ouro', 5, 28, 26, 6, 80, 30);
+INSERT INTO fish_ph (fish_id, ph_id) VALUES(4, 1);
+INSERT INTO fish_ph (fish_id, ph_id) VALUES(4, 2);
+INSERT INTO fish_dh (fish_id, dh_id) VALUES(4, 3);
+
+INSERT INTO fish (id, name, size, maxtemperature, mintemperature, minnumber, widthtank, lengthtank)
+VALUES(5, 'Ramirezi', 5, 28, 26, 1, 60, 30);
+INSERT INTO fish_ph (fish_id, ph_id) VALUES(5, 1);
+INSERT INTO fish_dh (fish_id, dh_id) VALUES(5, 3);
+
+INSERT INTO fish (id, name, size, maxtemperature, mintemperature, minnumber, widthtank, lengthtank)
+VALUES(6, 'Coliza', 5, 28, 26, 1, 60, 30);
+INSERT INTO fish_ph (fish_id, ph_id) VALUES(6, 1);
+INSERT INTO fish_dh (fish_id, dh_id) VALUES(6, 3);
+
+INSERT INTO fish (id, name, size, maxtemperature, mintemperature, minnumber, widthtank, lengthtank)
+VALUES(7, 'Tricogaster', 5, 28, 26, 1, 60, 30);
+INSERT INTO fish_ph (fish_id, ph_id) VALUES(7, 1);
+INSERT INTO fish_dh (fish_id, dh_id) VALUES(7, 3);
+
+
+-- Compatibility
+
+-- Neon
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(1, 1);
 INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(1, 2);
 INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(1, 3);
+
+-- Mato grosso
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(2, 1);
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(2, 2);
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(2, 3);
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(2, 4);
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(2, 5);
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(2, 6);
+
+-- Tetra negro
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(3, 1);
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(3, 2);
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(3, 3);
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(3, 4);
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(3, 5);
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(3, 6);
+
+-- Barbus ouro
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(4, 7);
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(4, 2);
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(4, 3);
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(4, 4);
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(4, 5);
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(4, 6);
+
+
+--Ramirezi
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(5, 7);
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(5, 2);
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(5, 3);
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(5, 4);
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(5, 5);
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(5, 6);
+
+
+--Coliza
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(6, 7);
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(6, 2);
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(6, 3);
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(6, 4);
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(6, 5);
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(6, 6);
+
+--Tricogaster
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(7, 7);
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(7, 4);
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(7, 5);
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(7, 6);
