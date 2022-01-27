@@ -2,7 +2,9 @@ package muniz.aquarium.fishselector.infra.repository
 
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.flow.forEach
+import kotlinx.coroutines.flow.toList
 import kotlinx.coroutines.runBlocking
+import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Assertions.assertTrue
 import org.junit.jupiter.api.Test
 import org.springframework.beans.factory.annotation.Autowired
@@ -27,18 +29,14 @@ class FishRepositoryTest {
     @Test
     fun listFishByTank(){
         runBlocking {
-            val fishes = repository.findByWidthTankLessThanEqualAndLengthTankLessThanEqual(50,30)
-            fishes.collect { fish -> println(fish.name)}
+            val fishes = repository.findByWidthTankLessThanEqualAndLengthTankLessThanEqual(60,30).toList()
+            Assertions.assertEquals(4, fishes.size)
+            Assertions.assertEquals("Neon", fishes[0].name)
+            Assertions.assertEquals("Mato grosso", fishes[1].name)
+            Assertions.assertEquals("Tetra Negro", fishes[2].name)
+            Assertions.assertEquals("Ramirezi", fishes[3].name)
         }
-
     }
 
-    @Test
-    fun listFishByCompatibility(){
-        runBlocking {
-            val fishes = repository.findByCompatibleFish(widthTank = 80, lengthTank = 30, fishIds = mutableListOf(2),2,  aquariumRemainsSpace = 50)
-            fishes.collect { fish -> println(fish.name)}
-        }
 
-    }
 }

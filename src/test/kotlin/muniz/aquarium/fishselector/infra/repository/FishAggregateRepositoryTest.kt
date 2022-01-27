@@ -40,6 +40,26 @@ class FishAggregateRepositoryTest {
             assertEquals("Tetra Negro",fishes[2].name)
             assertEquals("Ramirezi",fishes[3].name)
         }
+    }
+
+    /*
+     1 - Neon
+     2 - Mato grosso
+     3 - Tetra Negro
+     4 - Barbus Ouro
+     5 - Ramirezi
+     6 - Coliza
+     7 - Tricogaster
+    */
+    @Test
+    fun listFishByCompatibility(){
+        runBlocking {
+            val fishes = repository.findByCompatibleFish(widthTank = 80, lengthTank = 30, fishIds = mutableListOf(1),aquariumRemainsSpace = 50).toList()
+            assertEquals(3 , fishes.size)
+            assertEquals("Neon",fishes[0].name)
+            assertEquals("Mato grosso",fishes[1].name)
+            assertEquals("Tetra Negro",fishes[2].name)
+        }
 
     }
 }
