@@ -1,23 +1,23 @@
-create table IF NOT EXISTS DH (
+create table IF NOT EXISTS dh (
     id int PRIMARY KEY,
     name VARCHAR(10),
-    minDH int,
-    maxDH int
+    mindh int,
+    maxdh int
     )
 ;
-create table IF NOT EXISTS  PH (
+create table IF NOT EXISTS  ph (
     id int PRIMARY KEY,
     name VARCHAR(10),
-    minPH numeric,
-    maxPh numeric
+    minph numeric,
+    maxph numeric
     )
 ;
-create Table IF NOT EXISTS Fish (
+create Table IF NOT EXISTS fish (
    id int PRIMARY KEY,
    name VARCHAR(50),
    size int,
-   maxTemperature int,
-   minTemperature int,
+   maxtemperature int,
+   mintemperature int,
    minNumber int,
    widthTank int,
    lengthTank int
