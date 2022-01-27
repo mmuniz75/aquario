@@ -40,12 +40,12 @@ INSERT INTO fish_ph (fish_id, ph_id) VALUES(5, 1);
 INSERT INTO fish_dh (fish_id, dh_id) VALUES(5, 3);
 
 INSERT INTO fish (id, name, size, maxtemperature, mintemperature, minnumber, widthtank, lengthtank)
-VALUES(6, 'Coliza', 5, 28, 26, 1, 60, 30);
+VALUES(6, 'Coliza', 5, 28, 26, 1, 80, 30);
 INSERT INTO fish_ph (fish_id, ph_id) VALUES(6, 1);
 INSERT INTO fish_dh (fish_id, dh_id) VALUES(6, 3);
 
 INSERT INTO fish (id, name, size, maxtemperature, mintemperature, minnumber, widthtank, lengthtank)
-VALUES(7, 'Tricogaster', 5, 28, 26, 1, 60, 30);
+VALUES(7, 'Tricogaster', 5, 28, 26, 1, 80, 30);
 INSERT INTO fish_ph (fish_id, ph_id) VALUES(7, 1);
 INSERT INTO fish_dh (fish_id, dh_id) VALUES(7, 3);
 
