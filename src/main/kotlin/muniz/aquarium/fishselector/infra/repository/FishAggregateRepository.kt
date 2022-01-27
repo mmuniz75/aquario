@@ -18,15 +18,21 @@ class FishAggregateRepository {
     private lateinit var dhRepository: DHRepository
 
     suspend fun listFish() : Flow<Fish>{
-        return repository.findAll()
-               .onEach { it.ph =  phRepository.findPHByFishId(it.id).toList()}
-               .onEach { it.dh =  dhRepository.findDHByFishId(it.id).toList()}
+        return addPHDH(repository.findAll())
     }
 
     suspend fun listFishByTank(widthTank : Int, lengthTank: Int) : Flow<Fish>{
-        return repository.findByWidthTankLessThanEqualAndLengthTankLessThanEqual(widthTank, lengthTank)
-            .onEach { it.ph =  phRepository.findPHByFishId(it.id).toList()}
-            .onEach { it.dh =  dhRepository.findDHByFishId(it.id).toList()}
+        return addPHDH(repository.findByWidthTankLessThanEqualAndLengthTankLessThanEqual(widthTank, lengthTank))
+    }
+
+    suspend fun findByCompatibleFish(widthTank : Int, lengthTank: Int, fishIds : List<Int>, aquariumRemainsSpace : Int) : Flow<Fish> {
+        return addPHDH(repository.findByCompatibleFish(widthTank, lengthTank,fishIds, aquariumRemainsSpace))
+    }
+
+    private suspend fun addPHDH(fishes : Flow<Fish>): Flow<Fish> {
+        return fishes
+                .onEach { it.ph =  phRepository.findPHByFishId(it.id).toList()}
+                .onEach { it.dh =  dhRepository.findDHByFishId(it.id).toList()}
     }
 
 }

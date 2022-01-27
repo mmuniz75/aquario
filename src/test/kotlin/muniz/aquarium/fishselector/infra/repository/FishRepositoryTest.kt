@@ -25,8 +25,8 @@ class FishRepositoryTest {
 
     @Test
     fun listFishByTank(){
-        val fishes = repository.findByWidthTankLessThanEqualAndLengthTankLessThanEqual(50,30)
         runBlocking {
+            val fishes = repository.findByWidthTankLessThanEqualAndLengthTankLessThanEqual(50,30)
             fishes.collect { fish -> println(fish.name)}
         }
 
@@ -34,8 +34,8 @@ class FishRepositoryTest {
 
     @Test
     fun listFishByCompatibility(){
-        val fishes = repository.findByCompatibleFish(widthTank = 80, lengthTank = 30, fishIds = mutableListOf(2), aquariumRemainsSpace = 50)
         runBlocking {
+            val fishes = repository.findByCompatibleFish(widthTank = 80, lengthTank = 30, fishIds = mutableListOf(2), aquariumRemainsSpace = 50)
             fishes.collect { fish -> println(fish.name)}
         }
 

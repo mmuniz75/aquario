@@ -7,7 +7,7 @@ import org.springframework.data.repository.kotlin.CoroutineCrudRepository
 
 interface FishRepository : CoroutineCrudRepository<Fish, Int>  {
 
-    fun findByWidthTankLessThanEqualAndLengthTankLessThanEqual(widthTank : Int, lengthTank: Int) : Flow<Fish>
+    suspend fun findByWidthTankLessThanEqualAndLengthTankLessThanEqual(widthTank : Int, lengthTank: Int) : Flow<Fish>
 
 
     @Query("""select f.* from fish f, fish_compatility fc  
@@ -16,5 +16,5 @@ interface FishRepository : CoroutineCrudRepository<Fish, Int>  {
                     and f.widthtank <= :widthTank  
                     and f.lengthtank <= :lengthTank  
                     and f.size * f.minnumber <= :aquariumRemainsSpace""")
-    fun findByCompatibleFish(widthTank : Int, lengthTank: Int, fishIds : List<Int>, aquariumRemainsSpace : Int) : Flow<Fish>
+    suspend fun findByCompatibleFish(widthTank : Int, lengthTank: Int, fishIds : List<Int>, aquariumRemainsSpace : Int) : Flow<Fish>
 }
