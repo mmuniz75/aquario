@@ -26,7 +26,7 @@ class FishAggregateRepository {
     }
 
     suspend fun findByCompatibleFish(widthTank : Int, lengthTank: Int, fishIds : List<Int>, aquariumRemainsSpace : Int) : Flow<Fish> {
-        return addPHDH(repository.findByCompatibleFish(widthTank, lengthTank,fishIds, aquariumRemainsSpace))
+        return addPHDH(repository.findByCompatibleFish(widthTank, lengthTank,fishIds, fishIds.size, aquariumRemainsSpace))
     }
 
     private suspend fun addPHDH(fishes : Flow<Fish>): Flow<Fish> {

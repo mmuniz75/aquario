@@ -1,11 +1,19 @@
 package muniz.aquarium.fishselector.application
 
+import kotlinx.coroutines.flow.Flow
+import muniz.aquarium.fishselector.domain.Fish
 import muniz.aquarium.fishselector.domain.HardScapeAnswer
 import muniz.aquarium.fishselector.domain.HardScapeQuestion
+import muniz.aquarium.fishselector.infra.repository.FishAggregateRepository
+import org.springframework.beans.factory.annotation.Autowired
+import org.springframework.stereotype.Service
 import java.lang.IllegalStateException
 
+@Service
 class AquariumService {
 
+    @Autowired
+    private lateinit var repository : FishAggregateRepository
 
     fun addNextQuestion(answer : HardScapeAnswer?,previousQuestions :  MutableList<HardScapeAnswer?>?) : MutableList<HardScapeAnswer?>{
         if(previousQuestions == null || previousQuestions.isEmpty())
