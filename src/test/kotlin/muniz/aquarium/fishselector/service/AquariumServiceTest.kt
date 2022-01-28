@@ -1,6 +1,8 @@
-package muniz.aquarium.fishselector.domain
+package muniz.aquarium.fishselector.service
 
 import muniz.aquarium.fishselector.application.AquariumService
+import muniz.aquarium.fishselector.domain.HardScape
+import muniz.aquarium.fishselector.domain.HardScapeAnswer
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Test
 

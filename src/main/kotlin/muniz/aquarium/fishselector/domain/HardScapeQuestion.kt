@@ -1,5 +1,8 @@
 package muniz.aquarium.fishselector.domain
 
+import com.fasterxml.jackson.annotation.JsonFormat
+
+@JsonFormat(shape = JsonFormat.Shape.OBJECT)
 enum class HardScapeQuestion(val displayText : String,
                              val isYesOrNoQuestion : Boolean = false) {
 
