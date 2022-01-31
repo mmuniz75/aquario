@@ -1,6 +1,8 @@
 package muniz.aquarium.fishselector.domain
 
+import com.fasterxml.jackson.annotation.JsonCreator
 import com.fasterxml.jackson.annotation.JsonFormat
+
 
 @JsonFormat(shape = JsonFormat.Shape.OBJECT)
 enum class HardScapeQuestion(val displayText : String,
@@ -66,8 +68,16 @@ enum class HardScapeQuestion(val displayText : String,
         const val WOOD_NUMBER_TEXT = "Quantos troncos você tem no seu aquário ?"
 
         fun getFirstQuestion() = HardScapeQuestion.SUBSTRACT_KNOLEDGEMENT
+
+        fun fromId(id: String?): HardScapeQuestion? {
+            return  HardScapeQuestion.values().firstOrNull() { it.id == id }
+        }
     }
 
+    val id : String = name
+
     abstract fun getNext(yes: Boolean? = null) : HardScapeQuestion?
+
+
 
 }
