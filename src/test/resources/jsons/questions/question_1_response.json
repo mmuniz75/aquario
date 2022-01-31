@@ -1,0 +1,10 @@
+[
+  {
+    "hardScapeQuestion": {
+      "displayText": "Você sabe quantos kilos de substrato tem no seu aquário ?",
+      "isYesOrNoQuestion": true,
+      "id": "SUBSTRACT_KNOLEDGEMENT"
+    },
+    "answer": null
+  }
+]

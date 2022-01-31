@@ -1,0 +1,10 @@
+{
+  "question": "SUBSTRACT_WEIGHT",
+  "answer": 10,
+  "previousAnswers": [
+    {
+      "id": "SUBSTRACT_KNOLEDGEMENT",
+      "answer": true
+    }
+  ]
+}

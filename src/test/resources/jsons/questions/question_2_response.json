@@ -1,0 +1,18 @@
+[
+  {
+    "hardScapeQuestion": {
+      "displayText": "Você sabe quantos kilos de substrato tem no seu aquário ?",
+      "isYesOrNoQuestion": true,
+      "id": "SUBSTRACT_KNOLEDGEMENT"
+    },
+    "answer": true
+  },
+  {
+    "hardScapeQuestion": {
+      "displayText": "Quantos kilos de substrato tem no seu aquário ?",
+      "isYesOrNoQuestion": false,
+      "id": "SUBSTRACT_WEIGHT"
+    },
+    "answer": null
+  }
+]
