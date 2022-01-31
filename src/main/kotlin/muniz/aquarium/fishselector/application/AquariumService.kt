@@ -15,14 +15,14 @@ class AquariumService {
     @Autowired
     private lateinit var repository : FishAggregateRepository
 
-    fun addNextQuestion(answer : HardScapeAnswer?,previousQuestions :  MutableList<HardScapeAnswer?>?) : MutableList<HardScapeAnswer?>{
-        if(previousQuestions == null || previousQuestions.isEmpty())
+    fun addNextQuestion(answer : HardScapeAnswer?,previousQuestions :  MutableList<HardScapeAnswer?>) : MutableList<HardScapeAnswer?>{
+        if(answer == null)
             return returnFirstQuestion()
 
         if(answer == null)
             throw IllegalStateException("Resposta não pode ser vazia")
 
-        previousQuestions.add(previousQuestions.size -1,answer)
+        previousQuestions.add(answer)
 
         val nextQuestion =  if(answer.answer is Boolean)
                                  answer.hardScapeQuestion.getNext(answer.answer)
@@ -35,7 +35,6 @@ class AquariumService {
             previousQuestions.add(null)
 
         return previousQuestions
-
     }
 
     fun returnFirstQuestion() : MutableList<HardScapeAnswer?>{

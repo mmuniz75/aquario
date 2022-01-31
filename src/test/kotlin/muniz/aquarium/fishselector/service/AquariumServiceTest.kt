@@ -22,7 +22,7 @@ class AquariumServiceTest {
 
     fun createHardScepe(yesForAll : Boolean): List<HardScapeAnswer> {
         val service = AquariumService()
-        var questions = service.addNextQuestion(null, null)
+        var questions = service.addNextQuestion(null, mutableListOf())
 
         while(questions[questions.lastIndex] !=null){
             val lastQuestion = questions[questions.lastIndex]

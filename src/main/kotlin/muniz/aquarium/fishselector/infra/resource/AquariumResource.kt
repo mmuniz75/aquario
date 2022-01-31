@@ -23,9 +23,9 @@ class AquariumResource {
         return service.addNextQuestion(answer, convertPreviousQuestions(request.previousAnswers))
     }
 
-    private fun convertPreviousQuestions(previousQuestions : MutableList<HardScapeAnswerDTO?>?) : MutableList<HardScapeAnswer?>?{
+    private fun convertPreviousQuestions(previousQuestions : MutableList<HardScapeAnswerDTO?>?) : MutableList<HardScapeAnswer?>{
         if(previousQuestions == null)
-           return null
+           return mutableListOf()
 
         return previousQuestions.mapNotNull { val question = HardScapeQuestion.fromId(it?.id)
                                               if (question !=null) HardScapeAnswer(question, it?.answer) else null
