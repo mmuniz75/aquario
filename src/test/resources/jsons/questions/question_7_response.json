@@ -1,0 +1,58 @@
+[
+  {
+    "hardScapeQuestion": {
+      "displayText": "Você sabe quantos kilos de substrato tem no seu aquário ?",
+      "isYesOrNoQuestion": true,
+      "id": "SUBSTRACT_KNOLEDGEMENT"
+    },
+    "answer": true
+  },
+  {
+    "hardScapeQuestion": {
+      "displayText": "Quantos kilos de substrato tem no seu aquário ?",
+      "isYesOrNoQuestion": false,
+      "id": "SUBSTRACT_WEIGHT"
+    },
+    "answer": 10
+  },
+  {
+    "hardScapeQuestion": {
+      "displayText": "Você possue rochas grandes no seu aquário ?",
+      "isYesOrNoQuestion": true,
+      "id": "ROCK_EXISTENCE"
+    },
+    "answer": true
+  },
+  {
+    "hardScapeQuestion": {
+      "displayText": "Você sabe quantos kilos de rochas tem no seu aquário ?",
+      "isYesOrNoQuestion": true,
+      "id": "ROCK_KNOLEDGEMENT"
+    },
+    "answer": true
+  },
+  {
+    "hardScapeQuestion": {
+      "displayText": "Quantos kilos de rochas você tem no seu aquário ?",
+      "isYesOrNoQuestion": false,
+      "id": "ROCK_WEIGHT"
+    },
+    "answer": 5
+  },
+  {
+    "hardScapeQuestion": {
+      "displayText": "Você possue troncos grandes no seu aquário ?",
+      "isYesOrNoQuestion": true,
+      "id": "WOOD_EXISTENCE"
+    },
+    "answer": true
+  },
+  {
+    "hardScapeQuestion": {
+      "displayText": "Você sabe quantos kilos de troncos tem no seu aquário ?",
+      "isYesOrNoQuestion": true,
+      "id": "WOOD_KNOLEDGEMENT"
+    },
+    "answer": null
+  }
+]

@@ -60,7 +60,7 @@ enum class HardScapeQuestion(val displayText : String,
         const val SUBSTRACT_BACK_HEIGHT_TEXT= "Quantos centimetros de substratos você tem na parte da trás do aquário ?"
         const val ROCK_EXISTENCE_TEXT = "Você possue rochas grandes no seu aquário ?"
         const val ROCK_KNOLEDGEMENT_TEXT = "Você sabe quantos kilos de rochas tem no seu aquário ?"
-        const val ROCK_WEIGHT_TEXT = "Quantas kilos de rochas você tem no seu aquário ?"
+        const val ROCK_WEIGHT_TEXT = "Quantos kilos de rochas você tem no seu aquário ?"
         const val ROCK_NUMBER_TEXT = "Quantas rochas você tem no seu aquário ?"
         const val WOOD_EXISTENCE_TEXT = "Você possue troncos grandes no seu aquário ?"
         const val WOOD_KNOLEDGEMENT_TEXT = "Você sabe quantos kilos de troncos tem no seu aquário ?"
