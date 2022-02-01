@@ -60,7 +60,7 @@ class AquariumResourceTest {
 
     @Test
     fun checkQuestion5() {
-        var request = HardScapeAnswerRequest("ROCK_WEIGHT", 5,
+        var request = HardScapeAnswerRequest("ROCK_KNOLEDGEMENT", true,
             mutableListOf(HardScapeAnswerDTO("SUBSTRACT_KNOLEDGEMENT", true),
                           HardScapeAnswerDTO("SUBSTRACT_WEIGHT", 10),
                           HardScapeAnswerDTO("ROCK_EXISTENCE", true)
@@ -76,7 +76,7 @@ class AquariumResourceTest {
             .expectStatus().isOk()
             .expectBody()
             .consumeWith {
-                assertTrue(testUtils.checkResponse(it,"questions/question_1_response.json")) }
+                assertTrue(testUtils.checkResponse(it,response)) }
     }
 
 }
