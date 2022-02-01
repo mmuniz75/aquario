@@ -7,6 +7,7 @@ import muniz.aquarium.fishselector.dto.HardScapeAnswerDTO
 import muniz.aquarium.fishselector.dto.HardScapeAnswerRequest
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Assertions.assertEquals
+import org.junit.jupiter.api.Assertions.assertTrue
 import org.junit.jupiter.api.Test
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.test.autoconfigure.web.reactive.AutoConfigureWebTestClient
@@ -48,6 +49,25 @@ class AquariumResourceTest {
         executePost(request, "questions/question_3_response.json")
     }
 
+    @Test
+    fun checkQuestion4() {
+        var request = HardScapeAnswerRequest("ROCK_EXISTENCE", true,
+                                                      mutableListOf(HardScapeAnswerDTO("SUBSTRACT_KNOLEDGEMENT", true),
+                                                                    HardScapeAnswerDTO("SUBSTRACT_WEIGHT", 10,
+                                                      )))
+        executePost(request, "questions/question_4_response.json")
+    }
+
+    @Test
+    fun checkQuestion5() {
+        var request = HardScapeAnswerRequest("ROCK_WEIGHT", 5,
+            mutableListOf(HardScapeAnswerDTO("SUBSTRACT_KNOLEDGEMENT", true),
+                          HardScapeAnswerDTO("SUBSTRACT_WEIGHT", 10),
+                          HardScapeAnswerDTO("ROCK_EXISTENCE", true)
+            ))
+        executePost(request, "questions/question_5_response.json")
+    }
+
     private fun executePost(request : HardScapeAnswerRequest, response : String) {
         webTestClient.post()
             .uri(URL)
@@ -56,7 +76,7 @@ class AquariumResourceTest {
             .expectStatus().isOk()
             .expectBody()
             .consumeWith {
-                testUtils.checkResponse(it,"questions/question_1_response.json") }
+                assertTrue(testUtils.checkResponse(it,"questions/question_1_response.json")) }
     }
 
 }

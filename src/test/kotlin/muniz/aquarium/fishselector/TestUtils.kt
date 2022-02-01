@@ -33,6 +33,9 @@ class TestUtils {
         }
         val responseJson = String(response.responseBodyContent!!)
             .replace(" ".toRegex(), "")
+
+        println("expceted json = $expectedJson")
+        println("reponse json = $responseJson")
         return expectedJson == responseJson
     }
 

@@ -1,0 +1,34 @@
+[
+  {
+    "hardScapeQuestion": {
+      "displayText": "Você sabe quantos kilos de substrato tem no seu aquário ?",
+      "isYesOrNoQuestion": true,
+      "id": "SUBSTRACT_KNOLEDGEMENT"
+    },
+    "answer": true
+  },
+  {
+    "hardScapeQuestion": {
+      "displayText": "Quantos kilos de substrato tem no seu aquário ?",
+      "isYesOrNoQuestion": false,
+      "id": "SUBSTRACT_WEIGHT"
+    },
+    "answer": 10
+  },
+  {
+    "hardScapeQuestion": {
+      "displayText": "Você possue rochas grandes no seu aquário ?",
+      "isYesOrNoQuestion": true,
+      "id": "ROCK_EXISTENCE"
+    },
+    "answer": true
+  },
+  {
+    "hardScapeQuestion": {
+      "displayText": "Você sabe quantos kilos de rochas tem no seu aquário ?",
+      "isYesOrNoQuestion": true,
+      "id": "ROCK_KNOLEDGEMENT"
+    },
+    "answer": null
+  }
+]
