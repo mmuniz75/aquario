@@ -3,6 +3,9 @@ package muniz.aquarium.fishselector.infra.resource
 
 import muniz.aquarium.fishselector.TestUtils
 import muniz.aquarium.fishselector.application.AquariumService
+import muniz.aquarium.fishselector.domain.Tank
+import muniz.aquarium.fishselector.dto.AquariumSpaceRequest
+import muniz.aquarium.fishselector.dto.FishRequest
 import muniz.aquarium.fishselector.dto.HardScapeAnswerDTO
 import muniz.aquarium.fishselector.dto.HardScapeAnswerRequest
 import org.junit.jupiter.api.Assertions
@@ -33,42 +36,35 @@ class AquariumResourceTest {
 
     @Test
     fun checkAquariumSpace() {
-        executePost("$URL/avaliableSpace","space_request.json","space.json");
+        val request = AquariumSpaceRequest(Tank(80,30,45),
+                                           mutableListOf(HardScapeAnswerDTO("SUBSTRACT_WEIGHT",10),
+                                                         HardScapeAnswerDTO("ROCK_WEIGHT",6),
+                                                         HardScapeAnswerDTO("WOOD_WEIGHT",1)))
+        executePost("avaliableSpace",request,"space.json");
     }
 
     @Test
     fun listNeonCompatibility() {
-        executePost("$URL/listFish","fishs/neon_request.json","fishs/neon_response.json");
-    }
-
-    private fun executePost(url : String, request : String, response: String) {
-        webTestClient.post()
-            .uri(url)
-            .header("Content-Type","application/json")
-            .bodyValue(testUtils.readJson(request))
-            .exchange()
-            .expectStatus().isOk()
-            .expectBody()
-            .consumeWith {
-                assertTrue(testUtils.checkResponse(it,response)) }
+        val request = FishRequest(80,30,50, listOf(1))
+        executePost("listFish",request,"fishs/neon_response.json");
     }
 
     @Test
     fun checkQuestion1() {
         var request = HardScapeAnswerRequest(null, null, null)
-        executePost(request, "questions/question_1_response.json")
+        executePost("hardscapeQuestion", request, "questions/question_1_response.json")
     }
 
     @Test
     fun checkQuestion2() {
         var request = HardScapeAnswerRequest("SUBSTRACT_KNOLEDGEMENT", true, null)
-        executePost(request, "questions/question_2_response.json")
+        executePost("hardscapeQuestion", request, "questions/question_2_response.json")
     }
 
     @Test
     fun checkQuestion3() {
         var request = HardScapeAnswerRequest("SUBSTRACT_WEIGHT", 10, mutableListOf(HardScapeAnswerDTO("SUBSTRACT_KNOLEDGEMENT", true)))
-        executePost(request, "questions/question_3_response.json")
+        executePost("hardscapeQuestion", request, "questions/question_3_response.json")
     }
 
     @Test
@@ -77,7 +73,7 @@ class AquariumResourceTest {
                                                       mutableListOf(HardScapeAnswerDTO("SUBSTRACT_KNOLEDGEMENT", true),
                                                                     HardScapeAnswerDTO("SUBSTRACT_WEIGHT", 10,
                                                       )))
-        executePost(request, "questions/question_4_response.json")
+        executePost("hardscapeQuestion",request, "questions/question_4_response.json")
     }
 
     @Test
@@ -87,7 +83,7 @@ class AquariumResourceTest {
                           HardScapeAnswerDTO("SUBSTRACT_WEIGHT", 10),
                           HardScapeAnswerDTO("ROCK_EXISTENCE", true)
             ))
-        executePost(request, "questions/question_5_response.json")
+        executePost("hardscapeQuestion",request, "questions/question_5_response.json")
     }
 
     @Test
@@ -98,7 +94,7 @@ class AquariumResourceTest {
                           HardScapeAnswerDTO("ROCK_EXISTENCE", true),
                           HardScapeAnswerDTO("ROCK_KNOLEDGEMENT", true)
             ))
-        executePost(request, "questions/question_6_response.json")
+        executePost("hardscapeQuestion",request, "questions/question_6_response.json")
     }
 
     @Test
@@ -110,7 +106,7 @@ class AquariumResourceTest {
                 HardScapeAnswerDTO("ROCK_KNOLEDGEMENT", true),
                 HardScapeAnswerDTO("ROCK_WEIGHT", 5)
             ))
-        executePost(request, "questions/question_7_response.json")
+        executePost("hardscapeQuestion",request, "questions/question_7_response.json")
     }
 
     @Test
@@ -123,7 +119,7 @@ class AquariumResourceTest {
                 HardScapeAnswerDTO("ROCK_WEIGHT", 5),
                 HardScapeAnswerDTO("WOOD_EXISTENCE", true)
             ))
-        executePost(request, "questions/question_8_response.json")
+        executePost("hardscapeQuestion",request, "questions/question_8_response.json")
     }
 
     @Test
@@ -137,13 +133,13 @@ class AquariumResourceTest {
                 HardScapeAnswerDTO("WOOD_EXISTENCE", true),
                 HardScapeAnswerDTO("WOOD_KNOLEDGEMENT", true)
             ))
-        executePost(request, "questions/question_9_response.json")
+        executePost("hardscapeQuestion", request, "questions/question_9_response.json")
     }
 
-    private fun executePost(request : HardScapeAnswerRequest, response : String) {
+    private fun executePost(endPoint : String, request : Any, response : String) {
         webTestClient.post()
-            .uri("$URL/hardscapeQuestion")
-            .body(Mono.just(request), HardScapeAnswerRequest::class.java)
+            .uri("$URL/$endPoint")
+            .body(Mono.just(request), request::class.java)
             .exchange()
             .expectStatus().isOk()
             .expectBody()
