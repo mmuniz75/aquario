@@ -202,7 +202,7 @@ class AquariumTest {
     }
 
     private fun createAquarium() : Aquarium{
-        val tank = Tank(width = 80, length = 30, heigth = 45)
+        val tank = Tank(width = 80, length = 30, height = 45)
         val hardScape = HardScape(substractWeight = 10, rocksHeight = 6, woodWeight = 1)
         return Aquarium(tank,hardScape)
     }

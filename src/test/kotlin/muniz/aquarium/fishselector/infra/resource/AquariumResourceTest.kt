@@ -29,7 +29,21 @@ class AquariumResourceTest {
     @Autowired
     private lateinit var testUtils: TestUtils
 
-    private val URL = "/aquarium/hardscapeQuestion"
+    private val URL = "/aquarium"
+
+    @Test
+    fun checkAquariumSpace() {
+        webTestClient.post()
+            .uri("$URL/avaliableSpace")
+            .header("Content-Type","application/json")
+            .bodyValue(testUtils.readJson("space_request.json"))
+            .exchange()
+            .expectStatus().isOk()
+            .expectBody()
+            .consumeWith {
+                assertEquals("{\"centimeterAvaliable\":81}",String(it.responseBodyContent!!)) }
+    }
+
 
     @Test
     fun checkQuestion1() {
@@ -120,7 +134,7 @@ class AquariumResourceTest {
 
     private fun executePost(request : HardScapeAnswerRequest, response : String) {
         webTestClient.post()
-            .uri(URL)
+            .uri("$URL/hardscapeQuestion")
             .body(Mono.just(request), HardScapeAnswerRequest::class.java)
             .exchange()
             .expectStatus().isOk()

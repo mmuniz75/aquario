@@ -5,9 +5,9 @@ import java.math.RoundingMode
 
 class Tank(val width: Int,
            val length: Int,
-           val heigth: Int) {
+           val height: Int) {
 
-    val liter : Int = width * length * heigth / 1000
+    val liter : Int = width * length * height / 1000
 
     val glassThickness : GlassThickness = GlassThickness.thickness(liter)
 
@@ -19,7 +19,7 @@ class Tank(val width: Int,
         val doubleThickness = glassThickness.cm.multiply(BigDecimal(2))
         val realWidth = BigDecimal(width).subtract(doubleThickness)
         val realLength = BigDecimal(length).subtract(doubleThickness)
-        val realHeight = BigDecimal(heigth).subtract(glassThickness.cm)
+        val realHeight = BigDecimal(height).subtract(glassThickness.cm)
                           .subtract(WATER_SURFACE_SPACE)
 
         return  realWidth.multiply(realLength).multiply(realHeight).divide(BigDecimal(1000)).toInt()
