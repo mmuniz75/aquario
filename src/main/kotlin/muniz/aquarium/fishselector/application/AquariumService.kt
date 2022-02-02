@@ -1,14 +1,21 @@
 package muniz.aquarium.fishselector.application
 
 import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.map
 import muniz.aquarium.fishselector.domain.*
+import muniz.aquarium.fishselector.dto.FishDTO
+import muniz.aquarium.fishselector.dto.FishRequest
 import muniz.aquarium.fishselector.infra.repository.FishAggregateRepository
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Service
 import java.lang.IllegalStateException
+import javax.crypto.KeyAgreement
 
 @Service
 class AquariumService {
+
+    @Autowired
+    private lateinit var repositoryAggregate: FishAggregateRepository
 
     @Autowired
     private lateinit var repository : FishAggregateRepository
@@ -48,5 +55,9 @@ class AquariumService {
         return aquarium.fishCentimeterAvaliable();
     }
 
+    suspend fun listFish(request : FishRequest) : Flow<FishDTO>{
+        return repository.findByCompatibleFish(request.tankWidth, request.tankWidth,request.currentFishIds,request.centimetersAvailable)
+               .map { FishDTO.fromDomain(it) }
+    }
 
 }

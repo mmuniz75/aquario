@@ -33,17 +33,25 @@ class AquariumResourceTest {
 
     @Test
     fun checkAquariumSpace() {
+        executePost("$URL/avaliableSpace","space_request.json","space.json");
+    }
+
+    @Test
+    fun listNeonCompatibility() {
+        executePost("$URL/listFish","fishs/neon_request.json","fishs/neon_response.json");
+    }
+
+    private fun executePost(url : String, request : String, response: String) {
         webTestClient.post()
-            .uri("$URL/avaliableSpace")
+            .uri(url)
             .header("Content-Type","application/json")
-            .bodyValue(testUtils.readJson("space_request.json"))
+            .bodyValue(testUtils.readJson(request))
             .exchange()
             .expectStatus().isOk()
             .expectBody()
             .consumeWith {
-                assertEquals("{\"centimeterAvaliable\":81}",String(it.responseBodyContent!!)) }
+                assertTrue(testUtils.checkResponse(it,response)) }
     }
-
 
     @Test
     fun checkQuestion1() {
