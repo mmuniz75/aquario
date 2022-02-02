@@ -1,14 +1,17 @@
 [
   {
     "name" : "Neon",
+    "minNumber" : 10,
     "imageUrl" : "http://www.aquarismopaulista.com/wp-content/uploads/2014/11/Trichogaster-lalius.jpg"
   },
   {
     "name" : "Mato grosso",
+    "minNumber" : 6,
     "imageUrl" : "http://www.aquarismopaulista.com/wp-content/uploads/2014/11/Trichogaster-lalius.jpg"
   },
   {
     "name" : "Tetra Negro",
+    "minNumber" : 6,
     "imageUrl" : "http://www.aquarismopaulista.com/wp-content/uploads/2014/11/Trichogaster-lalius.jpg"
   }
 ]

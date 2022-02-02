@@ -1,26 +1,32 @@
 [
   {
     "name" : "Neon",
+    "minNumber" : 10,
     "imageUrl" : "http://www.aquarismopaulista.com/wp-content/uploads/2014/11/Trichogaster-lalius.jpg"
   },
   {
     "name" : "Mato grosso",
+    "minNumber" : 6,
     "imageUrl" : "http://www.aquarismopaulista.com/wp-content/uploads/2014/11/Trichogaster-lalius.jpg"
   },
   {
     "name" : "Tetra Negro",
+    "minNumber" : 6,
     "imageUrl" : "http://www.aquarismopaulista.com/wp-content/uploads/2014/11/Trichogaster-lalius.jpg"
   },
   {
     "name" : "Barbus Ouro",
+    "minNumber" : 6,
     "imageUrl" : "http://www.aquarismopaulista.com/wp-content/uploads/2014/11/Trichogaster-lalius.jpg"
   },
   {
     "name" : "Ramirezi",
+    "minNumber" : 1,
     "imageUrl" : "http://www.aquarismopaulista.com/wp-content/uploads/2014/11/Trichogaster-lalius.jpg"
   },
   {
-    "name" : "Coliza",
+    "name" : "Colisa",
+    "minNumber" : 1,
     "imageUrl" : "http://www.aquarismopaulista.com/wp-content/uploads/2014/11/Trichogaster-lalius.jpg"
   }
 ]
