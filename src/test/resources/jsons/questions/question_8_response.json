@@ -37,6 +37,30 @@
       "isYesOrNoQuestion": false,
       "id": "ROCK_WEIGHT"
     },
+    "answer": 5
+  },
+  {
+    "hardScapeQuestion": {
+      "displayText": "Você possue troncos grandes no seu aquário ?",
+      "isYesOrNoQuestion": true,
+      "id": "WOOD_EXISTENCE"
+    },
+    "answer": true
+  },
+  {
+    "hardScapeQuestion": {
+      "displayText": "Você sabe quantos kilos de troncos tem no seu aquário ?",
+      "isYesOrNoQuestion": true,
+      "id": "WOOD_KNOLEDGEMENT"
+    },
+    "answer": true
+  },
+  {
+    "hardScapeQuestion": {
+      "displayText": "Quantos kilos de troncos tem no seu aquário ?",
+      "isYesOrNoQuestion": false,
+      "id": "WOOD_WEIGHT"
+    },
     "answer": null
   }
 ]

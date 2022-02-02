@@ -35,7 +35,7 @@ class TestUtils {
             .replace(" ".toRegex(), "")
 
         println("expceted json = $expectedJson")
-        println("reponse json = $responseJson")
+        println("reponse json  = $responseJson")
         return expectedJson == responseJson
     }
 
