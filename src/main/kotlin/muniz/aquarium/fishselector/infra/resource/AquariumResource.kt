@@ -39,6 +39,6 @@ class AquariumResource {
         return previousQuestions.mapNotNull { val question = HardScapeQuestion.fromId(it?.questionId)
                                               if (question !=null) HardScapeAnswer(question, it?.answer) else null
                                             }
-            ?.toMutableList()
+
     }
 }

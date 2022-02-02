@@ -22,13 +22,13 @@ class AquariumServiceTest {
 
     fun createHardScepe(yesForAll : Boolean): List<HardScapeAnswer> {
         val service = AquariumService()
-        var questions = service.addNextQuestion(null, mutableListOf())
+        var questions = service.addNextQuestion(null, listOf())
 
         while(questions[questions.lastIndex] !=null){
             val lastQuestion = questions[questions.lastIndex]
             println(lastQuestion?.hardScapeQuestion?.displayText)
             val answer = if (lastQuestion?.hardScapeQuestion?.isYesOrNoQuestion!!) yesForAll else 10
-            questions = service.addNextQuestion(HardScapeAnswer(lastQuestion.hardScapeQuestion,answer), questions)
+            questions = service.addNextQuestion(HardScapeAnswer(lastQuestion.hardScapeQuestion,answer), questions.filterNotNull())
         }
 
         val answers : List<HardScapeAnswer?> =  questions.toList()
