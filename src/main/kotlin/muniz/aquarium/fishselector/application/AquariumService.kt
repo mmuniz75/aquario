@@ -1,9 +1,7 @@
 package muniz.aquarium.fishselector.application
 
 import kotlinx.coroutines.flow.Flow
-import muniz.aquarium.fishselector.domain.Fish
-import muniz.aquarium.fishselector.domain.HardScapeAnswer
-import muniz.aquarium.fishselector.domain.HardScapeQuestion
+import muniz.aquarium.fishselector.domain.*
 import muniz.aquarium.fishselector.infra.repository.FishAggregateRepository
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Service
@@ -15,14 +13,17 @@ class AquariumService {
     @Autowired
     private lateinit var repository : FishAggregateRepository
 
-    fun addNextQuestion(answer : HardScapeAnswer?,previousQuestions :  MutableList<HardScapeAnswer?>) : MutableList<HardScapeAnswer?>{
+    fun addNextQuestion(answer : HardScapeAnswer?,previousQuestions :  List<HardScapeAnswer>) : List<HardScapeAnswer?>{
         if(answer == null)
             return returnFirstQuestion()
 
         if(answer == null)
             throw IllegalStateException("Resposta não pode ser vazia")
 
-        previousQuestions.add(answer)
+        val newPreviousList = mutableListOf<HardScapeAnswer?>()
+        newPreviousList.addAll(previousQuestions)
+
+        newPreviousList.add(answer)
 
         val nextQuestion =  if(answer.answer is Boolean)
                                  answer.hardScapeQuestion.getNext(answer.answer)
@@ -30,15 +31,21 @@ class AquariumService {
                                 answer.hardScapeQuestion.getNext()
 
         if(nextQuestion!=null)
-            previousQuestions.add(HardScapeAnswer(nextQuestion,null))
+            newPreviousList.add(HardScapeAnswer(nextQuestion,null))
         else
-            previousQuestions.add(null)
+            newPreviousList.add(null)
 
-        return previousQuestions
+        return newPreviousList
     }
 
     fun returnFirstQuestion() : MutableList<HardScapeAnswer?>{
         return mutableListOf(HardScapeAnswer(HardScapeQuestion.getFirstQuestion(), null))
+    }
+
+    fun calculateAquariumAvaliableSpace(tank : Tank, answers : List<HardScapeAnswer>) : Int{
+        val hardScape = HardScape(answers, tank.width, tank.length)
+        val aquarium =  Aquarium(tank, hardScape)
+        return aquarium.fishCentimeterAvaliable();
     }
 
 

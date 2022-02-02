@@ -1,5 +1,6 @@
 package muniz.aquarium.fishselector.domain
 
+import com.google.common.collect.ImmutableList
 import java.lang.IllegalStateException
 import java.math.BigDecimal
 
