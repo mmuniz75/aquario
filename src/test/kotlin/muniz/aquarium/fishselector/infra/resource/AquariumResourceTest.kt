@@ -50,6 +50,30 @@ class AquariumResourceTest {
     }
 
     @Test
+    fun listNeonMatoGrossoTetraCompatibility() {
+        val request = FishRequest(80,30,50, listOf(1,2,3))
+        executePost("listFish",request,"fishs/neon_response.json");
+    }
+
+    @Test
+    fun listMatoGrossoTetraCompatibility() {
+        val request = FishRequest(80,30,50, listOf(2,3))
+        executePost("listFish",request,"fishs/mato_tetra_response.json");
+    }
+
+    @Test
+    fun listTricogasterCompatibility() {
+        val request = FishRequest(80,30,50, listOf(7))
+        executePost("listFish",request,"fishs/tricogaster_response.json");
+    }
+
+    @Test
+    fun listCompatibility() {
+        val request = FishRequest(80,30,50, listOf(2,3,4,5,6))
+        executePost("listFish",request,"fishs/response.json");
+    }
+
+    @Test
     fun checkQuestion1() {
         var request = HardScapeAnswerRequest(null, null, null)
         executePost("hardscapeQuestion", request, "questions/question_1_response.json")
