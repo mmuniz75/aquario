@@ -2,9 +2,22 @@ package muniz.aquarium.fishselector.domain
 
 import java.lang.IllegalStateException
 
-class Aquarium (val tank:Tank, val hardScape: HardScape) {
+class Aquarium {
 
-    private val fishes  = mutableListOf<Shoal>()
+    var fishCentimeterAvaliable: Int = 0
+    var fishes: MutableList<Shoal> = mutableListOf()
+    val tank:Tank? = null
+    val hardScape: HardScape? = null
+
+    constructor(tank:Tank, hardScape: HardScape) {
+        this.fishes = mutableListOf()
+        this.fishCentimeterAvaliable =  tank.realLiter - hardScape.height()
+    }
+
+    constructor(fishCentimeterAvaliable : Int,fishes : MutableList<Fish> ) {
+        this.fishes = fishes.map { Shoal(it, it.minNumber) }.toMutableList()
+        this.fishCentimeterAvaliable = fishCentimeterAvaliable
+    }
 
     fun addFish(fish : Fish, count : Int){
         if(count < fish.minNumber)
@@ -12,14 +25,11 @@ class Aquarium (val tank:Tank, val hardScape: HardScape) {
 
         val shoal = Shoal(fish, count)
 
-        if(shoal.totalCentimeter > fishCentimeterAvaliable())
+        if(shoal.totalCentimeter > fishCentimeterAvaliable)
             throw IllegalStateException("Não é possivel adicionar esses peixes pois o aquario não suporta essa quandidade")
 
         fishes.add(shoal)
-    }
-
-    fun fishCentimeterAvaliable(): Int {
-        return tank.realLiter - hardScape.height() - totalFishesSize()
+        fishCentimeterAvaliable -= shoal.totalCentimeter
     }
 
     fun getTemperatureRange() : String {

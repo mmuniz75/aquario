@@ -23,4 +23,6 @@ interface FishRepository : CoroutineCrudRepository<Fish, Int>  {
                                  )
                     """)
     suspend fun findByCompatibleFish(widthTank : Int, lengthTank: Int, fishIds : List<Int>, fishCount : Int, aquariumRemainsSpace : Int) : Flow<Fish>
+
+    suspend fun findByIdIn(ids: List<Int>) : Flow<Fish>
 }

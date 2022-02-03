@@ -1,11 +1,13 @@
 package muniz.aquarium.fishselector.application
 
-import kotlinx.coroutines.flow.Flow
-import kotlinx.coroutines.flow.map
+import kotlinx.coroutines.flow.*
 import muniz.aquarium.fishselector.domain.*
+import muniz.aquarium.fishselector.dto.AddFishRequest
+import muniz.aquarium.fishselector.dto.AquariumDTO
 import muniz.aquarium.fishselector.dto.FishDTO
 import muniz.aquarium.fishselector.dto.FishRequest
 import muniz.aquarium.fishselector.infra.repository.FishAggregateRepository
+import muniz.aquarium.fishselector.infra.repository.FishRepository
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Service
 import java.lang.IllegalStateException
@@ -18,7 +20,7 @@ class AquariumService {
     private lateinit var repositoryAggregate: FishAggregateRepository
 
     @Autowired
-    private lateinit var repository : FishAggregateRepository
+    private lateinit var repository : FishRepository
 
     fun addNextQuestion(answer : HardScapeAnswer?,previousQuestions :  List<HardScapeAnswer>) : List<HardScapeAnswer?>{
         if(answer == null)
@@ -49,15 +51,31 @@ class AquariumService {
         return mutableListOf(HardScapeAnswer(HardScapeQuestion.getFirstQuestion(), null))
     }
 
-    fun calculateAquariumAvaliableSpace(tank : Tank, answers : List<HardScapeAnswer>) : Int{
+    fun calculateAquariumAvailableSpace(tank : Tank, answers : List<HardScapeAnswer>) : Int{
         val hardScape = HardScape(answers, tank.width, tank.length)
         val aquarium =  Aquarium(tank, hardScape)
-        return aquarium.fishCentimeterAvaliable();
+        return aquarium.fishCentimeterAvaliable;
     }
 
     suspend fun listFish(request : FishRequest) : Flow<FishDTO>{
-        return repository.findByCompatibleFish(request.tankWidth, request.tankWidth,request.currentFishIds,request.centimetersAvailable)
+        return repository.findByCompatibleFish(request.tankWidth, request.tankWidth,request.currentFishIds,request.currentFishIds.size,request.centimetersAvailable)
                .map { FishDTO.fromDomain(it) }
+    }
+
+    suspend fun addFish(request: AddFishRequest): AquariumDTO {
+
+        val fishs = repositoryAggregate.findByIdIn(request.currentFishIds)
+
+        val aquarium = Aquarium(request.centimetersAvailable, fishs.toList().toMutableList())
+
+        val fish = repository.findById(request.fishId)?:throw IllegalStateException("Peixe não encontrado")
+
+        aquarium.addFish(fish, request.fishCount)
+
+        return AquariumDTO(aquarium.getTemperatureRange(),
+                           aquarium.getPHRange(),
+                           aquarium.getDHRange(),
+                           aquarium.fishCentimeterAvaliable)
     }
 
 }

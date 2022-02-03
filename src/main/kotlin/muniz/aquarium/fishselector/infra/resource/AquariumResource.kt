@@ -2,10 +2,8 @@ package muniz.aquarium.fishselector.infra.resource
 
 import kotlinx.coroutines.flow.Flow
 import muniz.aquarium.fishselector.application.AquariumService
-import muniz.aquarium.fishselector.domain.Aquarium
 import muniz.aquarium.fishselector.domain.HardScapeAnswer
 import muniz.aquarium.fishselector.domain.HardScapeQuestion
-import muniz.aquarium.fishselector.domain.Tank
 import muniz.aquarium.fishselector.dto.*
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.web.bind.annotation.*
@@ -27,12 +25,17 @@ class AquariumResource {
 
     @PostMapping("/avaliableSpace")
     fun getAvaliableSpace(@RequestBody request : AquariumSpaceRequest): AquariumSpaceResponse {
-        return AquariumSpaceResponse(service.calculateAquariumAvaliableSpace(request.tank,convertPreviousQuestions(request.answers)))
+        return AquariumSpaceResponse(service.calculateAquariumAvailableSpace(request.tank,convertPreviousQuestions(request.answers)))
     }
 
     @PostMapping("/fish")
     suspend fun listFishs(@RequestBody request : FishRequest): Flow<FishDTO> {
         return service.listFish(request)
+    }
+
+    @PutMapping("/fish")
+    suspend fun addFish(@RequestBody request : AddFishRequest): AquariumDTO {
+        return service.addFish(request)
     }
 
     private fun convertPreviousQuestions(previousQuestions : List<HardScapeAnswerDTO?>?) : List<HardScapeAnswer>{

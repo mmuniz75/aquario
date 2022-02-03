@@ -29,6 +29,10 @@ class FishAggregateRepository {
         return addPHDH(repository.findByCompatibleFish(widthTank, lengthTank,fishIds, fishIds.size, aquariumRemainsSpace))
     }
 
+    suspend fun findByIdIn(ids: List<Int>) : Flow<Fish> {
+        return addPHDH(repository.findByIdIn(ids))
+    }
+
     private suspend fun addPHDH(fishes : Flow<Fish>): Flow<Fish> {
         return fishes
                 .onEach { it.ph =  phRepository.findPHByFishId(it.id).toList()}
