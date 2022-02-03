@@ -5,9 +5,10 @@ import org.springframework.data.annotation.Transient
 import org.springframework.data.relational.core.mapping.Column
 import java.math.BigDecimal
 
-class Fish (val id : Int,
+data class Fish (val id : Int,
             val name: String,
             val size:Int,
+            @Column("imageurl") val imageUrl : String = "",
             @Transient var ph : List<PH> = mutableListOf(),
             @Transient var dh: List<DH> = mutableListOf(),
             @Column("maxtemperature") val maxTemperature:Int,
@@ -22,12 +23,13 @@ class Fish (val id : Int,
     constructor(id : Int,
                 name: String,
                 size:Int,
+                imageUrl : String,
                 maxTemperature:Int,
                 minTemperature:Int,
                 minNumber:Int,
                 widthTank:Int,
                 lengthTank:Int
-    ): this(id,name,size,mutableListOf(),mutableListOf(),maxTemperature,minTemperature,minNumber,widthTank,lengthTank,mutableListOf())
+    ): this(id,name,size,imageUrl, mutableListOf(),mutableListOf(),maxTemperature,minTemperature,minNumber,widthTank,lengthTank,mutableListOf())
 
     fun getPHRangeDisplay(): String {
         val min = getMinPH().toString()

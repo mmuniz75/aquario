@@ -46,31 +46,31 @@ class AquariumResourceTest {
     @Test
     fun listNeonCompatibility() {
         val request = FishRequest(80,30,50, listOf(1))
-        executePost("listFish",request,"fishs/neon_response.json");
+        executePost("fish",request,"fishs/neon_response.json");
     }
 
     @Test
     fun listNeonMatoGrossoTetraCompatibility() {
         val request = FishRequest(80,30,50, listOf(1,2,3))
-        executePost("listFish",request,"fishs/neon_response.json");
+        executePost("fish",request,"fishs/neon_response.json");
     }
 
     @Test
     fun listMatoGrossoTetraCompatibility() {
         val request = FishRequest(80,30,50, listOf(2,3))
-        executePost("listFish",request,"fishs/mato_tetra_response.json");
+        executePost("fish",request,"fishs/mato_tetra_response.json");
     }
 
     @Test
     fun listTricogasterCompatibility() {
         val request = FishRequest(80,30,50, listOf(7))
-        executePost("listFish",request,"fishs/tricogaster_response.json");
+        executePost("fish",request,"fishs/tricogaster_response.json");
     }
 
     @Test
     fun listCompatibility() {
         val request = FishRequest(80,30,50, listOf(2,3,4,5,6))
-        executePost("listFish",request,"fishs/response.json");
+        executePost("fish",request,"fishs/response.json");
     }
 
     @Test

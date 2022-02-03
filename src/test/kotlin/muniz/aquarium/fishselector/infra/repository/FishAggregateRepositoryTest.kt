@@ -48,7 +48,7 @@ class FishAggregateRepositoryTest {
      3 - Tetra Negro
      4 - Barbus Ouro
      5 - Ramirezi
-     6 - Coliza
+     6 - Colisa
      7 - Tricogaster
     */
     @Test
@@ -73,7 +73,7 @@ class FishAggregateRepositoryTest {
             assertEquals("Tetra Negro",fishes[2].name)
             assertEquals("Barbus Ouro",fishes[3].name)
             assertEquals("Ramirezi",fishes[4].name)
-            assertEquals("Coliza",fishes[5].name)
+            assertEquals("Colisa",fishes[5].name)
         }
     }
 
@@ -96,7 +96,7 @@ class FishAggregateRepositoryTest {
             assertEquals(4 , fishes.size)
             assertEquals("Barbus Ouro",fishes[0].name)
             assertEquals("Ramirezi",fishes[1].name)
-            assertEquals("Coliza",fishes[2].name)
+            assertEquals("Colisa",fishes[2].name)
             assertEquals("Tricogaster",fishes[3].name)
         }
     }
@@ -110,7 +110,7 @@ class FishAggregateRepositoryTest {
             assertEquals("Tetra Negro",fishes[1].name)
             assertEquals("Barbus Ouro",fishes[2].name)
             assertEquals("Ramirezi",fishes[3].name)
-            assertEquals("Coliza",fishes[4].name)
+            assertEquals("Colisa",fishes[4].name)
         }
     }
 

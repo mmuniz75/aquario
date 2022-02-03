@@ -20,7 +20,8 @@ create Table IF NOT EXISTS fish (
    mintemperature int,
    minNumber int,
    widthTank int,
-   lengthTank int
+   lengthTank int,
+   imageurl VARCHAR(255)
 )
 ;
 

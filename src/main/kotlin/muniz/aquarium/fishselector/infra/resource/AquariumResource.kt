@@ -30,7 +30,7 @@ class AquariumResource {
         return AquariumSpaceResponse(service.calculateAquariumAvaliableSpace(request.tank,convertPreviousQuestions(request.answers)))
     }
 
-    @PostMapping("/listFish")
+    @PostMapping("/fish")
     suspend fun listFishs(@RequestBody request : FishRequest): Flow<FishDTO> {
         return service.listFish(request)
     }

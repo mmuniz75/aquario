@@ -31,7 +31,10 @@ class AquariumServiceTest {
             questions = service.addNextQuestion(HardScapeAnswer(lastQuestion.hardScapeQuestion,answer), questions.filterNotNull())
         }
 
-        val answers : List<HardScapeAnswer?> =  questions.toList()
-        return answers.filterNotNull()
+        val answers =  questions
+            .filterNotNull()
+            .filter { !it.hardScapeQuestion.isYesOrNoQuestion &&  it.answer !=null }
+
+        return answers
      }
 }
