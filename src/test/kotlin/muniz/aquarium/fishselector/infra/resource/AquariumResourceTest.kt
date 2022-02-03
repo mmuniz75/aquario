@@ -1,13 +1,11 @@
 package muniz.aquarium.fishselector.infra.resource
 
 
+import com.fasterxml.jackson.databind.ObjectMapper
 import muniz.aquarium.fishselector.TestUtils
 import muniz.aquarium.fishselector.application.AquariumService
 import muniz.aquarium.fishselector.domain.Tank
-import muniz.aquarium.fishselector.dto.AquariumSpaceRequest
-import muniz.aquarium.fishselector.dto.FishRequest
-import muniz.aquarium.fishselector.dto.HardScapeAnswerDTO
-import muniz.aquarium.fishselector.dto.HardScapeAnswerRequest
+import muniz.aquarium.fishselector.dto.*
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Assertions.assertTrue
@@ -31,6 +29,9 @@ class AquariumResourceTest {
 
     @Autowired
     private lateinit var testUtils: TestUtils
+
+    @Autowired
+    private lateinit var objectMapper : ObjectMapper
 
     private val URL = "/aquarium"
 
@@ -160,6 +161,14 @@ class AquariumResourceTest {
         executePost("hardscapeQuestion", request, "questions/question_9_response.json")
     }
 
+    @Test
+    fun checkFishCentimerOneShoal(){
+        executePut("fish",
+                    AddFishRequest(1,10,81, listOf(1)),
+                    AquariumDTO("24Cº - 30Cº","6.2 - 6.8","0-8",51)
+        )
+    }
+
     private fun executePost(endPoint : String, request : Any, response : String) {
         webTestClient.post()
             .uri("$URL/$endPoint")
@@ -169,6 +178,18 @@ class AquariumResourceTest {
             .expectBody()
             .consumeWith {
                 assertTrue(testUtils.checkResponse(it,response)) }
+    }
+
+    private fun executePut(endPoint : String, request : AddFishRequest, dto : AquariumDTO) {
+        webTestClient.put()
+            .uri("$URL/$endPoint")
+            .body(Mono.just(request), request::class.java)
+            .exchange()
+            .expectStatus().isOk()
+            .expectBody()
+            .consumeWith {
+                assertTrue(testUtils.checkResponse(it,objectMapper.writeValueAsString(dto))) }
+
     }
 
 }
