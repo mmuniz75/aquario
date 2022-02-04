@@ -165,7 +165,7 @@ class AquariumResourceTest {
     fun checkFishCentimerOneShoal(){
         executePut("fish",
                     AddFishRequest(1,10,81, listOf(1)),
-                    AquariumDTO("24Cº - 30Cº","6.2 - 6.8","0-8",51)
+                    AquariumDTO("26Cº - 28Cº","6.2 - 6.8","0-8",51)
         )
     }
 
@@ -177,7 +177,7 @@ class AquariumResourceTest {
             .expectStatus().isOk()
             .expectBody()
             .consumeWith {
-                assertTrue(testUtils.checkResponse(it,response)) }
+                assertTrue(testUtils.checkResponseWithResource(it,response)) }
     }
 
     private fun executePut(endPoint : String, request : AddFishRequest, dto : AquariumDTO) {
@@ -188,7 +188,7 @@ class AquariumResourceTest {
             .expectStatus().isOk()
             .expectBody()
             .consumeWith {
-                assertTrue(testUtils.checkResponse(it,objectMapper.writeValueAsString(dto))) }
+                assertTrue(testUtils.checkResponseWithJson(it,objectMapper.writeValueAsString(dto))) }
 
     }
 

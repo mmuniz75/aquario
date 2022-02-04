@@ -27,6 +27,15 @@ class FishRepositoryTest {
     }
 
     @Test
+    fun findFishByID(){
+        runBlocking {
+            val fishes = repository.findByIdIn(listOf(2,3,4,7))
+            fishes.collect {assertTrue(listOf("Mato grosso","Tetra Negro","Barbus Ouro","Tricogaster").contains(it.name))}
+        }
+
+    }
+
+    @Test
     fun listFishByTank(){
         runBlocking {
             val fishes = repository.findByWidthTankLessThanEqualAndLengthTankLessThanEqual(60,30).toList()

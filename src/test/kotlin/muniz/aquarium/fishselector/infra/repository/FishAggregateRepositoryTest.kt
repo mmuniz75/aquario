@@ -7,6 +7,7 @@ import kotlinx.coroutines.flow.toList
 import kotlinx.coroutines.runBlocking
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Assertions.assertEquals
+import org.junit.jupiter.api.Assertions.assertTrue
 import org.junit.jupiter.api.Test
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.test.context.SpringBootTest
@@ -27,7 +28,18 @@ class FishAggregateRepositoryTest {
             assertEquals("6.2 - 6.8",fish.getPHRangeDisplay())
             assertEquals("0-8",fish.getDHRangeDisplay())
         }
+    }
 
+    @Test
+    fun findFishByID(){
+        runBlocking {
+            val fishes = repository.findByIdIn(listOf(2,3,7))
+            fishes.collect {
+                assertTrue(listOf("Mato grosso","Tetra Negro", "Tricogaster").contains(it.name))
+                assertEquals("6.2 - 6.8",  it.getPHRangeDisplay())
+                assertEquals("9-12",  it.getDHRangeDisplay())
+            }
+        }
     }
 
     @Test

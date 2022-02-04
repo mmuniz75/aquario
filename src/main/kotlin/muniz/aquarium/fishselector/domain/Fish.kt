@@ -1,22 +1,23 @@
 package muniz.aquarium.fishselector.domain
 
+import org.springframework.data.annotation.Id
 import org.springframework.data.annotation.PersistenceConstructor
 import org.springframework.data.annotation.Transient
 import org.springframework.data.relational.core.mapping.Column
 import java.math.BigDecimal
 
-data class Fish (val id : Int,
-            val name: String,
-            val size:Int,
-            @Column("imageurl") val imageUrl : String = "",
-            @Transient var ph : List<PH> = mutableListOf(),
-            @Transient var dh: List<DH> = mutableListOf(),
-            @Column("maxtemperature") val maxTemperature:Int,
-            @Column("mintemperature") val minTemperature:Int,
-            @Column("minnumber") val minNumber:Int,
-            @Column("widthtank") val widthTank:Int,
-            @Column("lengthtank") val lengthTank:Int,
-            @Transient var compatibility : List<Fish> = mutableListOf()
+data class Fish (@Id val id : Int,
+                 val name: String,
+                 val size:Int,
+                 @Column("imageurl") val imageUrl : String = "",
+                 @Transient var ph : List<PH> = mutableListOf(),
+                 @Transient var dh: List<DH> = mutableListOf(),
+                 @Column("maxtemperature") val maxTemperature:Int,
+                 @Column("mintemperature") val minTemperature:Int,
+                 @Column("minnumber") val minNumber:Int,
+                 @Column("widthtank") val widthTank:Int,
+                 @Column("lengthtank") val lengthTank:Int,
+                 @Transient var compatibility : List<Fish> = mutableListOf()
            ) {
 
     @PersistenceConstructor

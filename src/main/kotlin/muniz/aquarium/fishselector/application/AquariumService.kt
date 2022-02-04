@@ -64,11 +64,11 @@ class AquariumService {
 
     suspend fun addFish(request: AddFishRequest): AquariumDTO {
 
-        val fishs = repositoryAggregate.findByIdIn(request.currentFishIds)
+        val fishs = repositoryAggregate.findByIdIn(request.currentFishIds).toList()
 
-        val aquarium = Aquarium(request.centimetersAvailable, fishs.toList().toMutableList())
+        val aquarium = Aquarium(request.centimetersAvailable, fishs.toMutableList())
 
-        val fish = repository.findById(request.fishId)?:throw IllegalStateException("Peixe não encontrado")
+        val fish = repositoryAggregate.findById(request.fishId)?:throw IllegalStateException("Peixe não encontrado")
 
         aquarium.addFish(fish, request.fishCount)
 
@@ -76,6 +76,8 @@ class AquariumService {
                            aquarium.getPHRange(),
                            aquarium.getDHRange(),
                            aquarium.fishCentimeterAvaliable)
+
+
     }
 
 }

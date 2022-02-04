@@ -39,7 +39,7 @@ class Aquarium {
         val minTemperature = fishes.map { it.fish.minTemperature }.maxOrNull()
         val maxTemperature = fishes.map { it.fish.maxTemperature }.minOrNull()
 
-        return "$minTemperature Cº - $maxTemperature Cº"
+        return "${minTemperature}Cº - ${maxTemperature}Cº"
     }
 
     fun getPHRange() : String {
@@ -59,7 +59,7 @@ class Aquarium {
         val minDH = fishes.map { it.fish.getMinDH() }.maxOrNull()
         val maxDH = fishes.map { it.fish.getMaxDH() }.minOrNull()
 
-        return "$minDH - $maxDH"
+        return "${minDH}-$maxDH"
     }
 
     private fun totalFishesSize() : Int {

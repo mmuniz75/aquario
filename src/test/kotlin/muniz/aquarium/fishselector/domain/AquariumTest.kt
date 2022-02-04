@@ -57,7 +57,7 @@ class AquariumTest {
         aquarium.addFish(createColdFish(), 1)
         aquarium.addFish(createHotFish(), 1)
 
-        assertEquals("24 Cº - 25 Cº", aquarium.getTemperatureRange())
+        assertEquals("24Cº - 25Cº", aquarium.getTemperatureRange())
     }
 
     @Test
@@ -107,7 +107,7 @@ class AquariumTest {
         val fish1 = createColdFish()
         fish1.dh = listOf(createDHSoft())
         aquarium.addFish(fish1, 1)
-        assertEquals("4 - 8", aquarium.getDHRange())
+        assertEquals("4-8", aquarium.getDHRange())
     }
 
 
@@ -122,7 +122,7 @@ class AquariumTest {
         fish2.dh = listOf(createDHMedium(),createDHard())
         aquarium.addFish(fish2, 1)
 
-        assertEquals("9 - 18", aquarium.getDHRange())
+        assertEquals("9-18", aquarium.getDHRange())
     }
 
     @Test
@@ -136,7 +136,7 @@ class AquariumTest {
         fish2.dh = listOf(createDHMedium(),createDHSoft())
         aquarium.addFish(fish2, 1)
 
-        assertEquals("4 - 12", aquarium.getDHRange())
+        assertEquals("4-12", aquarium.getDHRange())
     }
 
     @Test
@@ -154,7 +154,7 @@ class AquariumTest {
         fish3.dh = listOf(createDHMedium())
         aquarium.addFish(fish3, 6)
 
-        assertEquals("9 - 12", aquarium.getDHRange())
+        assertEquals("9-12", aquarium.getDHRange())
     }
 
     private fun createAcidPH() : PH{

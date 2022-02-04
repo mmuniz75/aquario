@@ -21,10 +21,11 @@ class TestUtils {
         return mapper.readValue(json, classObjt) as T
     }
 
-    fun checkResponse(response: EntityExchangeResult<*>, jsonResourceFile: String?): Boolean {
+
+    fun checkResponseWithJson(response: EntityExchangeResult<*>, json: String): Boolean {
         var expectedJson: String? = null
         expectedJson = try {
-            this.readJson(jsonResourceFile!!)
+                json
                 .replace("\r\n".toRegex(), "")
                 .replace(" ".toRegex(), "")
         } catch (e: IOException) {
@@ -37,6 +38,10 @@ class TestUtils {
         println("expceted json = $expectedJson")
         println("reponse json  = $responseJson")
         return expectedJson == responseJson
+    }
+
+    fun checkResponseWithResource(response: EntityExchangeResult<*>, jsonResourceFile: String): Boolean {
+        return checkResponseWithJson(response,  this.readJson(jsonResourceFile))
     }
 
 }

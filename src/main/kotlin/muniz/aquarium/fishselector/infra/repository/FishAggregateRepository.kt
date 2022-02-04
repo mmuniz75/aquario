@@ -39,4 +39,12 @@ class FishAggregateRepository {
                 .onEach { it.dh =  dhRepository.findDHByFishId(it.id).toList()}
     }
 
+    suspend fun findById(id: Int): Fish? {
+        val fish = repository.findById(id)?: throw IllegalCallerException("Peixe não encontrado")
+        fish.ph = phRepository.findPHByFishId(id).toList()
+        fish.dh = dhRepository.findDHByFishId(id).toList()
+
+        return fish
+    }
+
 }
