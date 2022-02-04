@@ -169,6 +169,14 @@ class AquariumResourceTest {
         )
     }
 
+    @Test
+    fun checkFishCentimerSEcondShoal(){
+        executePut("fish",
+            AddFishRequest(3,7,51, listOf(2)),
+            AquariumDTO("26Cº - 28Cº","6.2 - 6.8","9-12",16)
+        )
+    }
+
     private fun executePost(endPoint : String, request : Any, response : String) {
         webTestClient.post()
             .uri("$URL/$endPoint")
