@@ -118,6 +118,33 @@ VALUES(26, 'Killifish', 5, 1, 18, 22, 30, 20,'http://www.aquarismopaulista.com/w
 INSERT INTO fish_ph (fish_id, ph_id) VALUES(26, 1)
 INSERT INTO fish_dh (fish_id, dh_id) VALUES(26, 1);
 
+INSERT INTO fish (id, name, size, minnumber, mintemperature, maxtemperature, widthtank, lengthtank,imageurl)
+VALUES(52, 'Engraçadinho', 3, 6, 22, 28, 60, 30,'http://www.aquarismopaulista.com/wp-content/uploads/2016/08/Hyphessobrycon-flammeus-tetra-engracadinho3.jpg');
+INSERT INTO fish_ph (fish_id, ph_id) VALUES(52, 1)
+INSERT INTO fish_dh (fish_id, dh_id) VALUES(52, 2);
+INSERT INTO fish_dh (fish_id, dh_id) VALUES(52, 3);
+INSERT INTO fish_dh (fish_id, dh_id) VALUES(52, 4);
+INSERT INTO fish_dh (fish_id, dh_id) VALUES(52, 5);
+
+INSERT INTO fish (id, name, size, minnumber, mintemperature, maxtemperature, widthtank, lengthtank,imageurl)
+VALUES(53, 'Rodostomus', 5, 10, 24, 30, 80, 30,'http://www.aquarismopaulista.com/wp-content/uploads/2014/09/Hemigrammus-rhodostomus1.jpg');
+INSERT INTO fish_ph (fish_id, ph_id) VALUES(53, 1)
+INSERT INTO fish_dh (fish_id, dh_id) VALUES(53, 1);
+INSERT INTO fish_dh (fish_id, dh_id) VALUES(53, 2);
+
+INSERT INTO fish (id, name, size, minnumber, mintemperature, maxtemperature, widthtank, lengthtank,imageurl)
+VALUES(54, 'Kribensis', 6, 1, 24, 28, 80, 30,'http://www.aquarismopaulista.com/wp-content/uploads/2015/07/Pelvicachromis-pulcher.jpg');
+INSERT INTO fish_ph (fish_id, ph_id) VALUES(54, 1)
+INSERT INTO fish_dh (fish_id, dh_id) VALUES(54, 2);
+INSERT INTO fish_dh (fish_id, dh_id) VALUES(54, 3);
+INSERT INTO fish_dh (fish_id, dh_id) VALUES(54, 4);
+
+INSERT INTO fish (id, name, size, minnumber, mintemperature, maxtemperature, widthtank, lengthtank,imageurl)
+VALUES(55, 'Acará Festivo', 15, 5, 24, 32, 100, 50,'http://www.aquarismopaulista.com/wp-content/uploads/2014/09/Mesonauta-festivus1.jpg');
+INSERT INTO fish_ph (fish_id, ph_id) VALUES(55, 1)
+INSERT INTO fish_ph (fish_id, ph_id) VALUES(55, 2)
+INSERT INTO fish_dh (fish_id, dh_id) VALUES(55, 2);
+
 -- PH Neutro
 
 INSERT INTO fish (id, name, size, minnumber, mintemperature, maxtemperature, widthtank, lengthtank,imageurl)
@@ -234,6 +261,12 @@ INSERT INTO fish_ph (fish_id, ph_id) VALUES(50, 2)
 INSERT INTO fish_dh (fish_id, dh_id) VALUES(50, 2);
 INSERT INTO fish_dh (fish_id, dh_id) VALUES(50, 3);
 INSERT INTO fish_dh (fish_id, dh_id) VALUES(50, 4);
+
+INSERT INTO fish (id, name, size, minnumber, mintemperature, maxtemperature, widthtank, lengthtank,imageurl)
+VALUES(51, 'Balashark', 30, 5, 24, 28, 130, 50,'http://www.aquarismopaulista.com/wp-content/uploads/2014/09/Balantiocheilos-melanopterus31.jpg');
+INSERT INTO fish_ph (fish_id, ph_id) VALUES(51, 2)
+INSERT INTO fish_dh (fish_id, dh_id) VALUES(51, 2);
+
 
 -- PH Alcalino
 INSERT INTO fish (id, name, size, minnumber, mintemperature, maxtemperature, widthtank, lengthtank,imageurl)
