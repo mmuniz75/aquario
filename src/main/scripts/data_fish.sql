@@ -7,6 +7,7 @@ INSERT INTO fish_ph (fish_id, ph_id) VALUES(1, 1);
 INSERT INTO fish_dh (fish_id, dh_id) VALUES(1, 1);
 INSERT INTO fish_dh (fish_id, dh_id) VALUES(1, 2);
 INSERT INTO fish_dh (fish_id, dh_id) VALUES(1, 3);
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(1, 17); -- Cruzeiro do sul
 
 INSERT INTO fish (id, name, size, minnumber, mintemperature, maxtemperature, widthtank, lengthtank,imageurl)
 VALUES(2, 'Acará Bandeira', 12, 6, 24, 30, 100, 50,'http://www.aquarismopaulista.com/wp-content/uploads/2014/09/Pterophyllum-scalare1.jpg');
@@ -236,43 +237,34 @@ INSERT INTO fish_dh (fish_id, dh_id) VALUES(50, 4);
 
 -- PH Alcalino
 INSERT INTO fish (id, name, size, minnumber, mintemperature, maxtemperature, widthtank, lengthtank,imageurl)
-VALUES(10, 'Ciclídeos Africanos Malawi', 5, 6, 24, 28, 80, 30,'');
-INSERT INTO fish_ph (fish_id, ph_id) VALUES(10, 3);
-
-INSERT INTO fish (id, name, size, minnumber, mintemperature, maxtemperature, widthtank, lengthtank,imageurl)
-VALUES(11, 'Ciclídeos Africanos Tanganyika', 5, 6, 24, 28, 80, 30,'');
-INSERT INTO fish_ph (fish_id, ph_id) VALUES(11, 3);
-
-INSERT INTO fish (id, name, size, minnumber, mintemperature, maxtemperature, widthtank, lengthtank,imageurl)
-VALUES(12, 'Ciclídeos Africanos Victoria', 5, 6, 24, 28, 80, 30,'');
-INSERT INTO fish_ph (fish_id, ph_id) VALUES(12, 4);
-
-INSERT INTO fish (id, name, size, minnumber, mintemperature, maxtemperature, widthtank, lengthtank,imageurl)
-VALUES(20, 'Espada', 5, 6, 24, 28, 80, 30,'');
+VALUES(20, 'Espada', 10, 6, 22, 28, 80, 30,'http://www.aquarismopaulista.com/wp-content/uploads/2017/10/Xiphophorus-hellerii.jpg');
 INSERT INTO fish_ph (fish_id, ph_id) VALUES(20, 3);
+INSERT INTO fish_dh (fish_id, dh_id) VALUES(20, 3);
+INSERT INTO fish_dh (fish_id, dh_id) VALUES(20, 4);
+INSERT INTO fish_dh (fish_id, dh_id) VALUES(20, 5);
 
 INSERT INTO fish (id, name, size, minnumber, mintemperature, maxtemperature, widthtank, lengthtank,imageurl)
-VALUES(23, 'Lebiste', 5, 6, 24, 28, 80, 30,'');
+VALUES(23, 'Lebiste', 3, 1, 17, 28, 40, 30,'http://www.aquarismopaulista.com/wp-content/uploads/2015/07/Poecilia-reticulata.jpg');
 INSERT INTO fish_ph (fish_id, ph_id) VALUES(23, 3);
+INSERT INTO fish_dh (fish_id, dh_id) VALUES(23, 3);
 
 INSERT INTO fish (id, name, size, minnumber, mintemperature, maxtemperature, widthtank, lengthtank,imageurl)
-VALUES(24, 'Haplochromis', 5, 6, 24, 28, 80, 30,'');
+VALUES(24, 'Haplochromis', 8, 1, 22, 28, 100, 50,'http://www.aquarismopaulista.com/wp-content/uploads/2016/03/Haplochromis-nyererei.jpg');
 INSERT INTO fish_ph (fish_id, ph_id) VALUES(24, 4)
+INSERT INTO fish_dh (fish_id, dh_id) VALUES(24, 3);
+INSERT INTO fish_dh (fish_id, dh_id) VALUES(24, 4);
 
 INSERT INTO fish (id, name, size, minnumber, mintemperature, maxtemperature, widthtank, lengthtank,imageurl)
-VALUES(30, 'Molinésia', 5, 6, 24, 28, 80, 30,'');
+VALUES(30, 'Molinésia', 4, 1, 18, 28, 80, 30,'http://www.aquarismopaulista.com/wp-content/uploads/2015/07/Poecilia-sphenops3.jpg');
 INSERT INTO fish_ph (fish_id, ph_id) VALUES(30, 3)
+INSERT INTO fish_dh (fish_id, dh_id) VALUES(30, 3);
+INSERT INTO fish_dh (fish_id, dh_id) VALUES(30, 4);
+INSERT INTO fish_dh (fish_id, dh_id) VALUES(30, 5);
 
 INSERT INTO fish (id, name, size, minnumber, mintemperature, maxtemperature, widthtank, lengthtank,imageurl)
-VALUES(31, 'Monos / Scats', 5, 6, 24, 28, 80, 30,'');
-INSERT INTO fish_ph (fish_id, ph_id) VALUES(31, 4)
-
-INSERT INTO fish (id, name, size, minnumber, mintemperature, maxtemperature, widthtank, lengthtank,imageurl)
-VALUES(39, 'Plati', 5, 6, 24, 28, 80, 30,'');
+VALUES(39, 'Plati', 4, 6, 18, 28, 80, 30,'http://www.aquarismopaulista.com/wp-content/uploads/2015/07/Xiphophorus-maculatus4-1.jpg');
 INSERT INTO fish_ph (fish_id, ph_id) VALUES(39, 3)
+INSERT INTO fish_dh (fish_id, dh_id) VALUES(39, 3);
+INSERT INTO fish_dh (fish_id, dh_id) VALUES(39, 4);
 
 
-
-
-INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(1, 2);
-INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(1, 3);
