@@ -145,6 +145,21 @@ INSERT INTO fish_ph (fish_id, ph_id) VALUES(42, 3);
 INSERT INTO fish_ph (fish_id, ph_id) VALUES(42, 4);
 INSERT INTO fish_dh (fish_id, dh_id) VALUES(42, 2);
 INSERT INTO fish_dh (fish_id, dh_id) VALUES(42, 3);
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(42, 1); -- Borboleta
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(42, 17); -- Cruzeiro do sul
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(42, 29); -- Mocinha
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(42, 33); -- Neon
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(42, 37); -- Mato Grosso
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(42, 42); -- Rosaceo
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(42, 43); -- Ramirezi
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(42, 47); -- Tetra
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(42, 52); -- Engraçãdinho
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(42, 7); -- Botia
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(42, 41); -- Rasbora
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(42, 22); -- Colisa
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(42, 4); -- Barbo
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(42, 8); -- Cascudo
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(42, 53); -- Rodostomo
 
 INSERT INTO fish (id, name, size, minnumber, mintemperature, maxtemperature, widthtank, lengthtank,imageurl)
 VALUES(43, 'Ramirezi', 4, 1, 24, 30, 60, 30,'http://www.aquarismopaulista.com/wp-content/uploads/2014/09/Mikrogeophagus-ramirezi1.jpg');
