@@ -31,9 +31,9 @@ create table fish_dh (
 create table fish_compatility (
    fish_id int,
    compatible_fish_id int,
-   PRIMARY KEY (fish_id,compatible_fish_id),
-   FOREIGN KEY (fish_id) REFERENCES fish(id),
-   FOREIGN KEY (compatible_fish_id) REFERENCES fish(id)
+   PRIMARY KEY (fish_id,compatible_fish_id)
+   --,FOREIGN KEY (fish_id) REFERENCES fish(id),
+   -- FOREIGN KEY (compatible_fish_id) REFERENCES fish(id)
 )
 ;
 
