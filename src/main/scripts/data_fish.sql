@@ -280,6 +280,18 @@ INSERT INTO fish_ph (fish_id, ph_id) VALUES(49, 4)
 INSERT INTO fish_dh (fish_id, dh_id) VALUES(49, 2);
 INSERT INTO fish_dh (fish_id, dh_id) VALUES(49, 3);
 INSERT INTO fish_dh (fish_id, dh_id) VALUES(49, 4);
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(49, 17); -- Cruzeiro do sul
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(49, 43); -- Ramirezi
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(49, 49); -- Tricogaster
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(49, 7); -- Botia
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(49, 22); -- Colisa
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(49, 4); -- Barbo
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(49, 19); -- Acará Disco
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(49, 2); -- Acará Bandiera
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(49, 8); -- Cascudo
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(49, 54); -- Kribensis
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(49, 55); -- Acará Festivo
+
 
 INSERT INTO fish (id, name, size, minnumber, mintemperature, maxtemperature, widthtank, lengthtank,imageurl)
 VALUES(26, 'Killifish', 5, 1, 18, 22, 30, 20,'http://www.aquarismopaulista.com/wp-content/uploads/2018/04/Aphyosemion-ogoense.jpg');
