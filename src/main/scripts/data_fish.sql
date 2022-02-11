@@ -298,6 +298,19 @@ VALUES(26, 'Killifish', 5, 1, 18, 22, 30, 20,'http://www.aquarismopaulista.com/w
 INSERT INTO fish_ph (fish_id, ph_id) VALUES(26, 3)
 INSERT INTO fish_ph (fish_id, ph_id) VALUES(26, 4)
 INSERT INTO fish_dh (fish_id, dh_id) VALUES(26, 1);
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(49, 13); -- Apistograma
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(49, 26); -- Killifish
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(49, 29); -- Mocinha
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(49, 37); -- Mato Grosso
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(49, 47); -- Tetra
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(49, 56); -- Tetra Negro
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(49, 48); -- Tricogaster Leeri
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(49, 49); -- Tricogaster
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(49, 7); -- Botia
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(49, 41); -- Rasbora
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(49, 22); -- Colisa
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(49, 4); -- Barbo
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(49, 8); -- Cascudo
 
 INSERT INTO fish (id, name, size, minnumber, mintemperature, maxtemperature, widthtank, lengthtank,imageurl)
 VALUES(52, 'Engraçadinho', 3, 6, 22, 28, 60, 30,'http://www.aquarismopaulista.com/wp-content/uploads/2016/08/Hyphessobrycon-flammeus-tetra-engracadinho3.jpg');
