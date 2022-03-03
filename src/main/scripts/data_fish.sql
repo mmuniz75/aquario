@@ -670,6 +670,37 @@ INSERT INTO fish_ph (fish_id, ph_id) VALUES(8, 5);
 INSERT INTO fish_dh (fish_id, dh_id) VALUES(8, 1);
 INSERT INTO fish_dh (fish_id, dh_id) VALUES(8, 2);
 INSERT INTO fish_dh (fish_id, dh_id) VALUES(8, 3);
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(8, 2); -- Acará Bandiera
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(8, 5); -- Beijador
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(8, 4); -- Barbo
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(8, 6); -- Betta
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(8, 7); -- Botia
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(8, 8); -- Cascudo
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(8, 13); -- Apistograma
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(8, 16); -- Coridora
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(8, 17); -- Cruzeiro do sul
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(8, 18); -- Danio
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(8, 19); -- Acará Disco
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(8, 21); -- Kinguio
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(8, 22); -- Colisa
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(8, 26); -- Killifish
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(8, 27); -- Faca
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(8, 29); -- Mocinha
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(8, 35); -- Paulistinha
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(8, 33); -- Neon
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(8, 36); -- Arco Irís
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(8, 37); -- Mato Grosso
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(8, 41); -- Rasbora
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(8, 42); -- Rosaceo
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(8, 44); -- Labeo
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(8, 45); -- Limpa vidro
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(8, 43); -- Ramirezi
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(8, 47); -- Tetra
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(8, 48); -- Tricogaster Leeri
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(8, 49); -- Tricogaster
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(8, 50); -- Tanictis
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(8, 55); -- Acará Festivo
+
 
 INSERT INTO fish (id, name, size, minnumber, mintemperature, maxtemperature, widthtank, lengthtank,imageurl)
 VALUES(55, 'Acará Festivo', 15, 5, 24, 32, 100, 50,'http://www.aquarismopaulista.com/wp-content/uploads/2014/09/Mesonauta-festivus1.jpg');
@@ -677,6 +708,20 @@ INSERT INTO fish_ph (fish_id, ph_id) VALUES(55, 3)
 INSERT INTO fish_ph (fish_id, ph_id) VALUES(55, 4)
 INSERT INTO fish_ph (fish_id, ph_id) VALUES(55, 5)
 INSERT INTO fish_dh (fish_id, dh_id) VALUES(55, 2);
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(55, 17); -- Cruzeiro do sul
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(55, 21); -- Kinguio
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(55, 22); -- Colisa
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(55, 48); -- Tricogaster Leeri
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(55, 49); -- Tricogaster
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(55, 5); -- Beijador
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(55, 2); -- Acará Bandiera
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(55, 19); -- Acará Disco
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(55, 43); -- Ramirezi
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(55, 55); -- Acará Festivo
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(55, 8); -- Cascudo
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(55, 16); -- Coridora
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(55, 45); -- Limpa vidro
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(55, 54); -- Kribensis
 
 INSERT INTO fish (id, name, size, minnumber, mintemperature, maxtemperature, widthtank, lengthtank,imageurl)
 VALUES(19, 'Acará Disco', 15, 6, 26, 30, 100, 40,'http://www.aquarismopaulista.com/wp-content/uploads/2018/06/Symphysodon-aquifasciatus.jpg');
@@ -684,6 +729,27 @@ INSERT INTO fish_ph (fish_id, ph_id) VALUES(19, 3);
 INSERT INTO fish_ph (fish_id, ph_id) VALUES(19, 4);
 INSERT INTO fish_ph (fish_id, ph_id) VALUES(19, 5);
 INSERT INTO fish_dh (fish_id, dh_id) VALUES(19, 1);
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(19, 1); -- Borboleta
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(19, 5); -- Beijador
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(19, 7); -- Botia
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(19, 8); -- Cascudo
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(19, 13); -- Apistograma
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(19, 16); -- Coridora
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(19, 17); -- Cruzeiro do sul
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(19, 18); -- Danio
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(19, 19); -- Acará Disco
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(19, 22); -- Colisa
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(19, 29); -- Mocinha
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(19, 33); -- Neon
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(19, 45); -- Limpa vidro
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(19, 43); -- Ramirezi
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(19, 47); -- Tetra
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(19, 48); -- Tricogaster Leeri
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(19, 49); -- Tricogaster
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(19, 50); -- Tanictis
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(19, 51); -- BalaShark
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(19, 54); -- Kribensis
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(19, 55); -- Acará Festivo
 
 INSERT INTO fish (id, name, size, minnumber, mintemperature, maxtemperature, widthtank, lengthtank,imageurl)
 VALUES(4, 'Barbo', 5, 6, 18, 28, 80, 30,'http://www.aquarismopaulista.com/wp-content/uploads/2014/08/Puntius-semifasciolatus1.jpg');
@@ -693,6 +759,34 @@ INSERT INTO fish_ph (fish_id, ph_id) VALUES(4, 5);
 INSERT INTO fish_dh (fish_id, dh_id) VALUES(4, 2);
 INSERT INTO fish_dh (fish_id, dh_id) VALUES(4, 3);
 INSERT INTO fish_dh (fish_id, dh_id) VALUES(4, 4);
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(4, 2); -- Acará Bandiera
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(4, 5); -- Beijador
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(4, 4); -- Barbo
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(4, 6); -- Betta
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(4, 7); -- Botia
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(4, 8); -- Cascudo
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(4, 13); -- Apistograma
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(4, 16); -- Coridora
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(4, 17); -- Cruzeiro do sul
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(4, 18); -- Danio
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(4, 22); -- Colisa
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(4, 26); -- Killifish
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(4, 27); -- Faca
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(4, 29); -- Mocinha
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(4, 35); -- Paulistinha
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(4, 36); -- Arco Irís
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(4, 37); -- Mato Grosso
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(4, 41); -- Rasbora
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(4, 42); -- Rosaceo
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(4, 44); -- Labeo
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(4, 45); -- Limpa vidro
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(4, 43); -- Ramirezi
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(4, 47); -- Tetra
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(4, 48); -- Tricogaster Leeri
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(4, 49); -- Tricogaster
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(4, 50); -- Tanictis
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(4, 52); -- Engraçãdinho
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(4, 56); -- Tetra Negro
 
 INSERT INTO fish (id, name, size, minnumber, mintemperature, maxtemperature, widthtank, lengthtank,imageurl)
 VALUES(2, 'Acará Bandeira', 12, 6, 24, 30, 100, 50,'http://www.aquarismopaulista.com/wp-content/uploads/2014/09/Pterophyllum-scalare1.jpg');
@@ -701,6 +795,32 @@ INSERT INTO fish_ph (fish_id, ph_id) VALUES(2, 4);
 INSERT INTO fish_ph (fish_id, ph_id) VALUES(2, 5);
 INSERT INTO fish_dh (fish_id, dh_id) VALUES(2, 2);
 INSERT INTO fish_dh (fish_id, dh_id) VALUES(2, 3);
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(2, 1); -- Borboleta
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(2, 2); -- Acará Bandiera
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(2, 5); -- Beijador
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(2, 4); -- Barbo
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(2, 6); -- Betta
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(2, 7); -- Botia
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(2, 8); -- Cascudo
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(2, 13); -- Apistograma
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(2, 16); -- Coridora
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(2, 17); -- Cruzeiro do sul
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(2, 18); -- Danio
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(2, 22); -- Colisa
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(2, 27); -- Faca
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(2, 29); -- Mocinha
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(2, 36); -- Arco Irís
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(2, 41); -- Rasbora
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(2, 44); -- Labeo
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(2, 45); -- Limpa vidro
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(2, 43); -- Ramirezi
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(2, 47); -- Tetra
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(2, 48); -- Tricogaster Leeri
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(2, 49); -- Tricogaster
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(2, 50); -- Tanictis
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(2, 51); -- BalaShark
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(2, 54); -- Kribensis
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(2, 55); -- Acará Festivo
 
 INSERT INTO fish (id, name, size, minnumber, mintemperature, maxtemperature, widthtank, lengthtank,imageurl)
 VALUES(53, 'Rodostomus', 5, 10, 24, 30, 80, 30,'http://www.aquarismopaulista.com/wp-content/uploads/2014/09/Hemigrammus-rhodostomus1.jpg');
@@ -709,6 +829,20 @@ INSERT INTO fish_ph (fish_id, ph_id) VALUES(53, 4)
 INSERT INTO fish_ph (fish_id, ph_id) VALUES(53, 5)
 INSERT INTO fish_dh (fish_id, dh_id) VALUES(53, 1);
 INSERT INTO fish_dh (fish_id, dh_id) VALUES(53, 2);
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(53, 1); -- Borboleta
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(53, 17); -- Cruzeiro do sul
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(53, 33); -- Neon
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(53, 37); -- Mato Grosso
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(53, 41); -- Rasbora
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(53, 42); -- Rosaceo
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(53, 47); -- Tetra
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(53, 52); -- Engraçãdinho
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(53, 53); -- Rodostomo
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(53, 56); -- Tetra Negro
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(53, 50); -- Tanictis
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(53, 22); -- Colisa
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(53, 43); -- Ramirezi
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(53, 16); -- Coridora
 
 INSERT INTO fish (id, name, size, minnumber, mintemperature, maxtemperature, widthtank, lengthtank,imageurl)
 VALUES(54, 'Kribensis', 6, 1, 24, 28, 80, 30,'http://www.aquarismopaulista.com/wp-content/uploads/2015/07/Pelvicachromis-pulcher.jpg');
@@ -718,6 +852,18 @@ INSERT INTO fish_ph (fish_id, ph_id) VALUES(54, 5)
 INSERT INTO fish_dh (fish_id, dh_id) VALUES(54, 2);
 INSERT INTO fish_dh (fish_id, dh_id) VALUES(54, 3);
 INSERT INTO fish_dh (fish_id, dh_id) VALUES(54, 4);
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(54, 22); -- Colisa
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(54, 48); -- Tricogaster Leeri
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(54, 49); -- Tricogaster
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(54, 16); -- Coridora
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(54, 2); -- Acará Bandiera
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(54, 5); -- Beijador
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(54, 19); -- Acará Disco
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(54, 43); -- Ramirezi
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(54, 54); -- Kribensis
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(54, 55); -- Acará Festivo
+
+-- PH Ligeiramente Acido e Neutro
 
 INSERT INTO fish (id, name, size, minnumber, mintemperature, maxtemperature, widthtank, lengthtank,imageurl)
 VALUES(22, 'Colisa', 7, 1, 22, 28, 80, 30,'http://www.aquarismopaulista.com/wp-content/uploads/Thricogaster-labiosa.jpg');
