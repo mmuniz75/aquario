@@ -919,17 +919,26 @@ INSERT INTO fish_ph (fish_id, ph_id) VALUES(20, 6);
 INSERT INTO fish_dh (fish_id, dh_id) VALUES(20, 3);
 INSERT INTO fish_dh (fish_id, dh_id) VALUES(20, 4);
 INSERT INTO fish_dh (fish_id, dh_id) VALUES(20, 5);
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(20, 20); -- Espada
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(20, 23); -- Lebiste
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(20, 30); -- Molinesia
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(20, 39); -- Plati
 
 INSERT INTO fish (id, name, size, minnumber, mintemperature, maxtemperature, widthtank, lengthtank,imageurl)
 VALUES(23, 'Lebiste', 3, 1, 17, 28, 40, 30,'http://www.aquarismopaulista.com/wp-content/uploads/2015/07/Poecilia-reticulata.jpg');
 INSERT INTO fish_ph (fish_id, ph_id) VALUES(23, 6);
 INSERT INTO fish_dh (fish_id, dh_id) VALUES(23, 3);
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(23, 20); -- Espada
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(23, 23); -- Lebiste
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(23, 30); -- Molinesia
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(23, 39); -- Plati
 
 INSERT INTO fish (id, name, size, minnumber, mintemperature, maxtemperature, widthtank, lengthtank,imageurl)
 VALUES(24, 'Haplochromis', 8, 1, 22, 28, 100, 50,'http://www.aquarismopaulista.com/wp-content/uploads/2016/03/Haplochromis-nyererei.jpg');
 INSERT INTO fish_ph (fish_id, ph_id) VALUES(24, 6)
 INSERT INTO fish_dh (fish_id, dh_id) VALUES(24, 3);
 INSERT INTO fish_dh (fish_id, dh_id) VALUES(24, 4);
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(24, 24); -- Haplochomus
 
 INSERT INTO fish (id, name, size, minnumber, mintemperature, maxtemperature, widthtank, lengthtank,imageurl)
 VALUES(30, 'Molinésia', 4, 1, 18, 28, 80, 30,'http://www.aquarismopaulista.com/wp-content/uploads/2015/07/Poecilia-sphenops3.jpg');
@@ -937,14 +946,20 @@ INSERT INTO fish_ph (fish_id, ph_id) VALUES(30, 6)
 INSERT INTO fish_dh (fish_id, dh_id) VALUES(30, 3);
 INSERT INTO fish_dh (fish_id, dh_id) VALUES(30, 4);
 INSERT INTO fish_dh (fish_id, dh_id) VALUES(30, 5);
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(30, 20); -- Espada
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(30, 23); -- Lebiste
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(30, 30); -- Molinesia
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(30, 39); -- Plati
 
 INSERT INTO fish (id, name, size, minnumber, mintemperature, maxtemperature, widthtank, lengthtank,imageurl)
 VALUES(39, 'Plati', 4, 6, 18, 28, 80, 30,'http://www.aquarismopaulista.com/wp-content/uploads/2015/07/Xiphophorus-maculatus4-1.jpg');
 INSERT INTO fish_ph (fish_id, ph_id) VALUES(39, 6)
 INSERT INTO fish_dh (fish_id, dh_id) VALUES(39, 3);
 INSERT INTO fish_dh (fish_id, dh_id) VALUES(39, 4);
-
-
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(39, 20); -- Espada
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(39, 23); -- Lebiste
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(39, 30); -- Molinesia
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(39, 39); -- Plati
 
 -- template
 
