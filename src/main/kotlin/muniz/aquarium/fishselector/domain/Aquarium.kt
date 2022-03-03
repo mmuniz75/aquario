@@ -59,7 +59,7 @@ class Aquarium {
         val minDH = fishes.map { it.fish.getMinDH() }.maxOrNull()
         val maxDH = fishes.map { it.fish.getMaxDH() }.minOrNull()
 
-        return "${minDH}-$maxDH"
+        return "$minDH-$maxDH"
     }
 
     private fun totalFishesSize() : Int {
