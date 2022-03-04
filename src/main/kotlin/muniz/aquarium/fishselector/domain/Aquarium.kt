@@ -49,6 +49,9 @@ class Aquarium {
         val minPH = fishes.map { it.fish.getMinPH() }.maxOrNull()
         val maxPH = fishes.map { it.fish.getMaxPH() }.minOrNull()
 
+        return if(minPH == maxPH)
+            minPH.toString()
+        else
         return "$minPH - $maxPH"
     }
 

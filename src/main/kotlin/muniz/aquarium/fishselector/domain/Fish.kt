@@ -17,7 +17,7 @@ data class Fish (@Id val id : Int,
                  @Column("minnumber") val minNumber:Int,
                  @Column("widthtank") val widthTank:Int,
                  @Column("lengthtank") val lengthTank:Int,
-                 @Transient var compatibility : List<Fish> = mutableListOf()
+                 @Column("initialspace") val initialSpace :Int = 0
            ) {
 
     @PersistenceConstructor
@@ -29,8 +29,9 @@ data class Fish (@Id val id : Int,
                 minTemperature:Int,
                 minNumber:Int,
                 widthTank:Int,
-                lengthTank:Int
-    ): this(id,name,size,imageUrl, mutableListOf(),mutableListOf(),maxTemperature,minTemperature,minNumber,widthTank,lengthTank,mutableListOf())
+                lengthTank:Int,
+                initialSpace :Int
+    ): this(id,name,size,imageUrl, mutableListOf(),mutableListOf(),maxTemperature,minTemperature,minNumber,widthTank,lengthTank,initialSpace)
 
     fun getPHRangeDisplay(): String {
         val min = getMinPH().toString()

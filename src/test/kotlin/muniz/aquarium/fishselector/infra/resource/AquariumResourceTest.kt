@@ -189,6 +189,22 @@ class AquariumResourceTest {
         )
     }
 
+    @Test
+    fun addKinguio(){
+        executePut("fish",
+            AddFishRequest(21,1,120, listOf()),
+            AquariumDTO("10Cº - 28Cº","7.0","5-18",0)
+        )
+    }
+
+    @Test
+    fun checkFishCentimerKinguioMissingSpace(){
+        executePut("fish",
+            AddFishRequest(21,2,120, listOf()),
+            AquariumDTO("26Cº - 28Cº","7.0","5-18",0)
+        )
+    }
+
     private fun executePost(endPoint : String, request : Any, response : String) {
         webTestClient.post()
             .uri("$URL/$endPoint")

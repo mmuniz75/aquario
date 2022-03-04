@@ -6,9 +6,13 @@ delete from ph;
 delete from dh;
 
 -- PH
-INSERT INTO ph (id, name, minph, maxph) VALUES(1, 'Acido', 6.2, 6.8);
-INSERT INTO ph (id, name, minph, maxph) VALUES (2, 'Neutro', 7.0, 7.0);
-INSERT INTO ph (id, name, minph, maxph) VALUES(3, 'Alcalino', 7.2, 7.4);
+INSERT INTO ph (id, name, minph, maxph) VALUES(1, 'Extremamente Acido', 4.0, 4.9);
+INSERT INTO ph (id, name, minph, maxph) VALUES(2, 'Muito Acido', 5.0, 6.0);
+INSERT INTO ph (id, name, minph, maxph) VALUES(3, 'Acido', 6.2, 6.4);
+INSERT INTO ph (id, name, minph, maxph) VALUES(4, 'Ligeiramento Acido ', 6.6, 6.8);
+INSERT INTO ph (id, name, minph, maxph) VALUES (5, 'Neutro', 7.0, 7.0);
+INSERT INTO ph (id, name, minph, maxph) VALUES(6, 'Alcalino', 7.2, 7.4);
+INSERT INTO ph (id, name, minph, maxph) VALUES(7, 'Muito Alcalino', 7.5, 8.0);
 
 -- DH
 INSERT INTO dh (id, name, mindh, maxdh) VALUES(1, 'Muito mole', 0, 4);
@@ -58,7 +62,10 @@ INSERT INTO fish_dh (fish_id, dh_id) VALUES(7, 3);
 
 INSERT INTO fish (id, name, size, minnumber, mintemperature, maxtemperature, widthtank, lengthtank,initialspace, imageurl)
 VALUES(21, 'Kinguio', 30, 1, 10, 28, 80, 40, 90, 'http://www.aquarismopaulista.com/wp-content/uploads/2015/12/Carassius-auratus.jpg');
-
+INSERT INTO fish_ph (fish_id, ph_id) VALUES(21, 5);
+INSERT INTO fish_dh (fish_id, dh_id) VALUES(21, 2);
+INSERT INTO fish_dh (fish_id, dh_id) VALUES(21, 3);
+INSERT INTO fish_dh (fish_id, dh_id) VALUES(21, 4);
 
 -- Compatibility
 

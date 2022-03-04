@@ -7,7 +7,7 @@ create table IF NOT EXISTS dh (
 ;
 create table IF NOT EXISTS  ph (
     id int PRIMARY KEY,
-    name VARCHAR(10),
+    name VARCHAR(20),
     minph numeric,
     maxph numeric
     )
