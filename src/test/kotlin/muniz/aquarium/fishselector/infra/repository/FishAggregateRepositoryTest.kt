@@ -67,10 +67,9 @@ class FishAggregateRepositoryTest {
     fun listNeonCompatibility(){
         runBlocking {
             val fishes = repository.findByCompatibleFish(widthTank = 80, lengthTank = 30, fishIds = mutableListOf(1),aquariumRemainsSpace = 50).toList()
-            assertEquals(3 , fishes.size)
-            assertEquals("Neon",fishes[0].name)
-            assertEquals("Mato grosso",fishes[1].name)
-            assertEquals("Tetra Negro",fishes[2].name)
+            assertEquals(2 , fishes.size)
+            assertEquals("Mato grosso",fishes[0].name)
+            assertEquals("Tetra Negro",fishes[1].name)
         }
 
     }
@@ -79,13 +78,11 @@ class FishAggregateRepositoryTest {
     fun listTetraMatoGrossoCompatibility(){
         runBlocking {
             val fishes = repository.findByCompatibleFish(widthTank = 80, lengthTank = 30, fishIds = mutableListOf(2,3),aquariumRemainsSpace = 50).toList()
-            assertEquals(6 , fishes.size)
+            assertEquals(4 , fishes.size)
             assertEquals("Neon",fishes[0].name)
-            assertEquals("Mato grosso",fishes[1].name)
-            assertEquals("Tetra Negro",fishes[2].name)
-            assertEquals("Barbus Ouro",fishes[3].name)
-            assertEquals("Ramirezi",fishes[4].name)
-            assertEquals("Colisa",fishes[5].name)
+            assertEquals("Barbus Ouro",fishes[1].name)
+            assertEquals("Ramirezi",fishes[2].name)
+            assertEquals("Colisa",fishes[3].name)
         }
     }
 
@@ -93,10 +90,7 @@ class FishAggregateRepositoryTest {
     fun listNeonTetraMatoGrossoCompatibility(){
         runBlocking {
             val fishes = repository.findByCompatibleFish(widthTank = 80, lengthTank = 30, fishIds = mutableListOf(1,2,3),aquariumRemainsSpace = 50).toList()
-            assertEquals(3 , fishes.size)
-            assertEquals("Neon",fishes[0].name)
-            assertEquals("Mato grosso",fishes[1].name)
-            assertEquals("Tetra Negro",fishes[2].name)
+            assertEquals(0 , fishes.size)
         }
 
     }
@@ -105,11 +99,10 @@ class FishAggregateRepositoryTest {
     fun listTricogasterCompatibility(){
         runBlocking {
             val fishes = repository.findByCompatibleFish(widthTank = 80, lengthTank = 30, fishIds = mutableListOf(7),aquariumRemainsSpace = 50).toList()
-            assertEquals(4 , fishes.size)
+            assertEquals(3 , fishes.size)
             assertEquals("Barbus Ouro",fishes[0].name)
             assertEquals("Ramirezi",fishes[1].name)
             assertEquals("Colisa",fishes[2].name)
-            assertEquals("Tricogaster",fishes[3].name)
         }
     }
 
@@ -117,12 +110,7 @@ class FishAggregateRepositoryTest {
     fun listMyAquariumCompatibility(){
         runBlocking {
             val fishes = repository.findByCompatibleFish(widthTank = 80, lengthTank = 30, fishIds = mutableListOf(2,3,4,5,6),aquariumRemainsSpace = 50).toList()
-            assertEquals(5 , fishes.size)
-            assertEquals("Mato grosso",fishes[0].name)
-            assertEquals("Tetra Negro",fishes[1].name)
-            assertEquals("Barbus Ouro",fishes[2].name)
-            assertEquals("Ramirezi",fishes[3].name)
-            assertEquals("Colisa",fishes[4].name)
+            assertEquals(0 , fishes.size)
         }
     }
 

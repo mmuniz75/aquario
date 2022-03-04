@@ -53,7 +53,7 @@ class AquariumResourceTest {
     @Test
     fun listNeonMatoGrossoTetraCompatibility() {
         val request = FishRequest(80,30,50, listOf(1,2,3))
-        executePost("fish",request,"fishs/neon_response.json");
+        executePost("fish",request,"fishs/empty.json");
     }
 
     @Test
@@ -71,7 +71,7 @@ class AquariumResourceTest {
     @Test
     fun listCompatibility() {
         val request = FishRequest(80,30,50, listOf(2,3,4,5,6))
-        executePost("fish",request,"fishs/response.json");
+        executePost("fish",request,"fishs/empty.json");
     }
 
     @Test

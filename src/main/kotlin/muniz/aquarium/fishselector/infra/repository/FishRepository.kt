@@ -14,6 +14,7 @@ interface FishRepository : CoroutineCrudRepository<Fish, Int>  {
                     where widthtank <= :widthTank  
                     and lengthtank <= :lengthTank  
                     and size * minnumber <= :aquariumRemainsSpace
+                    and id not in (:fishIds) 
                     and id in  
                                 (select compatible_fish_id 
                                  from fish_compatility
