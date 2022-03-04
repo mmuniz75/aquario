@@ -25,39 +25,46 @@ INSERT INTO dh (id, name, mindh, maxdh) VALUES(5, 'Muito dura', 19, 30);
 -- Fish
 INSERT INTO fish (id, name, size, maxtemperature, mintemperature, minnumber, widthtank, lengthtank, imageurl)
 VALUES(1, 'Neon', 3, 28, 26, 10, 60, 30, 'http://www.aquarismopaulista.com/wp-content/uploads/Paracheirodon-axelrodi1.jpg');
-INSERT INTO fish_ph (fish_id, ph_id) VALUES(1, 1);
+INSERT INTO fish_ph (fish_id, ph_id) VALUES(1, 3);
+INSERT INTO fish_ph (fish_id, ph_id) VALUES(1, 4);
 INSERT INTO fish_dh (fish_id, dh_id) VALUES(1, 1);
 INSERT INTO fish_dh (fish_id, dh_id) VALUES(1, 2);
 
 INSERT INTO fish (id, name, size, maxtemperature, mintemperature, minnumber, widthtank, lengthtank, imageurl)
 VALUES(2, 'Mato grosso', 3, 28, 26, 6, 60, 30 , 'http://www.aquarismopaulista.com/wp-content/uploads/2015/06/Hyphessobrycon-eques.jpg');
-INSERT INTO fish_ph (fish_id, ph_id) VALUES(2, 1);
+INSERT INTO fish_ph (fish_id, ph_id) VALUES(2, 3);
+INSERT INTO fish_ph (fish_id, ph_id) VALUES(2, 4);
 INSERT INTO fish_dh (fish_id, dh_id) VALUES(2, 3);
 
 INSERT INTO fish (id, name, size, maxtemperature, mintemperature, minnumber, widthtank, lengthtank, imageurl)
 VALUES(3, 'Tetra Negro', 5, 28, 26, 6, 60, 30 , 'http://www.aquarismopaulista.com/wp-content/uploads/2015/06/Gymnocorymbus-ternetzi1.jpg');
-INSERT INTO fish_ph (fish_id, ph_id) VALUES(3, 1);
+INSERT INTO fish_ph (fish_id, ph_id) VALUES(3, 3);
+INSERT INTO fish_ph (fish_id, ph_id) VALUES(3, 4);
 INSERT INTO fish_dh (fish_id, dh_id) VALUES(3, 3);
 
 INSERT INTO fish (id, name, size, maxtemperature, mintemperature, minnumber, widthtank, lengthtank, imageurl)
 VALUES(4, 'Barbus Ouro', 5, 28, 26, 6, 80, 30, 'http://www.aquarismopaulista.com/wp-content/uploads/2014/08/Puntius-semifasciolatus1.jpg');
-INSERT INTO fish_ph (fish_id, ph_id) VALUES(4, 1);
-INSERT INTO fish_ph (fish_id, ph_id) VALUES(4, 2);
+INSERT INTO fish_ph (fish_id, ph_id) VALUES(4, 3);
+INSERT INTO fish_ph (fish_id, ph_id) VALUES(4, 4);
+INSERT INTO fish_ph (fish_id, ph_id) VALUES(4, 5);
 INSERT INTO fish_dh (fish_id, dh_id) VALUES(4, 3);
 
 INSERT INTO fish (id, name, size, maxtemperature, mintemperature, minnumber, widthtank, lengthtank, imageurl)
 VALUES(5, 'Ramirezi', 5, 28, 26, 1, 60, 30 , 'http://www.aquarismopaulista.com/wp-content/uploads/2014/09/Mikrogeophagus-ramirezi1.jpg');
-INSERT INTO fish_ph (fish_id, ph_id) VALUES(5, 1);
+INSERT INTO fish_ph (fish_id, ph_id) VALUES(5, 3);
+INSERT INTO fish_ph (fish_id, ph_id) VALUES(5, 4);
 INSERT INTO fish_dh (fish_id, dh_id) VALUES(5, 3);
 
 INSERT INTO fish (id, name, size, maxtemperature, mintemperature, minnumber, widthtank, lengthtank, imageurl)
 VALUES(6, 'Colisa', 5, 28, 26, 1, 80, 30, 'http://www.aquarismopaulista.com/wp-content/uploads/2014/11/Trichogaster-lalius.jpg');
-INSERT INTO fish_ph (fish_id, ph_id) VALUES(6, 1);
+INSERT INTO fish_ph (fish_id, ph_id) VALUES(6, 3);
+INSERT INTO fish_ph (fish_id, ph_id) VALUES(6, 4);
 INSERT INTO fish_dh (fish_id, dh_id) VALUES(6, 3);
 
 INSERT INTO fish (id, name, size, maxtemperature, mintemperature, minnumber, widthtank, lengthtank, imageurl)
 VALUES(7, 'Tricogaster', 5, 28, 26, 1, 80, 30 , 'http://www.aquarismopaulista.com/wp-content/uploads/Trichogaster-trichopterus.jpg');
-INSERT INTO fish_ph (fish_id, ph_id) VALUES(7, 1);
+INSERT INTO fish_ph (fish_id, ph_id) VALUES(7, 3);
+INSERT INTO fish_ph (fish_id, ph_id) VALUES(7, 4);
 INSERT INTO fish_dh (fish_id, dh_id) VALUES(7, 3);
 
 INSERT INTO fish (id, name, size, minnumber, mintemperature, maxtemperature, widthtank, lengthtank,initialspace, imageurl)

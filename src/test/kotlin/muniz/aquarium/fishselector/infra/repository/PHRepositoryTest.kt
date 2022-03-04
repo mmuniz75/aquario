@@ -20,18 +20,17 @@ class PHRepositoryTest {
     fun listPHForFishAcid(){
         runBlocking {
             val phs = repository.findPHByFishId(1)
-            phs.collect { ph -> assertEquals("6.2 - 6.8",ph.displayRange)}
+            phs.collect { ph -> assertTrue(listOf("6.2 - 6.4","6.6 - 6.8").contains(ph.displayRange))}
         }
     }
 
     @Test
-    fun listPHForFishAcidNeutral(){
+    fun listPHForFishAcidNeutral() {
         runBlocking {
             val phs = repository.findPHByFishId(4)
             phs.collect { ph ->
-                println(ph.displayRange)
-                assertTrue("6.2 - 6.8" == ph.displayRange || "7.0" == ph.displayRange)}
+                assertTrue(listOf("6.2 - 6.4", "6.6 - 6.8", "7.0").contains(ph.displayRange))
+            }
         }
     }
-
 }
