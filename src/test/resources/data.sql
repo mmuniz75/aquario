@@ -56,6 +56,9 @@ VALUES(7, 'Tricogaster', 5, 28, 26, 1, 80, 30 , 'http://www.aquarismopaulista.co
 INSERT INTO fish_ph (fish_id, ph_id) VALUES(7, 1);
 INSERT INTO fish_dh (fish_id, dh_id) VALUES(7, 3);
 
+INSERT INTO fish (id, name, size, minnumber, mintemperature, maxtemperature, widthtank, lengthtank,imageurl)
+VALUES(21, 'Kinguio', 30, 1, 10, 28, 80, 40,'http://www.aquarismopaulista.com/wp-content/uploads/2015/12/Carassius-auratus.jpg');
+
 
 -- Compatibility
 

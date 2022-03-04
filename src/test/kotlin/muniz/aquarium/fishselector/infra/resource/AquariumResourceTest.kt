@@ -75,6 +75,12 @@ class AquariumResourceTest {
     }
 
     @Test
+    fun listAllCompatibility() {
+        val request = FishRequest(80,40,50, listOf())
+        executePost("fish",request,"fishs/all.json");
+    }
+
+    @Test
     fun checkQuestion1() {
         var request = HardScapeAnswerRequest(null, null, null)
         executePost("hardscapeQuestion", request, "questions/question_1_response.json")

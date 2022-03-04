@@ -21,7 +21,7 @@ class FishRepositoryTest {
     fun listFish(){
         val fishes = repository.findAll()
         runBlocking {
-            fishes.collect {assertTrue(listOf("Neon","Mato grosso","Tetra Negro","Barbus Ouro","Ramirezi","Colisa","Tricogaster").contains(it.name))}
+            fishes.collect {assertTrue(listOf("Neon","Mato grosso","Tetra Negro","Barbus Ouro","Ramirezi","Colisa","Tricogaster","Kinguio").contains(it.name))}
         }
 
     }

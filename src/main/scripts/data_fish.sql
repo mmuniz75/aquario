@@ -484,7 +484,7 @@ INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(18, 54); -- Kr
 INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(18, 55); -- Acará Festivo
 
 INSERT INTO fish (id, name, size, minnumber, mintemperature, maxtemperature, widthtank, lengthtank,imageurl)
-VALUES(21, 'Kinguio', 30, 1, 10, 28, 100, 50,'http://www.aquarismopaulista.com/wp-content/uploads/2015/12/Carassius-auratus.jpg');
+VALUES(21, 'Kinguio', 30, 1, 10, 28, 80, 40,'http://www.aquarismopaulista.com/wp-content/uploads/2015/12/Carassius-auratus.jpg');
 INSERT INTO fish_ph (fish_id, ph_id) VALUES(21, 5);
 INSERT INTO fish_dh (fish_id, dh_id) VALUES(21, 2);
 INSERT INTO fish_dh (fish_id, dh_id) VALUES(21, 3);

@@ -25,5 +25,13 @@ interface FishRepository : CoroutineCrudRepository<Fish, Int>  {
                     """)
     suspend fun findByCompatibleFish(widthTank : Int, lengthTank: Int, fishIds : List<Int>, fishCount : Int, aquariumRemainsSpace : Int) : Flow<Fish>
 
+
+    @Query("""select distinct * from fish  
+                    where widthtank <= :widthTank  
+                    and lengthtank <= :lengthTank  
+                    and size * minnumber <= :aquariumRemainsSpace
+                    """)
+    suspend fun findByCompatibleFishEmptyTank(widthTank : Int, lengthTank: Int, aquariumRemainsSpace : Int) : Flow<Fish>
+
     suspend fun findByIdIn(ids: List<Int>) : Flow<Fish>
 }
