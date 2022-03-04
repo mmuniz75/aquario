@@ -76,8 +76,14 @@ class AquariumResourceTest {
 
     @Test
     fun listAllCompatibility() {
-        val request = FishRequest(80,40,50, listOf())
+        val request = FishRequest(80,40,120, listOf())
         executePost("fish",request,"fishs/all.json");
+    }
+
+    @Test
+    fun listNotDisplayKinguioMissingRoom() {
+        val request = FishRequest(80,40,50, listOf())
+        executePost("fish",request,"fishs/missing_kinguio.json");
     }
 
     @Test

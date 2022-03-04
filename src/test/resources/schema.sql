@@ -12,6 +12,7 @@ create table IF NOT EXISTS  ph (
     maxph numeric
     )
 ;
+
 create Table IF NOT EXISTS fish (
    id int PRIMARY KEY,
    name VARCHAR(50),
@@ -21,6 +22,7 @@ create Table IF NOT EXISTS fish (
    minNumber int,
    widthTank int,
    lengthTank int,
+   initialspace int default 0,
    imageurl VARCHAR(255)
 )
 ;

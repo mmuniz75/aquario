@@ -7,6 +7,7 @@ create Table Fish (
    minNumber int,
    widthTank int,
    lengthTank int,
+   initialspace int default 0,
    imageurl VARCHAR(255)
 )
 ;
@@ -32,8 +33,8 @@ create table fish_compatility (
    fish_id int,
    compatible_fish_id int,
    PRIMARY KEY (fish_id,compatible_fish_id)
-   --,FOREIGN KEY (fish_id) REFERENCES fish(id),
-   -- FOREIGN KEY (compatible_fish_id) REFERENCES fish(id)
+   FOREIGN KEY (fish_id) REFERENCES fish(id),
+   FOREIGN KEY (compatible_fish_id) REFERENCES fish(id)
 )
 ;
 
