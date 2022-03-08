@@ -11,7 +11,7 @@ class Aquarium {
 
     constructor(tank:Tank, hardScape: HardScape) {
         this.fishes = mutableListOf()
-        this.fishCentimeterAvaliable =  tank.realLiter - hardScape.height()
+        this.fishCentimeterAvaliable =  tank.liter - hardScape.height()
     }
 
     constructor(fishCentimeterAvaliable : Int,fishes : MutableList<Fish> ) {

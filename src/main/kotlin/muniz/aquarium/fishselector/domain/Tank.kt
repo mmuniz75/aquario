@@ -2,6 +2,7 @@ package muniz.aquarium.fishselector.domain
 
 import com.fasterxml.jackson.annotation.JsonIgnore
 import java.math.BigDecimal
+import java.math.RoundingMode
 
 class Tank(val width: Int,
            val length: Int,
@@ -25,7 +26,7 @@ class Tank(val width: Int,
         val realHeight = BigDecimal(height).subtract(glassThickness.cm)
                           .subtract(WATER_SURFACE_SPACE)
 
-        return  realWidth.multiply(realLength).multiply(realHeight).divide(BigDecimal(1000)).toInt()
+        return  realWidth.multiply(realLength).multiply(realHeight).divide(BigDecimal(1000)).setScale(0, RoundingMode.CEILING).toInt()
     }
 
 }

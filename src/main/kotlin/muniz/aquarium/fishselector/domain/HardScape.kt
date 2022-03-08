@@ -2,6 +2,7 @@ package muniz.aquarium.fishselector.domain
 
 import muniz.aquarium.fishselector.exception.PreConditionException
 import java.math.BigDecimal
+import java.math.RoundingMode
 
 class HardScape(var rocksCount : Int = 0,
                 var rocksHeight : Int = 0,
@@ -57,7 +58,6 @@ class HardScape(var rocksCount : Int = 0,
         substractWeight = BigDecimal(tankWidth)
                          .multiply(BigDecimal(tankLenght))
                          .multiply(substractAverage)
-                         .multiply(BigDecimal("1.5"))
                          .divide(BigDecimal(1000))
                          .toInt()
 
@@ -66,12 +66,12 @@ class HardScape(var rocksCount : Int = 0,
     private fun calculateRocksWeight(){
         if(rocksHeight>0) return;
         if(rocksCount == 0) return
-        rocksHeight = BigDecimal(rocksCount).multiply(ROCKS_WEIGHT_AVERAGE).toInt()
+        rocksHeight = BigDecimal(rocksCount).multiply(ROCKS_WEIGHT_AVERAGE).setScale(0, RoundingMode.CEILING).toInt()
     }
 
     private fun calculateWoodWeight(){
         if(woodWeight>0) return;
         if(woodCount == 0) return
-        woodWeight = BigDecimal(woodCount).multiply(WOOD_WEIGHT_AVERAGE).toInt()
+        woodWeight = BigDecimal(woodCount).multiply(WOOD_WEIGHT_AVERAGE).setScale(0, RoundingMode.CEILING).toInt()
     }
 }

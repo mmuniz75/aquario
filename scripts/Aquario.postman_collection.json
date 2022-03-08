@@ -9,7 +9,7 @@
 			"name": "questions",
 			"item": [
 				{
-					"name": "1 questao hardscape",
+					"name": "1 question hardscape",
 					"request": {
 						"method": "POST",
 						"header": [],
@@ -38,7 +38,7 @@
 					"response": []
 				},
 				{
-					"name": "2 questao hardscape",
+					"name": "2 question hardscape",
 					"request": {
 						"method": "POST",
 						"header": [],
@@ -67,7 +67,7 @@
 					"response": []
 				},
 				{
-					"name": "3 questao hardscape",
+					"name": "3 question hardscape",
 					"request": {
 						"method": "POST",
 						"header": [],
@@ -96,7 +96,7 @@
 					"response": []
 				},
 				{
-					"name": "4 questao hardscape",
+					"name": "4 question hardscape",
 					"request": {
 						"method": "POST",
 						"header": [],
@@ -125,7 +125,7 @@
 					"response": []
 				},
 				{
-					"name": "5 questao hardscape",
+					"name": "5 question hardscape",
 					"request": {
 						"method": "POST",
 						"header": [],
@@ -154,6 +154,93 @@
 					"response": []
 				}
 			]
+		},
+		{
+			"name": "Avaliable space in tank weugth",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"tank\": {\r\n        \"width\": 80,\r\n        \"length\": 30,\r\n        \"height\": 45\r\n    },\r\n    \"answers\": [\r\n        {\r\n            \"questionId\": \"SUBSTRACT_WEIGHT\",\r\n            \"answer\": 10\r\n        },\r\n        {\r\n            \"questionId\": \"ROCK_WEIGHT\",\r\n            \"answer\": 6\r\n        },\r\n        {\r\n            \"questionId\": \"WOOD_WEIGHT\",\r\n            \"answer\": 3\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/aquarium/avaliableSpace",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"aquarium",
+						"avaliableSpace"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Avaliable space in tank weight 46",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"tank\": {\r\n        \"width\": 46,\r\n        \"length\": 24,\r\n        \"height\": 30\r\n    },\r\n    \"answers\": [\r\n        {\r\n            \"questionId\": \"SUBSTRACT_WEIGHT\",\r\n            \"answer\": 5\r\n        },\r\n        {\r\n            \"questionId\": \"ROCK_WEIGHT\",\r\n            \"answer\": 2\r\n        },\r\n        {\r\n            \"questionId\": \"WOOD_WEIGHT\",\r\n            \"answer\": 1\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/aquarium/avaliableSpace",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"aquarium",
+						"avaliableSpace"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Avaliable space in tank no info",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"tank\": {\r\n        \"width\": 80,\r\n        \"length\": 30,\r\n        \"height\": 45\r\n    },\r\n    \"answers\": [\r\n        {\r\n            \"questionId\": \"SUBSTRACT_FRONT_HEIGHT\",\r\n            \"answer\": 6\r\n        },\r\n         {\r\n            \"questionId\": \"SUBSTRACT_BACK_HEIGHT\",\r\n            \"answer\": 9\r\n        },\r\n        {\r\n            \"questionId\": \"ROCK_COUNT\",\r\n            \"answer\": 6\r\n        },\r\n        {\r\n            \"questionId\": \"WOOD_COUNT\",\r\n            \"answer\": 3\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/aquarium/avaliableSpace",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"aquarium",
+						"avaliableSpace"
+					]
+				}
+			},
+			"response": []
 		}
 	]
 }
