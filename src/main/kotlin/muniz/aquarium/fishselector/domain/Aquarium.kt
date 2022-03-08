@@ -1,5 +1,6 @@
 package muniz.aquarium.fishselector.domain
 
+import muniz.aquarium.fishselector.exception.PreConditionException
 import java.lang.IllegalStateException
 
 class Aquarium {
@@ -21,12 +22,12 @@ class Aquarium {
 
     fun addFish(fish : Fish, count : Int){
         if(count < fish.minNumber)
-            throw IllegalStateException("${fish.minNumber} é o minimo de peixes dessa especie que se deve colocar no aquario")
+            throw PreConditionException("${fish.minNumber} é o minimo de peixes dessa especie que se deve colocar no aquario")
 
         val shoal = Shoal(fish, count)
 
         if(shoal.totalCentimeter > fishCentimeterAvaliable)
-            throw IllegalStateException("Não é possivel adicionar esses peixes pois o aquario não suporta essa quandidade")
+            throw PreConditionException("Não é possivel adicionar esses peixes pois o aquario não suporta essa quandidade")
 
         fishes.add(shoal)
         fishCentimeterAvaliable -= shoal.totalCentimeter

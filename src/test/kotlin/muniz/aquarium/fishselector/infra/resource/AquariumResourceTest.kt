@@ -213,12 +213,9 @@ class AquariumResourceTest {
             .uri("$URL/fish")
             .body(Mono.just(request), request::class.java)
             .exchange()
-            .expectStatus().is5xxServerError
-            /*.expectBody()
-            "Não é possivel adicionar esses peixes pois o aquario não suporta essa quandidade"
-            .consumeWith {
-                assertTrue(testUtils.checkResponseWithJson(it,objectMapper.writeValueAsString(dto))) }*/
-
+            .expectStatus().is4xxClientError
+            .expectBody()
+            .jsonPath("$.message").isEqualTo("Não é possivel adicionar esses peixes pois o aquario não suporta essa quandidade")
     }
 
     private fun executePost(endPoint : String, request : Any, response : String) {

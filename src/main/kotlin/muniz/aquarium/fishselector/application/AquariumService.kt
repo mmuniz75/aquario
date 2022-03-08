@@ -6,6 +6,8 @@ import muniz.aquarium.fishselector.dto.AddFishRequest
 import muniz.aquarium.fishselector.dto.AquariumDTO
 import muniz.aquarium.fishselector.dto.FishDTO
 import muniz.aquarium.fishselector.dto.FishRequest
+import muniz.aquarium.fishselector.exception.NotFoundException
+import muniz.aquarium.fishselector.exception.PreConditionException
 import muniz.aquarium.fishselector.infra.repository.FishAggregateRepository
 import muniz.aquarium.fishselector.infra.repository.FishRepository
 import org.springframework.beans.factory.annotation.Autowired
@@ -27,7 +29,7 @@ class AquariumService {
             return returnFirstQuestion()
 
         if(answer == null)
-            throw IllegalStateException("Resposta não pode ser vazia")
+            throw PreConditionException("Resposta não pode ser vazia")
 
         val newPreviousList = mutableListOf<HardScapeAnswer?>()
         newPreviousList.addAll(previousQuestions)
@@ -72,7 +74,7 @@ class AquariumService {
 
         val aquarium = Aquarium(request.centimetersAvailable, fishs.toMutableList())
 
-        val fish = repositoryAggregate.findById(request.fishId)?:throw IllegalStateException("Peixe não encontrado")
+        val fish = repositoryAggregate.findById(request.fishId)?:throw NotFoundException("Peixe não encontrado")
 
         aquarium.addFish(fish, request.fishCount)
 
