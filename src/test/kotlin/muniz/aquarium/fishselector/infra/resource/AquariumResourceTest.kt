@@ -208,7 +208,16 @@ class AquariumResourceTest {
     @Test
     fun checkFishCentimerKinguioMissingSpace(){
         val request = AddFishRequest(21, 2, 120, listOf())
+        perform400Put(request)
+    }
 
+    @Test
+    fun checkFishCentimerOneKinguioSmalTankShouldFail(){
+        val request = AddFishRequest(21, 1, 119, listOf())
+        perform400Put(request)
+    }
+
+    private fun perform400Put(request : AddFishRequest){
         webTestClient.put()
             .uri("$URL/fish")
             .body(Mono.just(request), request::class.java)
