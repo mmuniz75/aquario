@@ -1,16 +1,19 @@
 package muniz.aquarium.fishselector.domain
 
+import com.fasterxml.jackson.annotation.JsonIgnore
 import java.math.BigDecimal
-import java.math.RoundingMode
 
 class Tank(val width: Int,
            val length: Int,
            val height: Int) {
 
+    @JsonIgnore
     val liter : Int = width * length * height / 1000
 
+    @JsonIgnore
     val glassThickness : GlassThickness = GlassThickness.thickness(liter)
 
+    @JsonIgnore
     val realLiter = calculateRealLiter()
 
     private fun calculateRealLiter() : Int {

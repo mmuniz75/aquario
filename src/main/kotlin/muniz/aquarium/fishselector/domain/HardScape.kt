@@ -1,7 +1,6 @@
 package muniz.aquarium.fishselector.domain
 
-import com.google.common.collect.ImmutableList
-import java.lang.IllegalStateException
+import muniz.aquarium.fishselector.exception.PreConditionException
 import java.math.BigDecimal
 
 class HardScape(var rocksCount : Int = 0,
@@ -15,6 +14,9 @@ class HardScape(var rocksCount : Int = 0,
                 var tankLenght : Int = 0
                 )
 {
+
+    private val WOOD_WEIGHT_AVERAGE = BigDecimal("0.2")
+    private val ROCKS_WEIGHT_AVERAGE = BigDecimal("0.5")
 
     constructor(questions : List<HardScapeAnswer>, tankWidth: Int = 0, tankLenght: Int = 0) :
             this( tankWidth = tankWidth,
@@ -45,10 +47,10 @@ class HardScape(var rocksCount : Int = 0,
     private fun canculateSubstractWeight(){
         if(substractWeight>0) return;
 
-        if(substractFrontHeight == 0) throw IllegalStateException("Altura frontal do substrato não informada")
-        if(substractBackHeight  == 0) throw IllegalStateException("Altura traseira do substrato não informada")
-        if(tankLenght == 0) throw IllegalStateException("Largura do aquario não informada")
-        if(tankWidth == 0) throw IllegalStateException("Comprimento do aquario não informada")
+        if(substractFrontHeight == 0) throw PreConditionException("Altura frontal do substrato não informada")
+        if(substractBackHeight  == 0) throw PreConditionException("Altura traseira do substrato não informada")
+        if(tankLenght == 0) throw PreConditionException("Largura do aquario não informada")
+        if(tankWidth == 0) throw PreConditionException("Comprimento do aquario não informada")
 
         val substractAverage = BigDecimal(substractFrontHeight).add(BigDecimal(substractBackHeight)).divide(BigDecimal(2))
 
@@ -62,14 +64,12 @@ class HardScape(var rocksCount : Int = 0,
     }
 
     private fun calculateRocksWeight(){
-        val ROCKS_WEIGHT_AVERAGE = BigDecimal.ONE
         if(rocksHeight>0) return;
         if(rocksCount == 0) return
         rocksHeight = BigDecimal(rocksCount).multiply(ROCKS_WEIGHT_AVERAGE).toInt()
     }
 
     private fun calculateWoodWeight(){
-        val WOOD_WEIGHT_AVERAGE = BigDecimal("0.5")
         if(woodWeight>0) return;
         if(woodCount == 0) return
         woodWeight = BigDecimal(woodCount).multiply(WOOD_WEIGHT_AVERAGE).toInt()

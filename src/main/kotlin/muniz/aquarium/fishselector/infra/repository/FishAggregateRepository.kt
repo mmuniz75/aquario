@@ -2,6 +2,7 @@ package muniz.aquarium.fishselector.infra.repository
 
 import kotlinx.coroutines.flow.*
 import muniz.aquarium.fishselector.domain.Fish
+import muniz.aquarium.fishselector.exception.NotFoundException
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Repository
 
@@ -40,7 +41,7 @@ class FishAggregateRepository {
     }
 
     suspend fun findById(id: Int): Fish? {
-        val fish = repository.findById(id)?: throw IllegalCallerException("Peixe não encontrado")
+        val fish = repository.findById(id)?: throw NotFoundException("Peixe não encontrado")
         fish.ph = phRepository.findPHByFishId(id).toList()
         fish.dh = dhRepository.findDHByFishId(id).toList()
 

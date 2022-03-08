@@ -12,8 +12,6 @@ import muniz.aquarium.fishselector.infra.repository.FishAggregateRepository
 import muniz.aquarium.fishselector.infra.repository.FishRepository
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Service
-import java.lang.IllegalStateException
-import javax.crypto.KeyAgreement
 
 @Service
 class AquariumService {

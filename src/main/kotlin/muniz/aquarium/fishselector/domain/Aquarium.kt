@@ -1,7 +1,6 @@
 package muniz.aquarium.fishselector.domain
 
 import muniz.aquarium.fishselector.exception.PreConditionException
-import java.lang.IllegalStateException
 
 class Aquarium {
 

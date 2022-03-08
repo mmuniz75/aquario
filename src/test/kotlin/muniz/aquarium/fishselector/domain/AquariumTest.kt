@@ -1,5 +1,6 @@
 package muniz.aquarium.fishselector.domain
 
+import muniz.aquarium.fishselector.exception.PreConditionException
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Assertions.fail
 import org.junit.jupiter.api.Test
@@ -25,8 +26,8 @@ class AquariumTest {
         try {
             aquarium.addFish(createNeon(), 100)
             fail("Não pode permitir mais que aquario suporta")
-        }catch(ex : IllegalStateException){
-            assertEquals("Não é possivel adicionar esses peixes pois o aquario não suporta essa quandidade", ex.message)
+        }catch(ex : PreConditionException){
+            assertEquals("Não é possivel adicionar esses peixes pois o aquario não suporta essa quandidade", ex.error.message)
         }
     }
 
@@ -36,8 +37,8 @@ class AquariumTest {
         try {
             aquarium.addFish(createNeon(), 9)
             fail("Não pode permitir menos peixes que o cardume minimo")
-        }catch(ex : IllegalStateException){
-            assertEquals("10 é o minimo de peixes dessa especie que se deve colocar no aquario", ex.message)
+        }catch(ex : PreConditionException){
+            assertEquals("10 é o minimo de peixes dessa especie que se deve colocar no aquario", ex.error.message)
         }
     }
 
