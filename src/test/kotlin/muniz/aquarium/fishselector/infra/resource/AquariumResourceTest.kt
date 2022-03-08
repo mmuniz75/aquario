@@ -227,7 +227,11 @@ class AquariumResourceTest {
             .jsonPath("$.message").isEqualTo("Não é possivel adicionar esses peixes pois o aquario não suporta essa quandidade")
     }
 
+    @Autowired
+    private lateinit var mapper : ObjectMapper
+
     private fun executePost(endPoint : String, request : Any, response : String) {
+        println("request = ${mapper.writeValueAsString(request)}")
         webTestClient.post()
             .uri("$URL/$endPoint")
             .body(Mono.just(request), request::class.java)

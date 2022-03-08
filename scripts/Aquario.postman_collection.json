@@ -1,0 +1,159 @@
+{
+	"info": {
+		"_postman_id": "76fd1300-909d-4ac4-9484-6f4780acd7b2",
+		"name": "Aquario",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "questions",
+			"item": [
+				{
+					"name": "1 questao hardscape",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"question\" : null,\r\n    \"answer\": null,\r\n    \"previousAnswers\": null\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/aquarium/hardscapeQuestion",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"aquarium",
+								"hardscapeQuestion"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "2 questao hardscape",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"question\" : \"SUBSTRACT_KNOLEDGEMENT\",\r\n    \"answer\": true,\r\n    \"previousAnswers\": null\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/aquarium/hardscapeQuestion",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"aquarium",
+								"hardscapeQuestion"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "3 questao hardscape",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"question\": \"SUBSTRACT_WEIGHT\",\r\n    \"answer\": 10,\r\n    \"previousAnswers\": [\r\n        {\r\n            \"questionId\": \"SUBSTRACT_KNOLEDGEMENT\",\r\n            \"answer\": true\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/aquarium/hardscapeQuestion",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"aquarium",
+								"hardscapeQuestion"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "4 questao hardscape",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"question\": \"ROCK_EXISTENCE\",\r\n    \"answer\": true,\r\n    \"previousAnswers\": [\r\n        {\r\n            \"questionId\": \"SUBSTRACT_KNOLEDGEMENT\",\r\n            \"answer\": true\r\n        },\r\n        {\r\n            \"questionId\": \"SUBSTRACT_WEIGHT\",\r\n            \"answer\": 10\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/aquarium/hardscapeQuestion",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"aquarium",
+								"hardscapeQuestion"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "5 questao hardscape",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"question\": \"ROCK_KNOLEDGEMENT\",\r\n    \"answer\": true,\r\n    \"previousAnswers\": [\r\n        {\r\n            \"questionId\": \"SUBSTRACT_KNOLEDGEMENT\",\r\n            \"answer\": true\r\n        },\r\n        {\r\n            \"questionId\": \"SUBSTRACT_WEIGHT\",\r\n            \"answer\": 10\r\n        }\r\n        ,\r\n        {\r\n            \"questionId\": \"ROCK_EXISTENCE\",\r\n            \"answer\": true\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/aquarium/hardscapeQuestion",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"aquarium",
+								"hardscapeQuestion"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
