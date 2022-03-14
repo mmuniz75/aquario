@@ -74,6 +74,13 @@ INSERT INTO fish_dh (fish_id, dh_id) VALUES(21, 2);
 INSERT INTO fish_dh (fish_id, dh_id) VALUES(21, 3);
 INSERT INTO fish_dh (fish_id, dh_id) VALUES(21, 4);
 
+INSERT INTO fish (id, name, size, minnumber, mintemperature, maxtemperature, widthtank, lengthtank,imageurl)
+VALUES(26, 'Killifish', 5, 1, 18, 22, 30, 20,'http://www.aquarismopaulista.com/wp-content/uploads/2018/04/Aphyosemion-ogoense.jpg');
+INSERT INTO fish_ph (fish_id, ph_id) VALUES(26, 3);
+INSERT INTO fish_ph (fish_id, ph_id) VALUES(26, 4);
+INSERT INTO fish_dh (fish_id, dh_id) VALUES(26, 1);
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(26, 3); -- Tetra Negro
+
 -- Compatibility
 
 -- Neon

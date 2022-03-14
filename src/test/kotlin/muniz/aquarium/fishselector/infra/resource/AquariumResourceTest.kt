@@ -73,6 +73,18 @@ class AquariumResourceTest {
     }
 
     @Test
+    fun listKilliFishTankLenghtSize() {
+        val request = FishRequest(80,20,32, listOf())
+        executePost("fish",request,"fishs/killi_fish_response.json");
+    }
+
+    @Test
+    fun listKilliFishTankLenghtSizeWithFish() {
+        val request = FishRequest(80,20,32, listOf(3))
+        executePost("fish",request,"fishs/killi_fish_response.json");
+    }
+
+    @Test
     fun listAllCompatibility() {
         val request = FishRequest(80,40,120, listOf())
         executePost("fish",request,"fishs/all.json");
