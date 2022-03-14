@@ -40,7 +40,7 @@ class HardScapeAnswerTest {
         answers.add(HardScapeAnswer(curentQuestion!!, 2))
 
         val hardScape =  HardScape(answers, 80, 30)
-        assertEquals(16 , hardScape.height())
+        assertEquals(13 , hardScape.height())
     }
 
     @Test

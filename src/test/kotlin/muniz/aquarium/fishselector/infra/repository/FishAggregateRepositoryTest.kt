@@ -79,10 +79,11 @@ class FishAggregateRepositoryTest {
         runBlocking {
             val fishes = repository.findByCompatibleFish(widthTank = 80, lengthTank = 30, fishIds = mutableListOf(2,3),aquariumRemainsSpace = 50).toList()
             assertEquals(4 , fishes.size)
-            assertEquals("Neon",fishes[0].name)
-            assertEquals("Barbus Ouro",fishes[1].name)
-            assertEquals("Ramirezi",fishes[2].name)
-            assertEquals("Colisa",fishes[3].name)
+            assertEquals("Barbus Ouro",fishes[0].name)
+            assertEquals("Colisa",fishes[1].name)
+            assertEquals("Neon",fishes[2].name)
+            assertEquals("Ramirezi",fishes[3].name)
+
         }
     }
 
@@ -101,8 +102,8 @@ class FishAggregateRepositoryTest {
             val fishes = repository.findByCompatibleFish(widthTank = 80, lengthTank = 30, fishIds = mutableListOf(7),aquariumRemainsSpace = 50).toList()
             assertEquals(3 , fishes.size)
             assertEquals("Barbus Ouro",fishes[0].name)
-            assertEquals("Ramirezi",fishes[1].name)
-            assertEquals("Colisa",fishes[2].name)
+            assertEquals("Colisa",fishes[1].name)
+            assertEquals("Ramirezi",fishes[2].name)
         }
     }
 

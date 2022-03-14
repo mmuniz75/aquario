@@ -10,17 +10,17 @@ class AquariumServiceTest {
 
     @Test
     fun allTrueQuestions(){
-        val hardScape  =  HardScape(createHardScepe(true));
+        val hardScape  =  HardScape(createHardScape(true));
         Assertions.assertEquals(30, hardScape.height())
     }
 
     @Test
     fun allFalseQuestions(){
-        val hardScape  =  HardScape(createHardScepe(false),80,30);
-        Assertions.assertEquals(36, hardScape.height())
+        val hardScape  =  HardScape(createHardScape(false),80,30);
+        Assertions.assertEquals(24, hardScape.height())
     }
 
-    fun createHardScepe(yesForAll : Boolean): List<HardScapeAnswer> {
+    fun createHardScape(yesForAll : Boolean): List<HardScapeAnswer> {
         val service = AquariumService()
         var questions = service.addNextQuestion(null, listOf())
 

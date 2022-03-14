@@ -21,13 +21,13 @@ class HardScapeTest {
     @Test
     fun checkWoodCalculation(){
         val hardScape = HardScape(substractWeight = 10, woodCount = 2, rocksHeight = 20)
-        assertEquals(30, hardScape.height())
+        assertEquals(31, hardScape.height())
     }
 
     @Test
     fun checkSubstractCalculation(){
         val hardScape = HardScape(substractFrontHeight = 3, substractBackHeight = 5, tankWidth = 80,tankLenght = 30, woodWeight = 5, rocksHeight = 20)
-        assertEquals(39, hardScape.height())
+        assertEquals(35, hardScape.height())
     }
 
 }

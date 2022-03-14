@@ -1,8 +1,13 @@
 [
     {
-        "name": "Neon",
-        "minNumber": 10,
-        "imageUrl": "http://www.aquarismopaulista.com/wp-content/uploads/Paracheirodon-axelrodi1.jpg"
+        "name": "BarbusOuro",
+        "minNumber": 6,
+        "imageUrl": "http://www.aquarismopaulista.com/wp-content/uploads/2014/08/Puntius-semifasciolatus1.jpg"
+    },
+    {
+        "name": "Colisa",
+        "minNumber": 1,
+        "imageUrl": "http://www.aquarismopaulista.com/wp-content/uploads/2014/11/Trichogaster-lalius.jpg"
     },
     {
         "name": "Matogrosso",
@@ -10,14 +15,9 @@
         "imageUrl": "http://www.aquarismopaulista.com/wp-content/uploads/2015/06/Hyphessobrycon-eques.jpg"
     },
     {
-        "name": "TetraNegro",
-        "minNumber": 6,
-        "imageUrl": "http://www.aquarismopaulista.com/wp-content/uploads/2015/06/Gymnocorymbus-ternetzi1.jpg"
-    },
-    {
-        "name": "BarbusOuro",
-        "minNumber": 6,
-        "imageUrl": "http://www.aquarismopaulista.com/wp-content/uploads/2014/08/Puntius-semifasciolatus1.jpg"
+        "name": "Neon",
+        "minNumber": 10,
+        "imageUrl": "http://www.aquarismopaulista.com/wp-content/uploads/Paracheirodon-axelrodi1.jpg"
     },
     {
         "name": "Ramirezi",
@@ -25,9 +25,9 @@
         "imageUrl": "http://www.aquarismopaulista.com/wp-content/uploads/2014/09/Mikrogeophagus-ramirezi1.jpg"
     },
     {
-        "name": "Colisa",
-        "minNumber": 1,
-        "imageUrl": "http://www.aquarismopaulista.com/wp-content/uploads/2014/11/Trichogaster-lalius.jpg"
+        "name": "TetraNegro",
+        "minNumber": 6,
+        "imageUrl": "http://www.aquarismopaulista.com/wp-content/uploads/2015/06/Gymnocorymbus-ternetzi1.jpg"
     },
     {
         "name": "Tricogaster",

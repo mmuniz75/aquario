@@ -1,22 +1,22 @@
 [
   {
-    "name" : "Neon",
-    "minNumber" : 10,
-    "imageUrl" : "http://www.aquarismopaulista.com/wp-content/uploads/Paracheirodon-axelrodi1.jpg"
-  },
-  {
     "name" : "Barbus Ouro",
     "minNumber" : 6,
     "imageUrl" : "http://www.aquarismopaulista.com/wp-content/uploads/2014/08/Puntius-semifasciolatus1.jpg"
   },
   {
-    "name" : "Ramirezi",
-    "minNumber" : 1,
-    "imageUrl" : "http://www.aquarismopaulista.com/wp-content/uploads/2014/09/Mikrogeophagus-ramirezi1.jpg"
-  },
-  {
     "name" : "Colisa",
     "minNumber" : 1,
     "imageUrl" : "http://www.aquarismopaulista.com/wp-content/uploads/2014/11/Trichogaster-lalius.jpg"
+  },
+  {
+    "name" : "Neon",
+    "minNumber" : 10,
+    "imageUrl" : "http://www.aquarismopaulista.com/wp-content/uploads/Paracheirodon-axelrodi1.jpg"
+  },
+    {
+    "name" : "Ramirezi",
+    "minNumber" : 1,
+    "imageUrl" : "http://www.aquarismopaulista.com/wp-content/uploads/2014/09/Mikrogeophagus-ramirezi1.jpg"
   }
 ]

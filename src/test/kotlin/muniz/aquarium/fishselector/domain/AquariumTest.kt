@@ -10,14 +10,14 @@ class AquariumTest {
 
     @Test
     fun checkFishCentimer(){
-        assertEquals(81, createAquarium().fishCentimeterAvaliable)
+        assertEquals(91, createAquarium().fishCentimeterAvaliable)
     }
 
     @Test
     fun checkFishCentimerOneShoal(){
         val aquarium = createAquarium()
         aquarium.addFish(createNeon(), 10)
-        assertEquals(51, aquarium.fishCentimeterAvaliable)
+        assertEquals(61, aquarium.fishCentimeterAvaliable)
     }
 
     @Test
@@ -48,7 +48,7 @@ class AquariumTest {
         aquarium.addFish(createNeon(), 10)
         aquarium.addFish(createTetra(), 7)
 
-        assertEquals(16, aquarium.fishCentimeterAvaliable)
+        assertEquals(26, aquarium.fishCentimeterAvaliable)
     }
 
     @Test

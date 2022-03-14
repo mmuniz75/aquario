@@ -59,6 +59,7 @@ class HardScape(var rocksCount : Int = 0,
                          .multiply(BigDecimal(tankLenght))
                          .multiply(substractAverage)
                          .divide(BigDecimal(1000))
+                         .setScale(0, RoundingMode.CEILING)
                          .toInt()
 
     }

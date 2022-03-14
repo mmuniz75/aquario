@@ -22,6 +22,7 @@ interface FishRepository : CoroutineCrudRepository<Fish, Int>  {
                                  group by compatible_fish_id
                                  having count(*)= :fishCount
                                  )
+                   order by name              
                     """)
     suspend fun findByCompatibleFish(widthTank : Int, lengthTank: Int, fishIds : List<Int>, fishCount : Int, aquariumRemainsSpace : Int) : Flow<Fish>
 
@@ -30,6 +31,7 @@ interface FishRepository : CoroutineCrudRepository<Fish, Int>  {
                     where widthtank <= :widthTank  
                     and lengthtank <= :lengthTank  
                     and size * minnumber + initialspace <= :aquariumRemainsSpace
+                    order by name
                     """)
     suspend fun findByCompatibleFishEmptyTank(widthTank : Int, lengthTank: Int, aquariumRemainsSpace : Int) : Flow<Fish>
 
