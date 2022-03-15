@@ -46,11 +46,12 @@ class FishAggregateRepositoryTest {
     fun listFishByTank(){
         runBlocking {
             val fishes = repository.listFishByTank(60,30).toList()
-            assertEquals(4 , fishes.size)
+            assertEquals(5 , fishes.size)
             assertEquals("Neon",fishes[0].name)
             assertEquals("Mato grosso",fishes[1].name)
             assertEquals("Tetra Negro",fishes[2].name)
             assertEquals("Ramirezi",fishes[3].name)
+            assertEquals("Killifish",fishes[4].name)
         }
     }
 

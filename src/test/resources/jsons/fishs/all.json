@@ -10,6 +10,11 @@
         "imageUrl": "http://www.aquarismopaulista.com/wp-content/uploads/2014/11/Trichogaster-lalius.jpg"
     },
     {
+        "name": "Killifish",
+        "minNumber": 26,
+        "imageUrl": "http://www.aquarismopaulista.com/wp-content/uploads/2018/04/Aphyosemion-ogoense.jpg"
+    },
+    {
         "name": "Kinguio",
         "minNumber": 1,
         "imageUrl": "http://www.aquarismopaulista.com/wp-content/uploads/2015/12/Carassius-auratus.jpg"

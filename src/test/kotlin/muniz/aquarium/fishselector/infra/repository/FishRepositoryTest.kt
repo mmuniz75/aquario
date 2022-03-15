@@ -21,7 +21,7 @@ class FishRepositoryTest {
     fun listFish(){
         val fishes = repository.findAll()
         runBlocking {
-            fishes.collect {assertTrue(listOf("Neon","Mato grosso","Tetra Negro","Barbus Ouro","Ramirezi","Colisa","Tricogaster","Kinguio").contains(it.name))}
+            fishes.collect {assertTrue(listOf("Neon","Mato grosso","Tetra Negro","Barbus Ouro","Ramirezi","Colisa","Tricogaster","Kinguio","Killifish").contains(it.name))}
         }
 
     }
@@ -39,11 +39,13 @@ class FishRepositoryTest {
     fun listFishByTank(){
         runBlocking {
             val fishes = repository.findByWidthTankLessThanEqualAndLengthTankLessThanEqual(60,30).toList()
-            Assertions.assertEquals(4, fishes.size)
+            println(fishes)
+            Assertions.assertEquals(5, fishes.size)
             Assertions.assertEquals("Neon", fishes[0].name)
             Assertions.assertEquals("Mato grosso", fishes[1].name)
             Assertions.assertEquals("Tetra Negro", fishes[2].name)
             Assertions.assertEquals("Ramirezi", fishes[3].name)
+            Assertions.assertEquals("Killifish", fishes[4].name)
         }
     }
 

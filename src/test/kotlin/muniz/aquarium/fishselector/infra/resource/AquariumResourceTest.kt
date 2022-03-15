@@ -80,7 +80,7 @@ class AquariumResourceTest {
 
     @Test
     fun listKilliFishTankLenghtSizeWithFish() {
-        val request = FishRequest(80,20,32, listOf(3))
+        val request = FishRequest(80,20,50, listOf(3))
         executePost("fish",request,"fishs/killi_fish_response.json");
     }
 
