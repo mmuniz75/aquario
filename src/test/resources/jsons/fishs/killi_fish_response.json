@@ -1,7 +1,11 @@
 [
   {
-    "name" : "Killifish",
-    "minNumber" : 1,
-    "imageUrl" : "http://www.aquarismopaulista.com/wp-content/uploads/2018/04/Aphyosemion-ogoense.jpg"
+    "id": 26,
+    "name": "Killifish",
+    "minNumber": 1,
+    "temperatureRange": "18Cº - 22Cº",
+    "phRange": "6.2 - 6.8",
+    "dhRange": "0-4",
+    "imageUrl": "http://www.aquarismopaulista.com/wp-content/uploads/2018/04/Aphyosemion-ogoense.jpg"
   }
 ]

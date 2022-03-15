@@ -39,6 +39,10 @@ data class Fish (@Id val id : Int,
         return if (min == max) min else "$min - $max"
     }
 
+    fun getTemperatureRangeDisplay(): String {
+        return "${minTemperature}Cº - ${maxTemperature}Cº"
+    }
+
     fun getMinPH(): BigDecimal {
         return if (ph.isEmpty()) BigDecimal.ZERO else ph.minOf { it.min }
     }

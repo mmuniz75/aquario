@@ -1,47 +1,83 @@
 [
     {
+        "id": 4,
         "name": "BarbusOuro",
         "minNumber": 6,
+        "temperatureRange": "26Cº - 28Cº",
+        "phRange": "6.2 - 7.0",
+        "dhRange": "9-12",
         "imageUrl": "http://www.aquarismopaulista.com/wp-content/uploads/2014/08/Puntius-semifasciolatus1.jpg"
     },
     {
+        "id": 6,
         "name": "Colisa",
         "minNumber": 1,
+        "temperatureRange": "26Cº - 28Cº",
+        "phRange": "6.2 - 6.8",
+        "dhRange": "9-12",
         "imageUrl": "http://www.aquarismopaulista.com/wp-content/uploads/2014/11/Trichogaster-lalius.jpg"
     },
     {
+        "id": 26,
         "name": "Killifish",
         "minNumber": 1,
+        "temperatureRange": "18Cº - 22Cº",
+        "phRange": "6.2 - 6.8",
+        "dhRange": "0-4",
         "imageUrl": "http://www.aquarismopaulista.com/wp-content/uploads/2018/04/Aphyosemion-ogoense.jpg"
     },
     {
+        "id": 21,
         "name": "Kinguio",
         "minNumber": 1,
+        "temperatureRange": "10Cº - 28Cº",
+        "phRange": "7.0",
+        "dhRange": "5-18",
         "imageUrl": "http://www.aquarismopaulista.com/wp-content/uploads/2015/12/Carassius-auratus.jpg"
     },
     {
-        "name": "Matogrosso",
+        "id": 2,
+        "name": "Mato grosso",
         "minNumber": 6,
+        "temperatureRange": "26Cº - 28Cº",
+        "phRange": "6.2 - 6.8",
+        "dhRange": "9-12",
         "imageUrl": "http://www.aquarismopaulista.com/wp-content/uploads/2015/06/Hyphessobrycon-eques.jpg"
     },
     {
+        "id": 1,
         "name": "Neon",
         "minNumber": 10,
+        "temperatureRange": "26Cº - 28Cº",
+        "phRange": "6.2 - 6.8",
+        "dhRange": "0-8",
         "imageUrl": "http://www.aquarismopaulista.com/wp-content/uploads/Paracheirodon-axelrodi1.jpg"
     },
     {
+        "id": 5,
         "name": "Ramirezi",
         "minNumber": 1,
+        "temperatureRange": "26Cº - 28Cº",
+        "phRange": "6.2 - 6.8",
+        "dhRange": "9-12",
         "imageUrl": "http://www.aquarismopaulista.com/wp-content/uploads/2014/09/Mikrogeophagus-ramirezi1.jpg"
     },
     {
+        "id": 3,
         "name": "TetraNegro",
         "minNumber": 6,
+        "temperatureRange": "26Cº - 28Cº",
+        "phRange": "6.2 - 6.8",
+        "dhRange": "9-12",
         "imageUrl": "http://www.aquarismopaulista.com/wp-content/uploads/2015/06/Gymnocorymbus-ternetzi1.jpg"
     },
     {
+        "id": 7,
         "name": "Tricogaster",
         "minNumber": 1,
+        "temperatureRange": "26Cº - 28Cº",
+        "phRange": "6.2 - 6.8",
+        "dhRange": "9-12",
         "imageUrl": "http://www.aquarismopaulista.com/wp-content/uploads/Trichogaster-trichopterus.jpg"
     }
 ]

@@ -4,6 +4,7 @@ import kotlinx.coroutines.flow.*
 import muniz.aquarium.fishselector.domain.Fish
 import muniz.aquarium.fishselector.exception.NotFoundException
 import org.springframework.beans.factory.annotation.Autowired
+import org.springframework.data.r2dbc.repository.Query
 import org.springframework.stereotype.Repository
 
 @Repository
@@ -30,6 +31,10 @@ class FishAggregateRepository {
         return addPHDH(repository.findByCompatibleFish(widthTank, lengthTank,fishIds, fishIds.size, aquariumRemainsSpace))
     }
 
+    suspend fun findByCompatibleFishEmptyTank(widthTank : Int, lengthTank: Int, aquariumRemainsSpace : Int) : Flow<Fish> {
+        return addPHDH(repository.findByCompatibleFishEmptyTank(widthTank, lengthTank, aquariumRemainsSpace))
+    }
+
     suspend fun findByIdIn(ids: List<Int>) : Flow<Fish> {
         return addPHDH(repository.findByIdIn(ids))
     }
@@ -47,5 +52,7 @@ class FishAggregateRepository {
 
         return fish
     }
+
+
 
 }

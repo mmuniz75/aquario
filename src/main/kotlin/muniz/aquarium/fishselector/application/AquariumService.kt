@@ -59,10 +59,10 @@ class AquariumService {
 
     suspend fun listFish(request : FishRequest) : Flow<FishDTO>{
         return if (request.currentFishIds.size>0)
-                     repository.findByCompatibleFish(request.tankWidth, request.tankLength,request.currentFishIds,request.currentFishIds.size,request.centimetersAvailable)
+                     repositoryAggregate.findByCompatibleFish(request.tankWidth, request.tankLength,request.currentFishIds, request.centimetersAvailable)
                         .map { FishDTO.fromDomain(it) }
                else
-                    repository.findByCompatibleFishEmptyTank(request.tankWidth, request.tankLength, request.centimetersAvailable)
+                    repositoryAggregate.findByCompatibleFishEmptyTank(request.tankWidth, request.tankLength, request.centimetersAvailable)
                         .map { FishDTO.fromDomain(it) }
     }
 
