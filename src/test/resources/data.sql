@@ -103,6 +103,7 @@ INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(3, 3);
 INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(3, 4);
 INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(3, 5);
 INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(3, 6);
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(3,26);
 
 -- Barbus ouro
 INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(4, 7);
