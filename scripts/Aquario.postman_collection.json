@@ -156,6 +156,243 @@
 			]
 		},
 		{
+			"name": "list fish",
+			"item": [
+				{
+					"name": "List fishs 46",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"tankWidth\": 46,\r\n    \"tankLength\": 24,\r\n    \"centimetersAvailable\" : 25,\r\n    \"currentFishIds\" : []        \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/aquarium/fish",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"aquarium",
+								"fish"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List fishs 80",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"tankWidth\": 80,\r\n    \"tankLength\": 30,\r\n    \"centimetersAvailable\" : 90,\r\n    \"currentFishIds\" : []        \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/aquarium/fish",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"aquarium",
+								"fish"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List fishs all",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"tankWidth\": 150,\r\n    \"tankLength\": 70,\r\n    \"centimetersAvailable\" : 250,\r\n    \"currentFishIds\" : []        \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/aquarium/fish",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"aquarium",
+								"fish"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List fishs no kinguio",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"tankWidth\": 80,\r\n    \"tankLength\": 30,\r\n    \"centimetersAvailable\" : 120,\r\n    \"currentFishIds\" : []        \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/aquarium/fish",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"aquarium",
+								"fish"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List fishs killyfish",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"tankWidth\": 80,\r\n    \"tankLength\": 20,\r\n    \"centimetersAvailable\" : 120,\r\n    \"currentFishIds\" : []        \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/aquarium/fish",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"aquarium",
+								"fish"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List fishs Beta",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"tankWidth\": 130,\r\n    \"tankLength\": 70,\r\n    \"centimetersAvailable\" : 200,\r\n    \"currentFishIds\" : [6]        \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/aquarium/fish",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"aquarium",
+								"fish"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List fishs all 80",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"tankWidth\": 80,\r\n    \"tankLength\": 30,\r\n    \"centimetersAvailable\" : 90,\r\n    \"currentFishIds\" : [37,43,56, 22, 4]        \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/aquarium/fish",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"aquarium",
+								"fish"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List fishs all 46",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"tankWidth\": 80,\r\n    \"tankLength\": 30,\r\n    \"centimetersAvailable\" : 90,\r\n    \"currentFishIds\" : [37,43,56, 22, 4]        \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/aquarium/fish",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"aquarium",
+								"fish"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
 			"name": "Avaliable space in tank weugth",
 			"request": {
 				"method": "POST",
@@ -237,6 +474,64 @@
 					"path": [
 						"aquarium",
 						"avaliableSpace"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add fish",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"fishId\" : 21,\r\n    \"fishCount\" : 1,\r\n    \"centimetersAvailable\" : 120,\r\n    \"currentFishIds\" : []\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/aquarium/fish",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"aquarium",
+						"fish"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add fish barbus",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"fishId\" : 4,\r\n    \"fishCount\" : 6,\r\n    \"centimetersAvailable\" : 32,\r\n    \"currentFishIds\" : [37,43,56, 22]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/aquarium/fish",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"aquarium",
+						"fish"
 					]
 				}
 			},
