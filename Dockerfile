@@ -1,0 +1,1 @@
+FROM fish-selector:1.0.0

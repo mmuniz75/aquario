@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>muniz.aquarium</groupId>
 	<artifactId>fish-selector</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0.0</version>
 	<name>fish-selector</name>
 	<description>Choose the right fish for your aquarium</description>
 	<properties>
