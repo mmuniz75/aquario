@@ -2,7 +2,7 @@ pipeline {
    agent any
 
    environment {
-      HEROKU_API_KEY = credentials('HEROKU_API_KEY')
+      HEROKU_API_KEY = credentials('HEROKU_TOKEN')
       DATABASE_URL = credentials('AQUARIO_DB')
    }
 
