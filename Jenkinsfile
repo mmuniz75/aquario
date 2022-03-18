@@ -20,12 +20,12 @@ pipeline {
       stage('Push Heroku') {
          steps {
            sh 'heroku container:login'
-           sh "heroku container:push web -a aquario"
+           sh "heroku container:push web -a fish-selector"
          }
       }
        stage('Release Heroku') {
            steps {
-              sh 'heroku container:release web --app aquario'
+              sh 'heroku container:release web --app fish-selector'
            }
         }
    }
