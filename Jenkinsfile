@@ -14,7 +14,7 @@ pipeline {
       }
       stage('Build image') {
          steps {
-            sh 'mvn clean spring-boot:build-image'
+            sh 'mvn clean spring-boot:build-image -DskipTests'
          }
       }
       stage('Push Heroku') {

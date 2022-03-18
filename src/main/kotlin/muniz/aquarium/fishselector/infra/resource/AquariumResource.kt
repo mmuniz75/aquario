@@ -16,6 +16,11 @@ class AquariumResource {
     @Autowired
     private lateinit var service: AquariumService
 
+    @GetMapping("/start")
+    fun start() : String {
+        return "started"
+    }
+
     @PostMapping("/hardscapeQuestion")
     fun getHardScapeQuestion(@RequestBody request : HardScapeAnswerRequest): List<HardScapeAnswer?> {
         val question = HardScapeQuestion.fromId(request.question)
