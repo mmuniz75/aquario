@@ -33,15 +33,7 @@ data class Fish (@Id val id : Int,
                 initialSpace :Int
     ): this(id,name,size,imageUrl, mutableListOf(),mutableListOf(),maxTemperature,minTemperature,minNumber,widthTank,lengthTank,initialSpace)
 
-    fun getPHRangeDisplay(): String {
-        val min = getMinPH().toString()
-        val max = getMaxPH().toString()
-        return if (min == max) min else "$min - $max"
-    }
-
-    fun getTemperatureRangeDisplay(): String {
-        return "${minTemperature}Cº - ${maxTemperature}Cº"
-    }
+    @Transient val temperatureRangeDisplay = "${minTemperature}Cº - ${maxTemperature}Cº"
 
     fun getMinPH(): BigDecimal {
         return if (ph.isEmpty()) BigDecimal.ZERO else ph.minOf { it.min }
@@ -49,6 +41,12 @@ data class Fish (@Id val id : Int,
 
     fun getMaxPH(): BigDecimal {
         return if (ph.isEmpty()) BigDecimal.ZERO else ph.maxOf { it.max }
+    }
+
+    fun getPHRangeDisplay(): String {
+        val min = getMinPH().toString()
+        val max = getMaxPH().toString()
+        return if (min == max) min else "$min - $max"
     }
 
     fun getDHRangeDisplay(): String {
