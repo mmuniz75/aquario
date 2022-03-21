@@ -25,8 +25,6 @@ class FishAggregateRepositoryTest {
             val fishes = repository.listFish()
             val fish = fishes.first()
             assertEquals("Neon",fish.name)
-            assertEquals("6.2 - 6.8",fish.getPHRangeDisplay())
-            assertEquals("0-8",fish.getDHRangeDisplay())
         }
     }
 
@@ -55,15 +53,22 @@ class FishAggregateRepositoryTest {
         }
     }
 
-    /*
-     1 - Neon
-     2 - Mato grosso
-     3 - Tetra Negro
-     4 - Barbus Ouro
-     5 - Ramirezi
-     6 - Colisa
-     7 - Tricogaster
-    */
+    @Test
+    fun listAllFish(){
+        runBlocking {
+            val fishes = repository.findByCompatibleFishEmptyTank(widthTank = 80, lengthTank = 40, aquariumRemainsSpace = 120).toList()
+            fishes.map { println(it) }
+            assertEquals(9 , fishes.size)
+            assertEquals("Barbus Ouro",fishes[0].name)
+            assertEquals("6.2 - 7.0",fishes[0].getPHRangeDisplay())
+            assertEquals("9-12",fishes[0].getDHRangeDisplay())
+            assertEquals("Tricogaster",fishes[8].name)
+            assertEquals("6.2 - 6.8",fishes[8].getPHRangeDisplay())
+            assertEquals("9-12",fishes[8].getDHRangeDisplay())
+        }
+
+    }
+
     @Test
     fun listNeonCompatibility(){
         runBlocking {

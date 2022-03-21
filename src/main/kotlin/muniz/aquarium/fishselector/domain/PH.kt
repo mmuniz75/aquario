@@ -3,7 +3,7 @@ package muniz.aquarium.fishselector.domain
 import org.springframework.data.relational.core.mapping.Column
 import java.math.BigDecimal
 
-class PH (val id : Int,
+data class PH (val id : Int,
           val name: String,
           @Column("minph") val min : BigDecimal,
           @Column("maxph") val max : BigDecimal) {

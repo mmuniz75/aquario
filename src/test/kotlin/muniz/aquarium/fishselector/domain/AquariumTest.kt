@@ -65,7 +65,7 @@ class AquariumTest {
     fun checkPHRangeAcid(){
         val aquarium = createAquarium()
         val fish1 = createColdFish()
-        fish1.ph = listOf(createAcidPH())
+        fish1.ph = mutableListOf(createAcidPH())
         aquarium.addFish(fish1, 1)
         assertEquals("6.2 - 6.8", aquarium.getPHRange())
     }
@@ -74,7 +74,7 @@ class AquariumTest {
     fun checkPHRangeAcidNeutral(){
         val aquarium = createAquarium()
         val fish1 = createColdFish()
-        fish1.ph = listOf(createAcidPH(),createNeutralPH())
+        fish1.ph = mutableListOf(createAcidPH(),createNeutralPH())
         aquarium.addFish(fish1, 1)
         assertEquals("6.2 - 7.0", aquarium.getPHRange())
     }
@@ -83,7 +83,7 @@ class AquariumTest {
     fun checkPHRangeNeutralAlcali(){
         val aquarium = createAquarium()
         val fish1 = createColdFish()
-        fish1.ph = listOf(createAlcaliPH(),createNeutralPH())
+        fish1.ph = mutableListOf(createAlcaliPH(),createNeutralPH())
         aquarium.addFish(fish1, 1)
         assertEquals("7.0 - 7.4", aquarium.getPHRange())
     }
@@ -92,10 +92,10 @@ class AquariumTest {
     fun checkPHRangeFishAcidAndFishAcidNeutral(){
         val aquarium = createAquarium()
         val fish1 = createColdFish()
-        fish1.ph = listOf(createAcidPH(),createNeutralPH())
+        fish1.ph = mutableListOf(createAcidPH(),createNeutralPH())
 
         val fish2 = createColdFish()
-        fish2.ph = listOf(createAcidPH())
+        fish2.ph = mutableListOf(createAcidPH())
 
         aquarium.addFish(fish1, 1)
         aquarium.addFish(fish2, 1)
@@ -106,7 +106,7 @@ class AquariumTest {
     fun checkDHRangeSoft(){
         val aquarium = createAquarium()
         val fish1 = createColdFish()
-        fish1.dh = listOf(createDHSoft())
+        fish1.dh = mutableListOf(createDHSoft())
         aquarium.addFish(fish1, 1)
         assertEquals("4-8", aquarium.getDHRange())
     }
@@ -116,11 +116,11 @@ class AquariumTest {
     fun checkDHRangeFishAllAndFishMediunHard(){
         val aquarium = createAquarium()
         val fish1 = createColdFish()
-        fish1.dh = listOf(createDHSoft(),createDHMedium(),createDHard())
+        fish1.dh = mutableListOf(createDHSoft(),createDHMedium(),createDHard())
         aquarium.addFish(fish1, 1)
 
         val fish2 = createHotFish()
-        fish2.dh = listOf(createDHMedium(),createDHard())
+        fish2.dh = mutableListOf(createDHMedium(),createDHard())
         aquarium.addFish(fish2, 1)
 
         assertEquals("9-18", aquarium.getDHRange())
@@ -130,11 +130,11 @@ class AquariumTest {
     fun checkDHRangeFishAllAndFishSoftMediun(){
         val aquarium = createAquarium()
         val fish1 = createColdFish()
-        fish1.dh = listOf(createDHSoft(),createDHMedium(),createDHard())
+        fish1.dh = mutableListOf(createDHSoft(),createDHMedium(),createDHard())
         aquarium.addFish(fish1, 1)
 
         val fish2 = createHotFish()
-        fish2.dh = listOf(createDHMedium(),createDHSoft())
+        fish2.dh = mutableListOf(createDHMedium(),createDHSoft())
         aquarium.addFish(fish2, 1)
 
         assertEquals("4-12", aquarium.getDHRange())
@@ -144,15 +144,15 @@ class AquariumTest {
     fun checkDHRangeFishMixt(){
         val aquarium = createAquarium()
         val fish1 = createColdFish()
-        fish1.dh = listOf(createDHSoft(),createDHMedium(),createDHard())
+        fish1.dh = mutableListOf(createDHSoft(),createDHMedium(),createDHard())
         aquarium.addFish(fish1, 1)
 
         val fish2 = createHotFish()
-        fish2.dh = listOf(createDHMedium(),createDHard())
+        fish2.dh = mutableListOf(createDHMedium(),createDHard())
         aquarium.addFish(fish2, 1)
 
         val fish3 = createBarbus()
-        fish3.dh = listOf(createDHMedium())
+        fish3.dh = mutableListOf(createDHMedium())
         aquarium.addFish(fish3, 6)
 
         assertEquals("9-12", aquarium.getDHRange())
