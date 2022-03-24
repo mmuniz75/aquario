@@ -12,7 +12,7 @@ class FishDTO (val id : Int,
 
     companion object {
         fun fromDomain(fish : Fish) : FishDTO{
-            return FishDTO(fish.id, fish.name, fish.minNumber, fish.getTemperatureRangeDisplay(), fish.getPHRangeDisplay(),fish.getDHRangeDisplay(), fish.imageUrl)
+            return FishDTO(fish.id, fish.name, fish.minNumber, fish.temperatureRangeDisplay, fish.getPHRangeDisplay(),fish.getDHRangeDisplay(), fish.imageUrl)
         }
     }
 }

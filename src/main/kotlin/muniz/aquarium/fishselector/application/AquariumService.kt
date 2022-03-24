@@ -68,7 +68,7 @@ class AquariumService {
 
     suspend fun addFish(request: AddFishRequest): AquariumDTO {
 
-        val fishs = repositoryAggregate.findByIdIn(request.currentFishIds).toList()
+        val fishs = if (request.currentFishIds.isEmpty()) listOf<Fish>() else repositoryAggregate.findByIdIn(request.currentFishIds).toList()
 
         val aquarium = Aquarium(request.centimetersAvailable, fishs.toMutableList())
 

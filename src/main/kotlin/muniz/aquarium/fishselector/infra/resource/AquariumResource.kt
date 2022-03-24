@@ -16,6 +16,11 @@ class AquariumResource {
     @Autowired
     private lateinit var service: AquariumService
 
+    @GetMapping("/start")
+    fun start() : String {
+        return "started"
+    }
+
     @PostMapping("/hardscapeQuestion")
     fun getHardScapeQuestion(@RequestBody request : HardScapeAnswerRequest): List<HardScapeAnswer?> {
         val question = HardScapeQuestion.fromId(request.question)
@@ -25,18 +30,15 @@ class AquariumResource {
 
     @PostMapping("/avaliableSpace")
     fun getAvaliableSpace(@RequestBody request : AquariumSpaceRequest): AquariumSpaceResponse {
-        return AquariumSpaceResponse(service.calculateAquariumAvailableSpace(request.tank,convertPreviousQuestions(request.answers)))
+        val avaliableSpace = service.calculateAquariumAvailableSpace(request.tank,convertPreviousQuestions(request.answers))
+        return AquariumSpaceResponse(avaliableSpace)
     }
 
     @PostMapping("/fish")
-    suspend fun listFishs(@RequestBody request : FishRequest): Flow<FishDTO> {
-        return service.listFish(request)
-    }
+    suspend fun listFishs(@RequestBody request : FishRequest) = service.listFish(request)
 
     @PutMapping("/fish")
-    suspend fun addFish(@RequestBody request : AddFishRequest): AquariumDTO {
-        return service.addFish(request)
-    }
+    suspend fun addFish(@RequestBody request : AddFishRequest) = service.addFish(request)
 
     private fun convertPreviousQuestions(previousQuestions : List<HardScapeAnswerDTO?>?) : List<HardScapeAnswer>{
         if(previousQuestions == null)

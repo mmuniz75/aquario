@@ -2,7 +2,8 @@ pipeline {
    agent any
 
    environment {
-      HEROKU_API_KEY = credentials('HEROKU_API_KEY')
+      HEROKU_API_KEY = credentials('HEROKU_TOKEN_GMAIL')
+      DATABASE_URL = credentials('AQUARIO_DB')
    }
 
    stages {
@@ -14,7 +15,7 @@ pipeline {
       }
       stage('Build image') {
          steps {
-            sh 'mvn clean spring-boot:build-image'
+            sh 'mvn clean spring-boot:build-image -DskipTests'
          }
       }
       stage('Push Heroku') {

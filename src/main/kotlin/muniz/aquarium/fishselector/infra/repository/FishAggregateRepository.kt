@@ -1,10 +1,11 @@
 package muniz.aquarium.fishselector.infra.repository
 
-import kotlinx.coroutines.flow.*
+import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.flow
+import kotlinx.coroutines.flow.toList
 import muniz.aquarium.fishselector.domain.Fish
 import muniz.aquarium.fishselector.exception.NotFoundException
 import org.springframework.beans.factory.annotation.Autowired
-import org.springframework.data.r2dbc.repository.Query
 import org.springframework.stereotype.Repository
 
 @Repository
@@ -39,16 +40,39 @@ class FishAggregateRepository {
         return addPHDH(repository.findByIdIn(ids))
     }
 
-    private suspend fun addPHDH(fishes : Flow<Fish>): Flow<Fish> {
-        return fishes
-                .onEach { it.ph =  phRepository.findPHByFishId(it.id).toList()}
-                .onEach { it.dh =  dhRepository.findDHByFishId(it.id).toList()}
+    private suspend fun addPHDH(fishesDuplicates : Flow<Fish>): Flow<Fish> {
+        val fishes = mutableListOf<Fish>()
+        var id = 0
+
+        return flow {
+
+            fishesDuplicates.toList().forEach {
+                if (it.id == id) {
+                    val fish = fishes.last()
+
+                    if (!fish.ph.contains(it.ph[0]))
+                        fish.ph.add(it.ph[0].copy())
+
+                    if (!fish.dh.contains(it.dh[0]))
+                        fish.dh.add(it.dh[0].copy())
+                } else {
+                    if(fishes.size > 0)
+                        emit(fishes.last())
+                    fishes.add(it.copy())
+                    id = it.id
+                }
+            }
+
+            if(!fishes.isEmpty())
+                emit(fishes.last())
+        }
+
     }
 
     suspend fun findById(id: Int): Fish? {
         val fish = repository.findById(id)?: throw NotFoundException("Peixe não encontrado")
-        fish.ph = phRepository.findPHByFishId(id).toList()
-        fish.dh = dhRepository.findDHByFishId(id).toList()
+        fish.ph = phRepository.findPHByFishId(id).toList().toMutableList()
+        fish.dh = dhRepository.findDHByFishId(id).toList().toMutableList()
 
         return fish
     }

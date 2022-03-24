@@ -139,12 +139,11 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/aquarium/hardscapeQuestion",
+							"raw": "http://{{aquario}}/aquarium/hardscapeQuestion",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"{{aquario}}"
 							],
-							"port": "8080",
 							"path": [
 								"aquarium",
 								"hardscapeQuestion"
@@ -173,12 +172,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/aquarium/fish",
-							"protocol": "http",
+							"raw": "{{aquario}}/aquarium/fish",
 							"host": [
-								"localhost"
+								"{{aquario}}"
 							],
-							"port": "8080",
 							"path": [
 								"aquarium",
 								"fish"
@@ -202,12 +199,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/aquarium/fish",
-							"protocol": "http",
+							"raw": "{{aquario}}/aquarium/fish",
 							"host": [
-								"localhost"
+								"{{aquario}}"
 							],
-							"port": "8080",
 							"path": [
 								"aquarium",
 								"fish"
@@ -231,12 +226,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/aquarium/fish",
-							"protocol": "http",
+							"raw": "{{aquario}}/aquarium/fish",
 							"host": [
-								"localhost"
+								"{{aquario}}"
 							],
-							"port": "8080",
 							"path": [
 								"aquarium",
 								"fish"
@@ -260,12 +253,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/aquarium/fish",
-							"protocol": "http",
+							"raw": "{{aquario}}/aquarium/fish",
 							"host": [
-								"localhost"
+								"{{aquario}}"
 							],
-							"port": "8080",
 							"path": [
 								"aquarium",
 								"fish"
@@ -289,12 +280,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/aquarium/fish",
-							"protocol": "http",
+							"raw": "{{aquario}}/aquarium/fish",
 							"host": [
-								"localhost"
+								"{{aquario}}"
 							],
-							"port": "8080",
 							"path": [
 								"aquarium",
 								"fish"
@@ -318,12 +307,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/aquarium/fish",
-							"protocol": "http",
+							"raw": "{{aquario}}/aquarium/fish",
 							"host": [
-								"localhost"
+								"{{aquario}}"
 							],
-							"port": "8080",
 							"path": [
 								"aquarium",
 								"fish"
@@ -347,12 +334,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/aquarium/fish",
-							"protocol": "http",
+							"raw": "{{aquario}}/aquarium/fish",
 							"host": [
-								"localhost"
+								"{{aquario}}"
 							],
-							"port": "8080",
 							"path": [
 								"aquarium",
 								"fish"
@@ -368,7 +353,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"tankWidth\": 80,\r\n    \"tankLength\": 30,\r\n    \"centimetersAvailable\" : 90,\r\n    \"currentFishIds\" : [37,43,56, 22, 4]        \r\n}",
+							"raw": "{\r\n    \"tankWidth\": 46,\r\n    \"tankLength\": 30,\r\n    \"centimetersAvailable\" : 90,\r\n    \"currentFishIds\" : [37,43,56, 22, 4]        \r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -376,12 +361,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/aquarium/fish",
-							"protocol": "http",
+							"raw": "{{aquario}}/aquarium/fish",
 							"host": [
-								"localhost"
+								"{{aquario}}"
 							],
-							"port": "8080",
 							"path": [
 								"aquarium",
 								"fish"
@@ -399,7 +382,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"tank\": {\r\n        \"width\": 80,\r\n        \"length\": 30,\r\n        \"height\": 45\r\n    },\r\n    \"answers\": [\r\n        {\r\n            \"questionId\": \"SUBSTRACT_WEIGHT\",\r\n            \"answer\": 10\r\n        },\r\n        {\r\n            \"questionId\": \"ROCK_WEIGHT\",\r\n            \"answer\": 6\r\n        },\r\n        {\r\n            \"questionId\": \"WOOD_WEIGHT\",\r\n            \"answer\": 3\r\n        }\r\n    ]\r\n}",
+					"raw": "{\r\n    \"tank\": {\r\n        \"width\": 80,\r\n        \"length\": 30,\r\n        \"height\": 45\r\n    },\r\n    \"answers\": [\r\n        {\r\n            \"questionId\": \"SUBSTRACT_WEIGHT\",\r\n            \"answer\": 10\r\n        },\r\n        {\r\n            \"questionId\": \"ROCK_WEIGHT\",\r\n            \"answer\": 6\r\n        },\r\n        {\r\n            \"questionId\": \"WOOD_WEIGHT\",\r\n            \"answer\": 1\r\n        }\r\n    ]\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -407,12 +390,10 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8080/aquarium/avaliableSpace",
-					"protocol": "http",
+					"raw": "{{aquario}}/aquarium/avaliableSpace",
 					"host": [
-						"localhost"
+						"{{aquario}}"
 					],
-					"port": "8080",
 					"path": [
 						"aquarium",
 						"avaliableSpace"
@@ -436,12 +417,10 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8080/aquarium/avaliableSpace",
-					"protocol": "http",
+					"raw": "{{aquario}}/aquarium/avaliableSpace",
 					"host": [
-						"localhost"
+						"{{aquario}}"
 					],
-					"port": "8080",
 					"path": [
 						"aquarium",
 						"avaliableSpace"
@@ -465,12 +444,10 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8080/aquarium/avaliableSpace",
-					"protocol": "http",
+					"raw": "{{aquario}}/aquarium/avaliableSpace",
 					"host": [
-						"localhost"
+						"{{aquario}}"
 					],
-					"port": "8080",
 					"path": [
 						"aquarium",
 						"avaliableSpace"
@@ -494,12 +471,10 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8080/aquarium/fish",
-					"protocol": "http",
+					"raw": "{{aquario}}/aquarium/fish",
 					"host": [
-						"localhost"
+						"{{aquario}}"
 					],
-					"port": "8080",
 					"path": [
 						"aquarium",
 						"fish"
@@ -523,15 +498,43 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8080/aquarium/fish",
-					"protocol": "http",
+					"raw": "{{aquario}}/aquarium/fish",
 					"host": [
-						"localhost"
+						"{{aquario}}"
 					],
-					"port": "8080",
 					"path": [
 						"aquarium",
 						"fish"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "start",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{aquario}}/aquarium/start",
+					"host": [
+						"{{aquario}}"
+					],
+					"path": [
+						"aquarium",
+						"start"
 					]
 				}
 			},
