@@ -67,14 +67,23 @@ class AquariumService {
     }
 
     suspend fun addFish(request: AddFishRequest): AquariumDTO {
+        return _addFish(request, true)
+    }
+
+    suspend fun getFishParameter(request: AddFishRequest): AquariumDTO {
+        return _addFish(request, false)
+    }
+
+    private suspend fun _addFish(request: AddFishRequest, addFish : Boolean): AquariumDTO {
 
         val fishs = if (request.currentFishIds.isEmpty()) listOf<Fish>() else repositoryAggregate.findByIdIn(request.currentFishIds).toList()
 
         val aquarium = Aquarium(request.centimetersAvailable, fishs.toMutableList())
 
-        val fish = repositoryAggregate.findById(request.fishId)?:throw NotFoundException("Peixe não encontrado")
-
-        aquarium.addFish(fish, request.fishCount)
+        if(addFish) {
+            val fish = repositoryAggregate.findById(request.fishId) ?: throw NotFoundException("Peixe não encontrado")
+            aquarium.addFish(fish, request.fishCount)
+        }
 
         return AquariumDTO(aquarium.getTemperatureRange(),
                            aquarium.getPHRange(),

@@ -40,6 +40,9 @@ class AquariumResource {
     @PutMapping("/fish")
     suspend fun addFish(@RequestBody request : AddFishRequest) = service.addFish(request)
 
+    @PostMapping("/fish-parameter")
+    suspend fun getFishPamrameter(@RequestBody request : AddFishRequest) = service.getFishParameter(request)
+
     private fun convertPreviousQuestions(previousQuestions : List<HardScapeAnswerDTO?>?) : List<HardScapeAnswer>{
         if(previousQuestions == null)
            return listOf()
