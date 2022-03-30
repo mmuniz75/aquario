@@ -18,7 +18,7 @@ class AquariumResource {
 
     @GetMapping("/start")
     fun start() : String {
-        return "started"
+        return "{\"status\" : \"started\"}"
     }
 
     @PostMapping("/hardscapeQuestion")
