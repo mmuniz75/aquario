@@ -1,11 +1,8 @@
 version: '3.1'
 services:
   askalien-admin:
-    image: fish-selector:1.0.0
+    image: fish-selector:1.0.0-test-h2
     ports:
       - "8080:8080"
-    environment: 
-      - DATABASE_URL=postgresql://aquario:aquario@10.0.0.87/aquario
-      - APPLICATION_WEBSITE=http://localhost
 
 
