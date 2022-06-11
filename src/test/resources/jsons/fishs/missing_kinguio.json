@@ -6,7 +6,7 @@
         "temperatureRange": "26Cº - 28Cº",
         "phRange": "6.2 - 7.0",
         "dhRange": "9-12",
-        "imageUrl": "http://www.aquarismopaulista.com/wp-content/uploads/2014/08/Puntius-semifasciolatus1.jpg"
+        "imageUrl": "https://peixes.top/assets/img/fishs/2014/08/Puntius-semifasciolatus1.jpg"
     },
     {
         "id": 6,
@@ -15,7 +15,7 @@
         "temperatureRange": "26Cº - 28Cº",
         "phRange": "6.2 - 6.8",
         "dhRange": "9-12",
-        "imageUrl": "http://www.aquarismopaulista.com/wp-content/uploads/2014/11/Trichogaster-lalius.jpg"
+        "imageUrl": "https://peixes.top/assets/img/fishs/2014/11/Trichogaster-lalius.jpg"
     },
     {
         "id": 26,
@@ -24,7 +24,7 @@
         "temperatureRange": "18Cº-22Cº",
         "phRange": "6.2 - 6.8",
         "dhRange": "0-4",
-        "imageUrl": "http://www.aquarismopaulista.com/wp-content/uploads/2018/04/Aphyosemion-ogoense.jpg"
+        "imageUrl": "https://peixes.top/assets/img/fishs/2018/04/Aphyosemion-ogoense.jpg"
     },
     {
         "id": 2,
@@ -33,7 +33,7 @@
         "temperatureRange": "26Cº - 28Cº",
         "phRange": "6.2 - 6.8",
         "dhRange": "9-12",
-        "imageUrl": "http://www.aquarismopaulista.com/wp-content/uploads/2015/06/Hyphessobrycon-eques.jpg"
+        "imageUrl": "https://peixes.top/assets/img/fishs/2015/06/Hyphessobrycon-eques.jpg"
     },
     {
         "id": 1,
@@ -42,7 +42,7 @@
         "temperatureRange": "26Cº - 28Cº",
         "phRange": "6.2 - 6.8",
         "dhRange": "0-8",
-        "imageUrl": "http://www.aquarismopaulista.com/wp-content/uploads/Paracheirodon-axelrodi1.jpg"
+        "imageUrl": "https://peixes.top/assets/img/fishs/Paracheirodon-axelrodi1.jpg"
     },
     {
         "id": 5,
@@ -51,7 +51,7 @@
         "temperatureRange": "26Cº - 28Cº",
         "phRange": "6.2 - 6.8",
         "dhRange": "9-12",
-        "imageUrl": "http://www.aquarismopaulista.com/wp-content/uploads/2014/09/Mikrogeophagus-ramirezi1.jpg"
+        "imageUrl": "https://peixes.top/assets/img/fishs/2014/09/Mikrogeophagus-ramirezi1.jpg"
     },
     {
         "id": 3,
@@ -60,7 +60,7 @@
         "temperatureRange": "26Cº - 28Cº",
         "phRange": "6.2 - 6.8",
         "dhRange": "9-12",
-        "imageUrl": "http://www.aquarismopaulista.com/wp-content/uploads/2015/06/Gymnocorymbus-ternetzi1.jpg"
+        "imageUrl": "https://peixes.top/assets/img/fishs/2015/06/Gymnocorymbus-ternetzi1.jpg"
     },
     {
         "id": 7,
@@ -69,6 +69,6 @@
         "temperatureRange": "26Cº - 28Cº",
         "phRange": "6.2 - 6.8",
         "dhRange": "9-12",
-        "imageUrl": "http://www.aquarismopaulista.com/wp-content/uploads/Trichogaster-trichopterus.jpg"
+        "imageUrl": "https://peixes.top/assets/img/fishs/Trichogaster-trichopterus.jpg"
     }
 ]
