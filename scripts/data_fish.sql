@@ -323,6 +323,11 @@ INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(48, 8); -- Cas
 INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(48, 53); -- Rodostomo
 INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(48, 54); -- Kribensis
 INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(48, 55); -- Acará Festivo
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(48, 5); -- Beijador
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(48, 6); -- Betta
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(48, 16); -- Corydora
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(48, 45); -- Limpa vidro
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(48, 51); -- Balashark
 
 INSERT INTO fish (id, name, size, minnumber, mintemperature, maxtemperature, widthtank, lengthtank,imageurl)
 VALUES(49, 'Tricogaster', 10, 1, 22, 30, 80, 30,'https://peixes.top/assets/img/fishs/Trichogaster-trichopterus.jpg');
@@ -343,7 +348,13 @@ INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(49, 2); -- Aca
 INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(49, 8); -- Cascudo
 INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(49, 54); -- Kribensis
 INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(49, 55); -- Acará Festivo
-
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(49, 5); -- Beijador
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(49, 6); -- Betta
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(49, 16); -- Corydora
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(49, 45); -- Limpa vidro
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(49, 51); -- Balashark
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(49, 44); -- Labeo
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(49, 50); -- Tanictis
 
 INSERT INTO fish (id, name, size, minnumber, mintemperature, maxtemperature, widthtank, lengthtank,imageurl)
 VALUES(26, 'Killifish', 5, 1, 18, 22, 30, 20,'https://peixes.top/assets/img/fishs/2018/04/Aphyosemion-ogoense.jpg');
