@@ -30,6 +30,8 @@ INSERT INTO fish_dh (fish_id, dh_id) VALUES(13, 2);
 INSERT INTO fish_dh (fish_id, dh_id) VALUES(13, 3);
 INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(13, 1); -- Borboleta
 INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(13, 13); -- Apistograma
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(13, 57); -- Curviceps
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(13, 58); -- Papilocromis
 INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(13, 26); -- Killifish
 INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(13, 43); -- Ramirezi
 INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(13, 47); -- Tetra
@@ -50,6 +52,8 @@ INSERT INTO fish_dh (fish_id, dh_id) VALUES(57, 2);
 INSERT INTO fish_dh (fish_id, dh_id) VALUES(57, 3);
 INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(57, 1); -- Borboleta
 INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(57, 13); -- Apistograma
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(57, 57); -- Curviceps
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(57, 58); -- Papilocromis
 INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(57, 26); -- Killifish
 INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(57, 43); -- Ramirezi
 INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(57, 47); -- Tetra
@@ -70,6 +74,8 @@ INSERT INTO fish_dh (fish_id, dh_id) VALUES(58, 2);
 INSERT INTO fish_dh (fish_id, dh_id) VALUES(58, 3);
 INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(58, 1); -- Borboleta
 INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(58, 13); -- Apistograma
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(58, 57); -- Curviceps
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(58, 58); -- Papilocromis
 INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(58, 26); -- Killifish
 INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(58, 43); -- Ramirezi
 INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(58, 47); -- Tetra
@@ -213,6 +219,8 @@ INSERT INTO fish_dh (fish_id, dh_id) VALUES(43, 2);
 INSERT INTO fish_dh (fish_id, dh_id) VALUES(43, 3);
 INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(43, 1); -- Borboleta
 INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(43, 13); -- Apistograma
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(43, 57); -- Curviceps
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(43, 58); -- Papilocromis
 INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(43, 17); -- Cruzeiro do sul
 INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(43, 29); -- Mocinha
 INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(43, 37); -- Mato Grosso
@@ -243,6 +251,8 @@ INSERT INTO fish_dh (fish_id, dh_id) VALUES(47, 2);
 INSERT INTO fish_dh (fish_id, dh_id) VALUES(47, 3);
 INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(47, 1); -- Borboleta
 INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(47, 13); -- Apistograma
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(47, 57); -- Curviceps
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(47, 58); -- Papilocromis
 INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(47, 17); -- Cruzeiro do sul
 INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(47, 26); -- Killifish
 INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(47, 29); -- Mocinha
@@ -270,6 +280,8 @@ INSERT INTO fish_dh (fish_id, dh_id) VALUES(56, 2);
 INSERT INTO fish_dh (fish_id, dh_id) VALUES(56, 3);
 INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(56, 1); -- Borboleta
 INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(56, 13); -- Apistograma
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(56, 57); -- Curviceps
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(56, 58); -- Papilocromis
 INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(56, 17); -- Cruzeiro do sul
 INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(56, 26); -- Killifish
 INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(56, 29); -- Mocinha
@@ -339,6 +351,8 @@ INSERT INTO fish_ph (fish_id, ph_id) VALUES(26, 3);
 INSERT INTO fish_ph (fish_id, ph_id) VALUES(26, 4);
 INSERT INTO fish_dh (fish_id, dh_id) VALUES(26, 1);
 INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(26, 13); -- Apistograma
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(26, 57); -- Curviceps
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(26, 58); -- Papilocromis
 INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(26, 26); -- Killifish
 INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(26, 29); -- Mocinha
 INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(26, 37); -- Mato Grosso
@@ -381,6 +395,8 @@ INSERT INTO fish_dh (fish_id, dh_id) VALUES(41, 2);
 INSERT INTO fish_dh (fish_id, dh_id) VALUES(41, 3);
 INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(41, 1); -- Borboleta
 INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(41, 13); -- Apistograma
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(41, 57); -- Curviceps
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(41, 58); -- Papilocromis
 INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(41, 17); -- Cruzeiro do sul
 INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(41, 26); -- Killifish
 INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(41, 29); -- Mocinha
@@ -407,6 +423,8 @@ INSERT INTO fish_dh (fish_id, dh_id) VALUES(7, 2);
 INSERT INTO fish_dh (fish_id, dh_id) VALUES(7, 3);
 INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(7, 1); -- Borboleta
 INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(7, 13); -- Apistograma
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(7, 57); -- Curviceps
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(7, 58); -- Papilocromis
 INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(7, 17); -- Cruzeiro do sul
 INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(7, 26); -- Killifish
 INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(7, 29); -- Mocinha
@@ -717,6 +735,8 @@ INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(8, 6); -- Bett
 INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(8, 7); -- Botia
 INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(8, 8); -- Cascudo
 INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(8, 13); -- Apistograma
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(8, 57); -- Curviceps
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(8, 58); -- Papilocromis
 INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(8, 16); -- Coridora
 INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(8, 17); -- Cruzeiro do sul
 INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(8, 18); -- Danio
@@ -774,6 +794,8 @@ INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(19, 5); -- Bei
 INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(19, 7); -- Botia
 INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(19, 8); -- Cascudo
 INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(19, 13); -- Apistograma
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(19, 57); -- Curviceps
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(19, 58); -- Papilocromis
 INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(19, 16); -- Coridora
 INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(19, 17); -- Cruzeiro do sul
 INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(19, 18); -- Danio
@@ -806,6 +828,8 @@ INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(4, 6); -- Bett
 INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(4, 7); -- Botia
 INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(4, 8); -- Cascudo
 INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(4, 13); -- Apistograma
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(4, 57); -- Curviceps
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(4, 58); -- Papilocromis
 INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(4, 16); -- Coridora
 INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(4, 17); -- Cruzeiro do sul
 INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(4, 18); -- Danio
@@ -843,6 +867,8 @@ INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(2, 6); -- Bett
 INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(2, 7); -- Botia
 INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(2, 8); -- Cascudo
 INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(2, 13); -- Apistograma
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(2, 57); -- Curviceps
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(2, 58); -- Papilocromis
 INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(2, 16); -- Coridora
 INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(2, 17); -- Cruzeiro do sul
 INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(2, 18); -- Danio
@@ -918,6 +944,8 @@ INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(22, 6); -- Bet
 INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(22, 7); -- Botia
 INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(22, 8); -- Cascudo
 INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(22, 13); -- Apistograma
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(22, 57); -- Curviceps
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(22, 58); -- Papilocromis
 INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(22, 16); -- Coridora
 INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(22, 17); -- Cruzeiro do sul
 INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(22, 18); -- Danio
