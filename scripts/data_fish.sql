@@ -678,7 +678,7 @@ INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(45, 50); -- Ta
 INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(45, 55); -- Acará Festivo
 
 INSERT INTO fish (id, name, size, minnumber, mintemperature, maxtemperature, widthtank, lengthtank,imageurl)
-VALUES(46, 'Peixe gato invertido', 8, 6, 22, 28, 80, 30,'https://peixes.top/assets/img/fishs/2014/09/Synodontis-nigriventris1.jpg');
+VALUES(46, 'Synodontis', 8, 6, 22, 28, 80, 30,'https://peixes.top/assets/img/fishs/2014/09/Synodontis-nigriventris1.jpg');
 INSERT INTO fish_ph (fish_id, ph_id) VALUES(46, 5);
 INSERT INTO fish_ph (fish_id, ph_id) VALUES(46, 2);
 INSERT INTO fish_dh (fish_id, dh_id) VALUES(46, 3);
