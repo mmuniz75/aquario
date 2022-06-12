@@ -50,17 +50,25 @@ data class Fish (@Id val id : Int,
     }
 
     fun getDHRangeDisplay(): String {
-        val min = getMinDH().toString()
-        val max = getMaxDH().toString()
-        return if (min ==max) min else "$min-$max"
+        val min = getMinDHName()
+        val max = getMaxDHName()
+        return if (min ==max) min else "$min até $max"
     }
 
     fun getMinDH(): Int {
         return if (dh.isEmpty()) 0 else dh.minOf { it.min }
     }
 
+    fun getMinDHName(): String {
+        return dh.filter { it.min == getMinDH() }.first().name.lowercase()
+    }
+
     fun getMaxDH(): Int {
         return if (dh.isEmpty()) 0 else dh.maxOf { it.max }
+    }
+
+    fun getMaxDHName(): String {
+           return dh.filter { it.max == getMaxDH() }.first().name.lowercase()
     }
 
 }

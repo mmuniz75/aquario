@@ -33,7 +33,7 @@ class FishDBConverter : Converter<Row?, Fish?> {
     private fun getPHs(source: Row) : MutableList<PH>{
         return  try {
                     mutableListOf(
-                        PH( id = 0, name = "",
+                        PH( id = 0, name = source.get("nameph", String::class.java)!!,
                             max = source.get("maxph", BigDecimal::class.java)!!,
                             min = source.get("minph", BigDecimal::class.java)!!)
                     )
@@ -45,7 +45,7 @@ class FishDBConverter : Converter<Row?, Fish?> {
     private fun getDHs(source: Row) : MutableList<DH>{
         return  try {
             mutableListOf(
-                DH( id = 0, name = "",
+                DH( id = 0, name = source.get("namedh", String::class.java)!!,
                     max=source.get("maxdh", Integer::class.java)?.toInt()!!,
                     min=source.get("mindh", Integer::class.java)?.toInt()!! )
             )
