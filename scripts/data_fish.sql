@@ -1040,6 +1040,23 @@ INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(39, 23); -- Le
 INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(39, 30); -- Molinesia
 INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(39, 39); -- Plati
 
+
+-- Tricogaster extra compatibility
+
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(5,49); -- Beijador
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(6,(49); -- Betta
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(16,49); -- Corydora
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(45,49); -- Limpa vidro
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(51,49); -- Balashark
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(44,49); -- Labeo
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(50,49); -- Tanictis
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(5,48); -- Beijador
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(6,48); -- Betta
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(16,48); -- Corydora
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(45,48); -- Limpa vidro
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(51,48); -- Balashark
+
+
 -- template
 
 -- acido

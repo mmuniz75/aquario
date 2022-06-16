@@ -108,7 +108,7 @@ class AquariumTest {
         val fish1 = createColdFish()
         fish1.dh = mutableListOf(createDHSoft())
         aquarium.addFish(fish1, 1)
-        assertEquals("4-8", aquarium.getDHRange())
+        assertEquals("mole", aquarium.getDHRange())
     }
 
 
@@ -123,7 +123,7 @@ class AquariumTest {
         fish2.dh = mutableListOf(createDHMedium(),createDHard())
         aquarium.addFish(fish2, 1)
 
-        assertEquals("9-18", aquarium.getDHRange())
+        assertEquals("media até dura", aquarium.getDHRange())
     }
 
     @Test
@@ -137,7 +137,7 @@ class AquariumTest {
         fish2.dh = mutableListOf(createDHMedium(),createDHSoft())
         aquarium.addFish(fish2, 1)
 
-        assertEquals("4-12", aquarium.getDHRange())
+        assertEquals("mole até media", aquarium.getDHRange())
     }
 
     @Test
@@ -155,7 +155,7 @@ class AquariumTest {
         fish3.dh = mutableListOf(createDHMedium())
         aquarium.addFish(fish3, 6)
 
-        assertEquals("9-12", aquarium.getDHRange())
+        assertEquals("media", aquarium.getDHRange())
     }
 
     private fun createAcidPH() : PH{

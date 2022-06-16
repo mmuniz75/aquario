@@ -35,7 +35,7 @@ class FishAggregateRepositoryTest {
             fishes.collect {
                 assertTrue(listOf("Mato grosso","Tetra Negro", "Tricogaster").contains(it.name))
                 assertEquals("6.2 - 6.8",  it.getPHRangeDisplay())
-                assertEquals("9-12",  it.getDHRangeDisplay())
+                assertEquals("media",  it.getDHRangeDisplay())
             }
         }
     }
@@ -61,10 +61,10 @@ class FishAggregateRepositoryTest {
             assertEquals(9 , fishes.size)
             assertEquals("Barbus Ouro",fishes[0].name)
             assertEquals("6.2 - 7.0",fishes[0].getPHRangeDisplay())
-            assertEquals("9-12",fishes[0].getDHRangeDisplay())
+            assertEquals("media",fishes[0].getDHRangeDisplay())
             assertEquals("Tricogaster",fishes[8].name)
             assertEquals("6.2 - 6.8",fishes[8].getPHRangeDisplay())
-            assertEquals("9-12",fishes[8].getDHRangeDisplay())
+            assertEquals("media",fishes[8].getDHRangeDisplay())
         }
 
     }

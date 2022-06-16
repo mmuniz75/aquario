@@ -1,13 +1,13 @@
 create table IF NOT EXISTS dh (
     id int PRIMARY KEY,
-    name VARCHAR(10),
+    namedh VARCHAR(10),
     mindh int,
     maxdh int
     )
 ;
 create table IF NOT EXISTS  ph (
     id int PRIMARY KEY,
-    name VARCHAR(20),
+    nameph VARCHAR(20),
     minph numeric,
     maxph numeric
     )
