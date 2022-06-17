@@ -5,7 +5,8 @@
     "minNumber": 6,
     "temperatureRange": "26Cº - 28Cº",
     "phRange": "6.2-7.0",
-    "dhRange": "9-12",
+    "dhRange": "media",
+    "size":5,
     "imageUrl": "http://www.aquarismopaulista.com/wp-content/uploads/2014/08/Puntius-semifasciolatus1.jpg"
   },
   {
@@ -14,7 +15,8 @@
     "minNumber": 1,
     "temperatureRange": "26Cº - 28Cº",
     "phRange": "6.2 - 6.8",
-    "dhRange": "9-12",
+    "dhRange": "media",
+    "size":5,
     "imageUrl": "http://www.aquarismopaulista.com/wp-content/uploads/2014/11/Trichogaster-lalius.jpg"
   },
   {
@@ -23,7 +25,8 @@
     "minNumber": 1,
     "temperatureRange": "26Cº - 28Cº",
     "phRange": "6.2 - 6.8",
-    "dhRange": "9-12",
+    "dhRange": "media",
+    "size":5,
     "imageUrl": "http://www.aquarismopaulista.com/wp-content/uploads/2014/09/Mikrogeophagus-ramirezi1.jpg"
   }
 ]
