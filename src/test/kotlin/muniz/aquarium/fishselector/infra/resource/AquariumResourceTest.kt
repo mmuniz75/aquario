@@ -2,10 +2,13 @@ package muniz.aquarium.fishselector.infra.resource
 
 
 import com.fasterxml.jackson.databind.ObjectMapper
+import kotlinx.coroutines.flow.collect
+import kotlinx.coroutines.runBlocking
 import muniz.aquarium.fishselector.TestUtils
 import muniz.aquarium.fishselector.application.AquariumService
 import muniz.aquarium.fishselector.domain.Tank
 import muniz.aquarium.fishselector.dto.*
+import muniz.aquarium.fishselector.infra.repository.FishRepository
 import org.junit.jupiter.api.Assertions.assertTrue
 import org.junit.jupiter.api.Test
 import org.springframework.beans.factory.annotation.Autowired
@@ -30,6 +33,9 @@ class AquariumResourceTest {
 
     @Autowired
     private lateinit var objectMapper : ObjectMapper
+
+    @Autowired
+    private lateinit var repository: FishRepository
 
     private val URL = "/aquarium"
 
@@ -63,7 +69,15 @@ class AquariumResourceTest {
     @Test
     fun listTricogasterCompatibility() {
         val request = FishRequest(80,30,50, listOf(7))
+        defeitoNoH2FazendoAcessoNoBancoCorrige()
         executePost("fish",request,"fishs/tricogaster_response.json");
+    }
+
+    fun defeitoNoH2FazendoAcessoNoBancoCorrige(){
+        runBlocking {
+            repository.findByCompatibleFish(100,50, listOf(7),1,100)
+                .collect {   }
+        }
     }
 
     @Test
