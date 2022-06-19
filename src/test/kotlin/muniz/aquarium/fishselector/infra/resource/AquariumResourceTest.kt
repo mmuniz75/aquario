@@ -187,7 +187,7 @@ class AquariumResourceTest {
     fun checkFishCentimerOneShoal(){
         executePut("fish",
                     AddFishRequest(1,10,81, listOf(1)),
-                    AquariumDTO("26Cº - 28Cº","6.2 - 6.8","0-8",51)
+                    AquariumDTO("26Cº - 28Cº","6.2 - 6.8","muito mole até mole",51)
         )
     }
 
@@ -195,7 +195,7 @@ class AquariumResourceTest {
     fun checkFishCentimerSEcondShoal(){
         executePut("fish",
             AddFishRequest(3,7,51, listOf(2)),
-            AquariumDTO("26Cº - 28Cº","6.2 - 6.8","9-12",16)
+            AquariumDTO("26Cº - 28Cº","6.2 - 6.8","media",16)
         )
     }
 
@@ -203,7 +203,7 @@ class AquariumResourceTest {
     fun addKinguio(){
         executePut("fish",
             AddFishRequest(21,1,120, listOf()),
-            AquariumDTO("10Cº - 28Cº","7.0","5-18",0)
+            AquariumDTO("10Cº - 28Cº","7.0","mole até dura",0)
         )
     }
 
@@ -211,7 +211,7 @@ class AquariumResourceTest {
     fun addTwoKinguio(){
         executePut("fish",
             AddFishRequest(21,2,150, listOf()),
-            AquariumDTO("10Cº - 28Cº","7.0","5-18",0)
+            AquariumDTO("10Cº - 28Cº","7.0","mole até dura",0)
         )
     }
 
