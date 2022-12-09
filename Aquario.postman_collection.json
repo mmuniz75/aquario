@@ -1,0 +1,636 @@
+{
+	"info": {
+		"_postman_id": "76996e86-1538-426d-9ae3-0f10a4e1e699",
+		"name": "Aquario",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "2661156"
+	},
+	"item": [
+		{
+			"name": "questions",
+			"item": [
+				{
+					"name": "1 question hardscape",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"question\" : null,\r\n    \"answer\": true,\r\n    \"previousAnswers\": null\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{aquario}}/aquarium/hardscapeQuestion",
+							"host": [
+								"{{aquario}}"
+							],
+							"path": [
+								"aquarium",
+								"hardscapeQuestion"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "2 question hardscape",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"question\" : \"SUBSTRACT_KNOLEDGEMENT\",\r\n    \"answer\": true,\r\n    \"previousAnswers\": null\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{aquario}}/aquarium/hardscapeQuestion",
+							"host": [
+								"{{aquario}}"
+							],
+							"path": [
+								"aquarium",
+								"hardscapeQuestion"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "3 question hardscape",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"question\": \"SUBSTRACT_WEIGHT\",\r\n    \"answer\": 10,\r\n    \"previousAnswers\": [\r\n        {\r\n            \"questionId\": \"SUBSTRACT_KNOLEDGEMENT\",\r\n            \"answer\": true\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/aquarium/hardscapeQuestion",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"aquarium",
+								"hardscapeQuestion"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "4 question hardscape",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"question\": \"ROCK_EXISTENCE\",\r\n    \"answer\": true,\r\n    \"previousAnswers\": [\r\n        {\r\n            \"questionId\": \"SUBSTRACT_KNOLEDGEMENT\",\r\n            \"answer\": true\r\n        },\r\n        {\r\n            \"questionId\": \"SUBSTRACT_WEIGHT\",\r\n            \"answer\": 10\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/aquarium/hardscapeQuestion",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"aquarium",
+								"hardscapeQuestion"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "5 question hardscape",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"question\": \"ROCK_KNOLEDGEMENT\",\r\n    \"answer\": true,\r\n    \"previousAnswers\": [\r\n        {\r\n            \"questionId\": \"SUBSTRACT_KNOLEDGEMENT\",\r\n            \"answer\": true\r\n        },\r\n        {\r\n            \"questionId\": \"SUBSTRACT_WEIGHT\",\r\n            \"answer\": 10\r\n        }\r\n        ,\r\n        {\r\n            \"questionId\": \"ROCK_EXISTENCE\",\r\n            \"answer\": true\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{aquario}}/aquarium/hardscapeQuestion",
+							"host": [
+								"{{aquario}}"
+							],
+							"path": [
+								"aquarium",
+								"hardscapeQuestion"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "list fish",
+			"item": [
+				{
+					"name": "List fishs 46",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"tankWidth\": 46,\r\n    \"tankLength\": 24,\r\n    \"centimetersAvailable\" : 25,\r\n    \"currentFishIds\" : []        \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{aquario}}/aquarium/fish",
+							"host": [
+								"{{aquario}}"
+							],
+							"path": [
+								"aquarium",
+								"fish"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List fishs 80",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"tankWidth\": 80,\r\n    \"tankLength\": 30,\r\n    \"centimetersAvailable\" : 90,\r\n    \"currentFishIds\" : []        \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{aquario}}/aquarium/fish",
+							"host": [
+								"{{aquario}}"
+							],
+							"path": [
+								"aquarium",
+								"fish"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List fishs all",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"tankWidth\": 150,\r\n    \"tankLength\": 70,\r\n    \"centimetersAvailable\" : 250,\r\n    \"currentFishIds\" : []        \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{aquario}}/aquarium/fish",
+							"host": [
+								"{{aquario}}"
+							],
+							"path": [
+								"aquarium",
+								"fish"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List fishs no kinguio",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"tankWidth\": 80,\r\n    \"tankLength\": 30,\r\n    \"centimetersAvailable\" : 120,\r\n    \"currentFishIds\" : []        \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{aquario}}}/aquarium/fish",
+							"protocol": "http",
+							"host": [
+								"{{aquario}}}"
+							],
+							"path": [
+								"aquarium",
+								"fish"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List fishs killyfish",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"tankWidth\": 80,\r\n    \"tankLength\": 20,\r\n    \"centimetersAvailable\" : 120,\r\n    \"currentFishIds\" : []        \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/aquarium/fish",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"aquarium",
+								"fish"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List fishs Beta",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"tankWidth\": 130,\r\n    \"tankLength\": 70,\r\n    \"centimetersAvailable\" : 200,\r\n    \"currentFishIds\" : [6]        \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/aquarium/fish",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"aquarium",
+								"fish"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List fishs all 80",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"tankWidth\": 80,\r\n    \"tankLength\": 30,\r\n    \"centimetersAvailable\" : 90,\r\n    \"currentFishIds\" : [37,43,56, 22, 4]        \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/aquarium/fish",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"aquarium",
+								"fish"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List fishs all 46",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"tankWidth\": 46,\r\n    \"tankLength\": 24,\r\n    \"centimetersAvailable\" : 20,\r\n    \"currentFishIds\" : [6]        \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/aquarium/fish",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"aquarium",
+								"fish"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "start server",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{aquario}}/aquarium/start",
+					"host": [
+						"{{aquario}}"
+					],
+					"path": [
+						"aquarium",
+						"start"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Avaliable space in tank weugth",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"tank\": {\r\n        \"width\": 80,\r\n        \"length\": 30,\r\n        \"height\": 45\r\n    },\r\n    \"answers\": [\r\n        {\r\n            \"questionId\": \"SUBSTRACT_WEIGHT\",\r\n            \"answer\": 10\r\n        },\r\n        {\r\n            \"questionId\": \"ROCK_WEIGHT\",\r\n            \"answer\": 6\r\n        },\r\n        {\r\n            \"questionId\": \"WOOD_WEIGHT\",\r\n            \"answer\": 3\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/aquarium/avaliableSpace",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"aquarium",
+						"avaliableSpace"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Avaliable space test",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"tank\": {\r\n        \"width\": 0,\r\n        \"length\": 0,\r\n        \"height\": 0\r\n    },\r\n    \"answers\": [\r\n        {\r\n            \"questionId\": \"SUBSTRACT_KNOLEDGEMENT\",\r\n            \"answer\": true\r\n        },\r\n        {\r\n            \"questionId\": \"SUBSTRACT_WEIGHT\",\r\n            \"answer\": \"10\"\r\n        },\r\n        {\r\n            \"questionId\": \"ROCK_EXISTENCE\",\r\n            \"answer\": false\r\n        },\r\n        {\r\n            \"questionId\": \"WOOD_EXISTENCE\",\r\n            \"answer\": false\r\n        },\r\n        {\r\n            \"questionId\": \"WOOD_EXISTENCE\",\r\n            \"answer\": true\r\n        },\r\n        {\r\n            \"questionId\": \"WOOD_KNOLEDGEMENT\",\r\n            \"answer\": true\r\n        },\r\n        {\r\n            \"questionId\": \"WOOD_WEIGHT\",\r\n            \"answer\": \"10\"\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/aquarium/avaliableSpace",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"aquarium",
+						"avaliableSpace"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Avaliable space in tank weight 46",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"tank\": {\r\n        \"width\": 46,\r\n        \"length\": 24,\r\n        \"height\": 30\r\n    },\r\n    \"answers\": [\r\n        {\r\n            \"questionId\": \"SUBSTRACT_WEIGHT\",\r\n            \"answer\": 5\r\n        },\r\n        {\r\n            \"questionId\": \"ROCK_WEIGHT\",\r\n            \"answer\": 2\r\n        },\r\n        {\r\n            \"questionId\": \"WOOD_WEIGHT\",\r\n            \"answer\": 1\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/aquarium/avaliableSpace",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"aquarium",
+						"avaliableSpace"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Avaliable space in tank no info",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"tank\": {\r\n        \"width\": 80,\r\n        \"length\": 30,\r\n        \"height\": 45\r\n    },\r\n    \"answers\": [\r\n        {\r\n            \"questionId\": \"SUBSTRACT_FRONT_HEIGHT\",\r\n            \"answer\": 6\r\n        },\r\n         {\r\n            \"questionId\": \"SUBSTRACT_BACK_HEIGHT\",\r\n            \"answer\": 9\r\n        },\r\n        {\r\n            \"questionId\": \"ROCK_COUNT\",\r\n            \"answer\": 6\r\n        },\r\n        {\r\n            \"questionId\": \"WOOD_COUNT\",\r\n            \"answer\": 3\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{aquario}}/aquarium/avaliableSpace",
+					"host": [
+						"{{aquario}}"
+					],
+					"path": [
+						"aquarium",
+						"avaliableSpace"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add fish",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"fishId\" : 21,\r\n    \"fishCount\" : 1,\r\n    \"centimetersAvailable\" : 120,\r\n    \"currentFishIds\" : []\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{aquario}}/aquarium/fish",
+					"host": [
+						"{{aquario}}"
+					],
+					"path": [
+						"aquarium",
+						"fish"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get fishs parameters",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"centimetersAvailable\" : 120,\r\n    \"currentFishIds\" : [37,43,56, 22]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{aquario}}/aquarium/fish-parameter",
+					"host": [
+						"{{aquario}}"
+					],
+					"path": [
+						"aquarium",
+						"fish-parameter"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add fish barbus",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"fishId\" : 4,\r\n    \"fishCount\" : 6,\r\n    \"centimetersAvailable\" : 32,\r\n    \"currentFishIds\" : [37,43,56, 22]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{aquario}}/aquarium/fish",
+					"host": [
+						"{{aquario}}"
+					],
+					"path": [
+						"aquarium",
+						"fish"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "check compatiblity",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"fishId\" : 4,\r\n    \"fishCount\" : 6,\r\n    \"centimetersAvailable\" : 32,\r\n    \"currentFishIds\" : [37,43,56, 22]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{aquario}}/aquarium/fish",
+					"host": [
+						"{{aquario}}"
+					],
+					"path": [
+						"aquarium",
+						"fish"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
