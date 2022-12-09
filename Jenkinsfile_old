@@ -18,20 +18,15 @@ pipeline {
             sh 'mvn clean spring-boot:build-image -DskipTests'
          }
       }
-      stage('Registry Docker image') {
-           steps {
-             sh 'docker tag fish-selector:1.0.0 mmuniz/fish-selector:1.0.0'
-             sh 'docker push mmuniz/fish-selector:1.0.0'
-           }
-        }
-      stage('Login fly.io') {
+      stage('Push Heroku') {
          steps {
-           sh 'flyctl auth login'
+           sh 'heroku container:login'
+           sh "heroku container:push web -a fish-selector"
          }
       }
-       stage('Push fly.io') {
+       stage('Release Heroku') {
            steps {
-              sh 'flyctl deploy'
+              sh 'heroku container:release web --app fish-selector'
            }
         }
    }
