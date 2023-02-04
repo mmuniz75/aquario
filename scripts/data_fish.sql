@@ -48,6 +48,8 @@ INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(13, 2); -- Aca
 INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(13, 8); -- Cascudo
 INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(13, 55); -- Acara Festivo
 INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(13, 54); -- Apistograma
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(13, 49); -- Tricogaster
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(13, 48); -- Tricogaster Leeri
 
 INSERT INTO fish (id, name, size, minnumber, mintemperature, maxtemperature, widthtank, lengthtank,imageurl)
 VALUES(57, 'Curviceps', 4, 1, 22, 28, 80, 30,'https://peixes.top/assets/img/fishs/curviceps.jpg');
@@ -72,6 +74,8 @@ INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(57, 2); -- Aca
 INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(57, 8); -- Cascudo
 INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(57, 55); -- Acará Festivo
 INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(57, 54); -- Curviceps
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(57, 49); -- Tricogaster
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(57, 48); -- Tricogaster Leeri
 
 INSERT INTO fish (id, name, size, minnumber, mintemperature, maxtemperature, widthtank, lengthtank,imageurl)
 VALUES(58, 'Papilocromis', 5, 1, 22, 28, 80, 30,'https://peixes.top/assets/img/fishs/papilocromis.jpg');
@@ -95,6 +99,8 @@ INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(58, 19); -- Ac
 INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(58, 2); -- Acará Bandiera
 INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(58, 55); -- Acará Festivo
 INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(58, 54); -- Papilocromis
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(58, 49); -- Tricogaster
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(58, 48); -- Tricogaster Leeri
 
 
 INSERT INTO fish (id, name, size, minnumber, mintemperature, maxtemperature, widthtank, lengthtank,imageurl)
@@ -339,6 +345,11 @@ INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(48, 6); -- Bet
 INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(48, 16); -- Corydora
 INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(48, 45); -- Limpa vidro
 INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(48, 51); -- Balashark
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(48, 13); -- Apistograma
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(48, 57); -- Curviceps
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(48, 58); -- Papilocromis
+
+
 
 INSERT INTO fish (id, name, size, minnumber, mintemperature, maxtemperature, widthtank, lengthtank,imageurl)
 VALUES(49, 'Tricogaster', 10, 1, 22, 30, 80, 30,'https://peixes.top/assets/img/fishs/Trichogaster-trichopterus.jpg');
@@ -366,6 +377,9 @@ INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(49, 45); -- Li
 INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(49, 51); -- Balashark
 INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(49, 44); -- Labeo
 INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(49, 50); -- Tanictis
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(49, 13); -- Apistograma
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(49, 57); -- Curviceps
+INSERT INTO fish_compatility (fish_id, compatible_fish_id) VALUES(49, 58); -- Papilocromis
 
 INSERT INTO fish (id, name, size, minnumber, mintemperature, maxtemperature, widthtank, lengthtank,imageurl)
 VALUES(26, 'Killifish', 5, 1, 18, 22, 30, 20,'https://peixes.top/assets/img/fishs/2018/04/Aphyosemion-ogoense.jpg');
